@@ -43,7 +43,7 @@
           Order allow,deny
           Allow from all
         </Directory>
-        DocumentRoot "C:/wamp64/www/mkkreman"
+        DocumentRoot "C:/wamp64/www/mkkreman/public"
         ServerName localhost.mkkreman.com
         ServerAlias localhost.mkkreman.com
         ErrorLog "logs/dummy-host.example.com-error.log"
