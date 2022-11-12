@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh_tw">
 <head>
-	@relativeInclude('html_head')
+	@relativeInclude('layout.html_head')
 	<script>
 		$(function() {
 			$(".login-btn").on('click',function(){

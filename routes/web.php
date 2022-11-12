@@ -25,8 +25,9 @@ Route::get('/', function () {
 Route::group([
     'prefix' => '_admin_',
 ], function () {
-    Route::get('',      function () { return view('AdminPage.index'); });
-    Route::get('login', function () { return view('AdminPage.login'); });
+    Route::get('',      function () { return redirect('_admin_/main');  });
+    Route::get('main',  function () { return view('AdminPage.main');    });
+    Route::get('login', function () { return view('AdminPage.login');   });
 
 
     
