@@ -2091,6 +2091,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
+window._typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return _typeof2(obj);
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : _typeof2(obj);
+};
 window.getFormData = function (form) {
   var mergeData = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return form.serializeArray().reduce(function (obj, item) {
@@ -2122,7 +2127,7 @@ window.exec = function (url, type, data, successFunction, failFunction) {
     dataType: 'json',
     url: ENV['APP_API_URL'] + 'admin/' + url
   }, _defineProperty(_config, "dataType", 'json'), _defineProperty(_config, "headers", {
-    Authorization: "Bearer " + (adminData ? adminData['api_token'] : '')
+    Authorization: "Bearer " + (adminData ? adminData['token']['plainTextToken'] : '')
   }), _defineProperty(_config, "statusCode", {
     200: function _(xhr) {
       successFunction(xhr);
@@ -2153,7 +2158,7 @@ window.exec = function (url, type, data, successFunction, failFunction) {
       }
     },
     401: function _(xhr) {
-      //window.location.assign('login');
+      window.location.assign('login');
     },
     429: function _(xhr) {
       if (typeof failFunction == "function") {

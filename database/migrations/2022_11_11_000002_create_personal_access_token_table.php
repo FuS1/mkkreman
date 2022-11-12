@@ -26,7 +26,7 @@ class CreatePersonalAccessTokenTable extends Migration
             Schema::create($this->tableName, function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('tokenable_type', 191);
-                $table->string('tokenable_id', 100);
+                $table->biginteger('tokenable_id');
                 $table->string('name', 191);
                 $table->string('token', 64);
                 $table->text('abilities')->nullable()->default(null);
@@ -41,6 +41,14 @@ class CreatePersonalAccessTokenTable extends Migration
 
                 $table->index(["tokenable_type", "tokenable_id"], 'personal_access_tokens_tokenable_type_tokenable_id_index');
                 $table->nullableTimestamps();
+            });
+        }else{
+            Schema::table($this->tableName, function (Blueprint $table) {
+                $table->string('platform')->nullable();
+                $table->string('deviceType')->nullable();
+                $table->string('device')->nullable();
+                $table->string('browser')->nullable();
+                $table->dateTime('expired_at')->nullable();
             });
         }
     }

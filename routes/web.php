@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminPage\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +25,9 @@ Route::get('/', function () {
 Route::group([
     'prefix' => '_admin_',
 ], function () {
+    Route::get('',      function () { return view('AdminPage.index'); });
     Route::get('login', function () { return view('AdminPage.login'); });
+
+
+    
 });

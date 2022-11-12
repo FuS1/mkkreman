@@ -28,6 +28,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
+window._typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 window.getFormData = function(form,mergeData={}){
     return form.serializeArray().reduce(function(obj, item) {
         if(item.value===''){
@@ -64,7 +66,7 @@ window.exec = function(url,type,data,successFunction,failFunction){
         url: ENV['APP_API_URL'] + 'admin/' + url,
         dataType:'json',
         headers: {
-            Authorization: "Bearer "+(adminData ? adminData['api_token'] : '')
+            Authorization: "Bearer "+(adminData ? adminData['token']['plainTextToken'] : '')
         },
         statusCode: {
             200: function(xhr){
@@ -98,15 +100,15 @@ window.exec = function(url,type,data,successFunction,failFunction){
                 }
             },
             401: function(xhr) {
-                //window.location.assign('login');
+                window.location.assign('login');
             },
             429: function(xhr) {
                 if(typeof failFunction == "function"){
-                    failFunction(xhr.ERR_MSG) 
+                    failFunction(xhr.ERR_MSG);
                     return;
                 }
                 if(Swal.isVisible()){
-                    Swal.hideLoading()
+                    Swal.hideLoading();
                     Swal.showValidationMessage('短期呼叫次數過多，請稍後再試')
                 }
                 Swal.fire({
@@ -116,11 +118,11 @@ window.exec = function(url,type,data,successFunction,failFunction){
             },
             500:function(xhr){
                 if(typeof failFunction == "function"){
-                    failFunction(xhr) 
+                    failFunction(xhr); 
                     return;
                 }
                 if(Swal.isVisible()){
-                    Swal.hideLoading()
+                    Swal.hideLoading();
                     Swal.showValidationMessage(xhr.responseJSON.message + ' at ' + xhr.responseJSON.file + ' line ' +  xhr.responseJSON.line)
                 }
                 Swal.fire({
@@ -128,16 +130,16 @@ window.exec = function(url,type,data,successFunction,failFunction){
                     width:'70%',
                     html: xhr.responseJSON.message + ' at ' + xhr.responseJSON.file + ' line ' +  xhr.responseJSON.line,
                 });
-                console.log(xhr.responseJSON)
+                console.log(xhr.responseJSON);
             },
             503:function(xhr){
                 if(typeof failFunction == "function"){
-                    failFunction(xhr) 
+                    failFunction(xhr);
                     return;
                 }
                 if(Swal.isVisible()){
-                    Swal.hideLoading()
-                    Swal.showValidationMessage('伺服器連線超時')
+                    Swal.hideLoading();
+                    Swal.showValidationMessage('伺服器連線超時');
                 }
                 Swal.fire({
                     icon: 'error',

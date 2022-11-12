@@ -23,4 +23,5 @@ Route::group([
     'prefix' => 'admin',
 ], function () {
     Route::post('login',     [AdminController::class, 'login'] );
+    // your routes here
 });

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use App\Exceptions\ErrorException;
-use App\Http\Controllers\Controller;
-
 use App\Services\BaseService;
 use Browser;
+use Crypt;
 use Carbon\Carbon;
 use App\Models\Admin;
 
@@ -24,21 +24,16 @@ class AdminController extends Controller
 
     public function login(Request $request)
     {
-
-
-        $admin = Admin::where([
-            'account'   => $request->account,
-            'password'  => Hash::make($request->password)
+        $admin = Admin::select(['id','name','password'])->where([
+            'account'     => $request->account,
+            'disabled_at' => null
         ])->first();
-
-        if (! $admin) {
-            return response(array(
-                "ERR_CODE"=>__LINE__.":"."WRONG_ACCOUNT_OR_PASSWORD",
-                "ERR_MSG"=>"帳號或密碼錯誤",
-            ),400); 
+        
+        if ( !$admin || !Hash::check($request->password,$admin->password) ) {
+            throw new ErrorException('帳號或密碼錯誤'); 
         }
 
-        $token = $admin->createToken($account);
+        $token = $admin->createToken($request->password.time());
         
         $admin->tokens()->where('id',$token->accessToken->id)->update([
             'platform'   => Browser::platformName(),
@@ -47,8 +42,10 @@ class AdminController extends Controller
             'browser'    => Browser::browserName(),
             'expired_at' => Carbon::now()->addSeconds(config('env.TOKEN_EXPIRETIME', 43200))->toDateTimeString()
         ]);
-        
-        return response($token,200);
+
+        $admin->token = $token;
+
+        return response($admin,200);
     }
 
 }
