@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminPage\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +24,10 @@ Route::get('/', function () {
 Route::group([
     'prefix' => '_admin_',
 ], function () {
-    Route::get('',       function () { return redirect('_admin_/main');  });
-    Route::get('main',   function () { return view('AdminPage.main');    });
-    Route::get('login',  function () { return view('AdminPage.login');   });
-    Route::get('banner_list', function () { return view('AdminPage.banner_list');  });
-    Route::get('banner', function () { return view('AdminPage.banner');  });
-
-
-
-    
+    Route::get('',              function () { return redirect('_admin_/main');      });
+    Route::get('main',          function () { return view('AdminPage.main');        });
+    Route::get('login',         function () { return view('AdminPage.login');       });
+    Route::get('banner_list',   function () { return view('AdminPage.banner_list'); });
+    Route::get('news_list',     function () { return view('AdminPage.news_list');   });
+    Route::get('news',          function () { return view('AdminPage.news');        });
 });

@@ -20,6 +20,9 @@
 <link  href="{{ asset('lib/tabulator/tabulator.min.css') }}" rel="stylesheet">
 <link  href="{{ asset('lib/tabulator/tabulator_bootstrap4.min.css') }}" rel="stylesheet">
 
+<!-- tinymce -->
+<script src="{{ asset('lib/tinymce/tinymce.min.js') }}"></script>
+
 <!-- app -->
 <link  href="{{ asset('AdminPage/css/app.css') }}" rel="stylesheet">
 <script src="{{ asset('AdminPage/js/app.js') }}" type="text/javascript" ></script>
@@ -29,4 +32,5 @@
         APP_URL : "{{ config('env.APP_URL') }}",
         APP_API_URL : "{{ config('env.APP_API_URL') }}",
     };
+    
 </script>

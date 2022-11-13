@@ -32,8 +32,8 @@ class BannerController extends Controller
     {
 
         $fileInfo = [
-            'filePath'          => 'banner',
-            'fileName'          => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
+            'filePath' => 'banner',
+            'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
         ];
         
         $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));
@@ -76,7 +76,7 @@ class BannerController extends Controller
         ]);
 
         $this->resetSortIdx();
-        
+
         return response($banner->refresh(),200);
     }
 

@@ -19,10 +19,10 @@ class Banner extends BaseModel
     protected $appends = ['file_url'];
 
 
-    // 確認此保單是否可被刪除
+    // 取得圖檔於Public資料夾的URL
     public function getFileUrlAttribute() 
     {
-        return asset('storage/'.$this->file_path);
+        return empty($this->file_path) ? null : asset('storage/'.$this->file_path);
     }
     
 

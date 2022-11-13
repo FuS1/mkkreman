@@ -23,3 +23,5 @@ mix.copy("resources/views/AdminPage/img","public/AdminPage/img");
 
 mix.copy("resources/views/lib","public/lib");
 mix.copy("node_modules/flowbite/dist","public/lib/flowbite");
+mix.copy("node_modules/tinymce","public/lib/tinymce");
+mix.copy("node_modules/tinymce-langs/langs","public/lib/tinymce/langs");

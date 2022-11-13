@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\TinymceController;
 use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BannerController;
-
+use App\Http\Controllers\API\NewsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,12 +37,23 @@ Route::group([
             Route::put  ('sort',  [BannerController::class, 'changeBannerSort'] );
         });
 
+        Route::group([
+            'prefix' => 'news',
+        ], function () {
+            
+            Route::get  ('',      [NewsController::class, 'getNews'] );
+            Route::post ('',      [NewsController::class, 'saveNews'] );
+            Route::delete('',     [NewsController::class, 'deleteNews'] );
+        });
 
         Route::group([
             'prefix' => 'tabulator',
         ], function () {
-            Route::get ('banner',             [BannerController::class, 'tabulator'] );
+            Route::get ('banner', [BannerController::class, 'tabulator'] );
+            Route::get ('news',   [NewsController::class,   'tabulator'] );
         });
+
+        Route::post ('tinymce/image',      [TinymceController::class, 'saveImage'] );
     });
     
 });

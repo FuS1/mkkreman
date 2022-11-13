@@ -18,13 +18,13 @@
                   <a href="./banner_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">首頁Banner</a>
                </li>
                <li>
-                  <a href="./news" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">最新消息</a>
+                  <a href="./news_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">最新消息</a>
                </li>
                <li>
-                  <a href="./food" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">餐點</a>
+                  <a href="./food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">餐點</a>
                </li>
                <li>
-                  <a href="./store" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">門市據點</a>
+                  <a href="./store_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">門市據點</a>
                </li>
             </ul>
          </li>

@@ -5,10 +5,9 @@
 	<script>
 		$(function() {
 			var table = initTabulator("#banner-table",{
-				// layout:"fitColumns",
 				rowHeight:250,
 				initialSort:[
-					{column:"sort_idx", dir:"asc"}, //sort by this first
+					{column:"sort_idx", dir:"asc"},
 				],
 				columns: [{
 						title: "標題",
@@ -23,7 +22,9 @@
 						width: '',
 						headerSort: false,
 						formatter: function(cell, formatterParams){
-							return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800" src="'+cell.getValue()+'">';
+							if(cell.getValue()){
+								return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800" src="'+cell.getValue()+'">';
+							}
 						}
 					},
 					{
@@ -120,11 +121,10 @@
 				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">首頁Banner設定</h1>
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
-			<div>
-				<button class="block text-white bg-[#062851] hover:bg-[#03152b] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" data-modal-toggle="add-banner-modal">
-					增加Banner
-				</button>
-			</div>
+			<button class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200" type="button" data-modal-toggle="add-banner-modal">
+				增加Banner
+			</button>
+			<hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
 			<div class="table-responsive" id="banner-table"></div>
 		</div>
 	</div>

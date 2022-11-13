@@ -20,10 +20,14 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
+    "@tinymce/oxide": "^1.10.1",
+    "@tinymce/oxide-icons-default": "^1.6.1",
     "dotenv": "^16.0.3",
     "flowbite": "^1.5.3",
     "jquery": "^3.6.1",
     "sweetalert2": "^11.6.8",
+    "tinymce": "^5.10.6",
+    "tinymce-langs": "^1.0.0",
     "tw-elements": "^1.0.0-alpha12"
   },
   "name": "mkkreman",

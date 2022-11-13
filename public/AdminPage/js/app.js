@@ -2117,6 +2117,53 @@ window.getLocalStorage = function (storageName) {
   }
   return obj;
 };
+
+//getUrlParam("id") 或 getUrlParam("id","網址")，不需要特别编码
+window.getUrlParam = function (name, url) {
+  var reg = RegExp('[?&]' + name.replace(/([[\]])/, '\\$1') + '=([^&#]*)');
+  var r = url ? (url.match(reg) || ['', ''])[1] : decodeURI((window.location.href.match(reg) || ['', ''])[1]);
+  if (r === '') {
+    return null;
+  }
+  return r;
+};
+window.flattenObject = function (ob) {
+  var toReturn = {};
+  for (var i in ob) {
+    if (!ob.hasOwnProperty(i)) continue;
+    if (_typeof2(ob[i]) == 'object' && ob[i] !== null && !Array.isArray(ob[i])) {
+      var flatObject = flattenObject(ob[i]);
+      for (var x in flatObject) {
+        if (!flatObject.hasOwnProperty(x)) continue;
+        toReturn[i + '.' + x] = flatObject[x];
+      }
+    } else {
+      toReturn[i] = ob[i];
+    }
+  }
+  return toReturn;
+};
+window.replaceAll = function (string, search, replace) {
+  return string.split(search).join(replace);
+};
+window.delUrlParam = function (key, url1) {
+  var url = url1 ? url1 : window.location.href;
+  var baseUrl = url.split('?')[0] + '?';
+  var query = url.split('?')[1];
+  if (query.indexOf(key) > -1) {
+    var obj = {};
+    var arr = query.split('&');
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].split('=');
+      obj[arr[i][0]] = arr[i][1];
+    }
+    delete obj[key];
+    var _url = baseUrl + JSON.stringify(obj).replace(/[\"\{\}]/g, '').replace(/\:/g, '=').replace(/\,/g, '&');
+    return _url;
+  } else {
+    return url;
+  }
+};
 window.exec = function (url, type, data, successFunction, failFunction) {
   var _config;
   var adminData = getLocalStorage('adminData');
@@ -2206,7 +2253,7 @@ window.exec = function (url, type, data, successFunction, failFunction) {
   }), _config);
   var haveFile = false;
   for (var i in data) {
-    if (i == "file") {
+    if (i == "file" && data[i] !== undefined) {
       haveFile = true;
     }
   }
@@ -2214,7 +2261,9 @@ window.exec = function (url, type, data, successFunction, failFunction) {
     formData = new FormData();
     for (var i in data) {
       if (i == "file") {
-        formData.append(i, data[i], data[i].name);
+        if (data[i] !== undefined) {
+          formData.append(i, data[i], data[i].name);
+        }
       } else {
         if (Array.isArray(data[i])) {
           formData.append(i + '[]', data[i]);
@@ -2352,36 +2401,44 @@ window.initTabulator = function (tableId, customConfig) {
 
 //custom max min filter function
 window.minMaxFilterFunctionDate = function (headerValue, rowValue, rowData, filterParams) {
-  // if(headerValue.start != ""){
-  //     headerValue.start = new Date(headerValue.start);
-  // } 
-  // if(headerValue.end != ""){
-  //     headerValue.end = new Date(headerValue.end);
-  // }
-  //         console.log('rowValue===='+rowValue);
-  //     console.log('headerValue.start===='+headerValue.start);
-  //     console.log('headerValue.end===='+headerValue.end);
-  // //compare dates
-  // if(rowValue){
-
-  //     rowValue = new Date(rowValue);
-
-  //     if(headerValue.start != ""){
-  //         if(headerValue.end != ""){
-  //             return rowValue >= headerValue.start && rowValue <= headerValue.end;
-  //         }else{
-  //             return rowValue >= headerValue.start;
-  //         }
-  //     }else{
-  //         if(headerValue.end != ""){
-  //             return rowValue <= headerValue.end;
-  //         }
-  //     }
-  // }
-
   return true; //must return a boolean, true if it passes the filter.
 };
 
+window.initTinymce = function (dom_id, customConfig) {
+  var tinyConfig = Object.assign(JSON.parse(JSON.stringify({
+    selector: dom_id,
+    height: 500,
+    language: 'zh_TW',
+    automatic_uploads: true,
+    plugins: ['advlist autolink lists link image charmap print preview anchor emoticons help', 'searchreplace visualblocks code fullscreen', 'insertdatetime media table paste wordcount'],
+    menubar: 'file edit view tools help',
+    toolbar: 'undo redo | fontselect fontsizeselect formatselect | forecolor backcolor lineheight bold italic underline strikethrough alignleft aligncenter alignright alignjustify formatpainter removeformat | bullist numlist outdent indent | link image media | table | charmap emoticons',
+    // icons: 'material',
+    image_advtab: true,
+    toolbar_mode: 'sliding',
+    skin: 'oxide',
+    // useDarkMode ? 'oxide-dark' : 'oxide',
+    content_css: 'default',
+    fullscreen_native: true,
+    statusbar: false,
+    default_link_target: '_blank',
+    paste_data_images: true,
+    smart_paste: true,
+    image_file_types: 'jpg,jpeg,svg,png,webp,gif'
+    // images_upload_url: ENV['APP_API_URL'] + 'admin/tinymce/image',
+  })), customConfig);
+
+  // 不可放入前面的Object中進行深拷貝，會導致此function失效
+  tinyConfig.images_upload_handler = function (blobInfo, success, failure, progress) {
+    exec('tinymce/image', 'POST', {
+      file: blobInfo.blob()
+    }, function (response) {
+      console.log(response);
+      success(response.location);
+    });
+  };
+  return tinymce.init(tinyConfig);
+};
 $(function () {
   // 取消form按鈕預設功能
   $("form").on('submit', function (e) {
