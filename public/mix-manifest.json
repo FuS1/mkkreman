@@ -575,5 +575,8 @@
     "/lib/font-awesome/webfonts/pro-fa-thin-100-f7aaa1.ttf": "/lib/font-awesome/webfonts/pro-fa-thin-100-f7aaa1.ttf",
     "/lib/font-awesome/webfonts/pro-fa-thin-100-f7aaa1.woff2": "/lib/font-awesome/webfonts/pro-fa-thin-100-f7aaa1.woff2",
     "/lib/font-awesome/webfonts/pro-fa-v4compatibility.ttf": "/lib/font-awesome/webfonts/pro-fa-v4compatibility.ttf",
-    "/lib/font-awesome/webfonts/pro-fa-v4compatibility.woff2": "/lib/font-awesome/webfonts/pro-fa-v4compatibility.woff2"
+    "/lib/font-awesome/webfonts/pro-fa-v4compatibility.woff2": "/lib/font-awesome/webfonts/pro-fa-v4compatibility.woff2",
+    "/lib/tabulator/tabulator.min.css": "/lib/tabulator/tabulator.min.css",
+    "/lib/tabulator/tabulator.min.js": "/lib/tabulator/tabulator.min.js",
+    "/lib/tabulator/tabulator_bootstrap4.min.css": "/lib/tabulator/tabulator_bootstrap4.min.css"
 }

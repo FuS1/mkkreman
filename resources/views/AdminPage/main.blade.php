@@ -3,7 +3,7 @@
 <head>
 	@relativeInclude('layout.html_head')
 </head>
-<body>
+<body class="flex">
 	@relativeInclude('layout.side_menu')
 </body>
 </html>

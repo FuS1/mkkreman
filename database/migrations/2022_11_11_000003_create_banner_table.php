@@ -6,13 +6,13 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdminTable extends Migration
+class CreateBannerTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'admin';
+    public $tableName = 'banner';
 
     /**
      * Run the migrations.
@@ -24,13 +24,12 @@ class CreateAdminTable extends Migration
     {
         if (!Schema::hasTable($this->tableName)) {
             Schema::create($this->tableName, function (Blueprint $table) {
-                $table->bigIncrements('id')->comment('序號');
-                $table->string('name')->comment('姓名');
-                $table->string('account')->comment('帳號');
-                $table->string('password', 2048)->comment('密碼');
-                $table->dateTime('disabled_at')->nullable()->comment('帳戶禁用時間');
+                $table->bigIncrements('id');
+                $table->string('title')->nullable()->comment('大圖標題');
+                $table->string('file_path')->comment('檔案儲存位置');
+                $table->integer('sort_idx')->default(99)->comment('排序(越小越前)');
                 $table->nullableTimestamps();
-                $table->unique(["account"], 'account');
+                $table->softDeletes();
             });
         }
     }

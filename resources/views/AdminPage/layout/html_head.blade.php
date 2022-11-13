@@ -8,10 +8,21 @@
 <meta property="og:url" content="https://mkkreman.com" />
 <meta property="og:site_name" content="麵匡匡拉麵食堂" />
 <link rel="icon" href="/AdminPage/img/favicon.png">
+
+<!-- font-awesome -->
 <link  href="{{ asset('lib/font-awesome/css/all.min.css') }}" rel="stylesheet">
+
+<!-- flowbite -->
+<script src="{{ asset('lib/flowbite/flowbite.js') }}" type="text/javascript" ></script>
+
+<!-- tabulator -->
+<script src="{{ asset('lib/tabulator/tabulator.min.js') }}" type="text/javascript" ></script>
+<link  href="{{ asset('lib/tabulator/tabulator.min.css') }}" rel="stylesheet">
+<link  href="{{ asset('lib/tabulator/tabulator_bootstrap4.min.css') }}" rel="stylesheet">
+
+<!-- app -->
 <link  href="{{ asset('AdminPage/css/app.css') }}" rel="stylesheet">
 <script src="{{ asset('AdminPage/js/app.js') }}" type="text/javascript" ></script>
-<script src="{{ asset('lib/flowbite/flowbite.js') }}" type="text/javascript" ></script>
 
 <script>
     window.ENV = {

@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.tabulator {
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    word-break: break-all;
+}
+.tabulator-row { 
+    min-height:35px;
+}
+.tabulator-row .tabulator-cell {
+    padding: 8px 5px;
+    white-space: normal !important;
+}
+.tabulator .tabulator-header .tabulator-col{
+    background-color: #2a3f54;
+    color: #FFF;
+}
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover{
+    background-color: #182c40;
+}
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+    padding-right:12px;
+}
+.tabulator-row .tabulator-responsive-collapse table {
+    font-size: 13px;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+    white-space: normal !important;
+}
+.tabulator .tabulator-footer .tabulator-page.active {
+    border-color: #007bff;
+    background-color: #2A3F54;
+}
+.tabulator .tabulator-footer {
+    background-color: #ffffff;
+}
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=desc] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow { 
+    border-top: 6px solid #00ffe3;
+}
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=asc] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+    border-top: 6px solid #00ffe3;
+}
+.tabulator_link {
+    color:#cc7400;
+}
+.tabulator-row.tabulator-selected{
+    background-color: #d2f1ff !important;
+}
+.tabulator-row.tabulator-selected :hover{
+    -webkit-filter: saturate(1.5);
+}
+.tabulator .tabulator-footer .tabulator-calcs-holder .tabulator-row{
+    background: #eef6ff!important;
+}
+.tabulator .tabulator-footer .tabulator-calcs-holder{
+    box-sizing: border-box;
+    width: calc(100% + 20px);
+    text-align: left;
+    background: #f3f3f3!important;
+    border-bottom: unset;
+    border-top: 2px solid #2a3f54;
+    overflow: hidden;
+}
+
+.tabulator-col-title {
+    text-align: center;
+}
+.tabulator .tabulator-footer .tabulator-page-size {
+    width: 4rem;
+}

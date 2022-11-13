@@ -1,12 +1,12 @@
-<aside class="w-64" aria-label="Sidebar">
-   <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
+<aside class="w-64 bg-[#062851]" aria-label="Sidebar">
+   <div class="overflow-y-auto overflow-x-hidden py-4 px-3 rounded h-screen w-full">
       <a href="/" target="_blank" class="flex items-center pl-2.5 mb-5">
          <img src="/AdminPage/img/favicon.png" class="mr-3 h-6" alt="Logo" />
-         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">麵匡匡拉麵食堂</span>
+         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">麵匡匡拉麵食堂</span>
       </a>
       <ul class="space-y-2">
          <li>
-            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold" aria-controls="dropdown-page-setting" data-collapse-toggle="dropdown-page-setting">
+            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-page-setting" data-collapse-toggle="dropdown-page-setting">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-solid fa-pager"></i>
                </div>                  
@@ -15,21 +15,21 @@
             </button>
             <ul id="dropdown-page-setting" class="py-2 space-y-2">
                <li>
-                  <a href="./banner" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">首頁Banner</a>
+                  <a href="./banner_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">首頁Banner</a>
                </li>
                <li>
-                  <a href="./news" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">最新消息</a>
+                  <a href="./news" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">最新消息</a>
                </li>
                <li>
-                  <a href="./food" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">餐點</a>
+                  <a href="./food" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">餐點</a>
                </li>
                <li>
-                  <a href="./store" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">門市據點</a>
+                  <a href="./store" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">門市據點</a>
                </li>
             </ul>
          </li>
          <li>
-            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold" aria-controls="dropdown-join-seminar" data-collapse-toggle="dropdown-join-seminar">
+            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-join-seminar" data-collapse-toggle="dropdown-join-seminar">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-sharp fa-solid fa-screen-users"></i>
                </div>
@@ -38,21 +38,21 @@
             </button>
             <ul id="dropdown-join-seminar" class="py-2 space-y-2">
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">講座列表</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">講座列表</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">課程簡介</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">課程簡介</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">Blog文章</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">Blog文章</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">外連影片</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">外連影片</a>
                </li>
             </ul>
          </li>
          <li>
-            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold" aria-controls="dropdown-system-setting" data-collapse-toggle="dropdown-system-setting">
+            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-system-setting" data-collapse-toggle="dropdown-system-setting">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-solid fa-gear"></i>
                </div>                  
@@ -61,17 +61,17 @@
             </button>
             <ul id="dropdown-system-setting" class="hidden py-2 space-y-2">
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">後台帳戶</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">後台帳戶</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:font-bold">Email收件人</a>
+                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">Email收件人</a>
                </li>
             </ul>
          </li>
       </ul>
       <ul class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
          <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-red-700 dark:text-white group hover:font-bold">
+            <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-red-700 dark:text-white group hover:text-red-700 hover:font-bold">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-red-700 dark:group-hover:text-white scale-125 pt-1.5 pl-1.5 fa-solid fa-arrow-up-left-from-circle"></i>
                </div>
