@@ -39,11 +39,16 @@ window.getFormData = function(form,mergeData={}){
 }
 
 window.setLocalStorage = function(storageName, obj) {
+    if(obj===null){
+        localStorage.removeItem(storageName);
+        return null;
+    }
+
     if (_typeof(obj) == 'object' || typeof obj == 'array') {
-      obj = JSON.stringify(obj);
+        obj = JSON.stringify(obj);
     }
   
-    return localStorage.setItem(storageName, obj);
+    return localStorage.setItem(storageName, obj);        
 };
   
 window.getLocalStorage = function(storageName) {
