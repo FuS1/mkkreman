@@ -2105,6 +2105,10 @@ window.getFormData = function (form) {
   }, mergeData);
 };
 window.setLocalStorage = function (storageName, obj) {
+  if (obj === null) {
+    localStorage.removeItem(storageName);
+    return null;
+  }
   if (_typeof(obj) == 'object' || typeof obj == 'array') {
     obj = JSON.stringify(obj);
   }

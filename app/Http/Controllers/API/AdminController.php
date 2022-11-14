@@ -22,6 +22,42 @@ class AdminController extends Controller
         $this->baseService = $baseService;
     }
 
+    public function tabulator(Request $request)
+    {
+        $admin_query = Admin::query();
+        
+        $admins = $this->baseService->applyFilterQuery($admin_query, $request->all());
+
+        // account於Model預設為隱藏，需另外設為顯示
+        $admins->through(function($admin){
+            $admin->makeVisible(['account']);
+            return $admin;
+        });
+
+        return response($admins,200);
+    }
+
+    public function saveAdmin(Request $request)
+    {
+        $password_new = $this->generateRandomString(8);
+       
+        $admin = Admin::create([
+            'name'      => $request->name ?? null,
+            'account'   => $request->account ?? null,
+            'password'  => Hash::make($password_new) 
+        ]);
+
+        return response([
+            "password" => $password_new,
+        ],200);
+    }
+
+    public function deleteAdmin(Request $request)
+    {
+        Admin::where('id',$request->admin_id)->delete();
+    }
+
+    
     public function login(Request $request)
     {
         $admin = Admin::select(['id','name','password'])->where([
@@ -43,9 +79,48 @@ class AdminController extends Controller
             'expired_at' => Carbon::now()->addSeconds(config('env.TOKEN_EXPIRETIME', 43200))->toDateTimeString()
         ]);
 
-        $admin->token = $token;
+        $admin->token = $token; 
 
         return response($admin,200);
     }
+
+    public function changePassword(Request $request)
+    {
+
+        if ( !Hash::check($request->password,$request->user()->password) ) {
+            throw new ErrorException('原密碼錯誤'); 
+        }
+
+        $request->user()->update([
+            'password' => Hash::make($request->password_new) 
+        ]);
+
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $admin = Admin::where('id',$request->admin_id)->first();
+        $password_new = $this->generateRandomString(8);
+
+        $admin->update([
+            'password' => Hash::make($password_new) 
+        ]);
+
+        return response([
+            "password" => $password_new,
+        ],200);
+    }
+
+    /*隨機產生亂數*/
+    private static function generateRandomString($length = 10) {
+        //$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $characters = '23456789abcdefghkmnprstuvwxyzABCDEFGHJKMNPRSTUVWXYZ'; //去除不易辨識字串
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    } 
 
 }

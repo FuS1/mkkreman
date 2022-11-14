@@ -40,10 +40,18 @@ Route::group([
         Route::group([
             'prefix' => 'news',
         ], function () {
-            
             Route::get  ('',      [NewsController::class, 'getNews'] );
             Route::post ('',      [NewsController::class, 'saveNews'] );
             Route::delete('',     [NewsController::class, 'deleteNews'] );
+        });
+
+        Route::group([
+            'prefix' => 'admin',
+        ], function () {
+            Route::post('',                [AdminController::class, 'saveAdmin'] );
+            Route::delete('',              [AdminController::class, 'deleteAdmin'] );
+            Route::put ('password',        [AdminController::class, 'changePassword'] );
+            Route::put ('password/reset',  [AdminController::class, 'resetPassword'] );
         });
 
         Route::group([
@@ -51,6 +59,7 @@ Route::group([
         ], function () {
             Route::get ('banner', [BannerController::class, 'tabulator'] );
             Route::get ('news',   [NewsController::class,   'tabulator'] );
+            Route::get ('admin',  [AdminController::class,   'tabulator'] );
         });
 
         Route::post ('tinymce/image',      [TinymceController::class, 'saveImage'] );

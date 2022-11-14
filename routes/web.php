@@ -30,4 +30,5 @@ Route::group([
     Route::get('banner_list',   function () { return view('AdminPage.banner_list'); });
     Route::get('news_list',     function () { return view('AdminPage.news_list');   });
     Route::get('news',          function () { return view('AdminPage.news');        });
+    Route::get('admin_list',    function () { return view('AdminPage.admin_list');  });
 });
