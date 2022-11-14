@@ -71,13 +71,21 @@
       </ul>
       <ul class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
          <li>
-            <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-red-700 dark:text-white group hover:text-red-700 hover:font-bold">
+            <span class="flex items-center p-2 text-base font-normal text-white rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-red-700 dark:text-white group hover:text-red-700 hover:font-bold hover:cursor-pointer btn-logout">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-red-700 dark:group-hover:text-white scale-125 pt-1.5 pl-1.5 fa-solid fa-arrow-up-left-from-circle"></i>
                </div>
                <div class="flex-1 ml-5 text-left whitespace-nowrap">登出</div>
-            </a>
+            </span>
          </li>
       </ul>
    </div>
 </aside>
+<script>
+   $(function(){
+      $('.btn-logout').on('click',function(){
+         setLocalStorage('adminData',null);
+			window.location.assign('./login');
+      });
+   });
+</script>
