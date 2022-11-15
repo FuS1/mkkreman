@@ -1,12 +1,11 @@
-
 window.ENV = {
-    APP_URL : "{{ config('env.APP_URL') }}",
-    APP_API_URL : "{{ config('env.APP_API_URL') }}",
+    APP_URL : process.env.MIX_APP_URL,
+    APP_API_URL : process.env.MIX_APP_API_URL,
 };
 
 
 window.$    = require("jquery");
-window._    = require('lodash');
+window._    = require('lodash'); 
 window.Swal = require("sweetalert2");
 
 /**

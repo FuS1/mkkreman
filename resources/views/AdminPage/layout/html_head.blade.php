@@ -27,11 +27,3 @@
 <!-- app -->
 <link  href="{{ asset('AdminPage/css/app.css') }}" rel="stylesheet">
 <script src="{{ asset('AdminPage/js/app.js') }}" type="text/javascript" ></script>
-
-<script>
-    window.ENV = {
-        APP_URL : "{{ config('env.APP_URL') }}",
-        APP_API_URL : "{{ config('env.APP_API_URL') }}",
-    };
-    
-</script>
