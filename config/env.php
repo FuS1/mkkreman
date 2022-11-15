@@ -7,8 +7,12 @@ return [
     'APP_DEBUG'=>env('APP_DEBUG', null),
     'APP_URL'=>env('APP_URL', null),
     'APP_API_URL'=>env('APP_API_URL', null),
-    'APP_FRONT_END_URL'=>env('APP_FRONT_END_URL', null),
+    'APP_CHINESE_NAME'=>env('APP_CHINESE_NAME', null),
+    'APP_CHINESE_DESCRIPTION'=>env('APP_CHINESE_DESCRIPTION', null),
     
+    'MIX_APP_URL'=>env('MIX_APP_URL', null),
+    'MIX_APP_API_URL'=>env('MIX_APP_API_URL', null),
+
     'LOG_CHANNEL'=>env('LOG_CHANNEL', null),
     'LOG_DEPRECATIONS_CHANNEL'=>env('LOG_DEPRECATIONS_CHANNEL', null),
     'LOG_LEVEL'=>env('LOG_LEVEL', null),
@@ -20,12 +24,16 @@ return [
     'DB_USERNAME'=>env('DB_USERNAME', null),
     'DB_PASSWORD'=>env('DB_PASSWORD', null),
     
+    'QUERY_LOG'=>env('QUERY_LOG', null),
+
     'BROADCAST_DRIVER'=>env('BROADCAST_DRIVER', null),
     'CACHE_DRIVER'=>env('LINE_ID', null),
     'FILESYSTEM_DRIVER'=>env('FILESYSTEM_DRIVER', null),
     'QUEUE_CONNECTION'=>env('QUEUE_CONNECTION', null),
     'SESSION_DRIVER'=>env('SESSION_DRIVER', null),
     'SESSION_LIFETIME'=>env('SESSION_LIFETIME', null),
+    'SESSION_DOMAIN'=>env('SESSION_DOMAIN', null),
+    'SANCTUM_STATEFUL_DOMAINS'=>env('SANCTUM_STATEFUL_DOMAINS', null),
     
     'MEMCACHED_HOST'=>env('MEMCACHED_HOST', null),
     
@@ -61,21 +69,5 @@ return [
     'MIX_PUSHER_APP_CLUSTER'=>env('MIX_PUSHER_APP_CLUSTER', null),
     
     'TIMEZONE'=>env('TIMEZONE', null),
-    
-    'LINE_ID' => env('LINE_ID', null),
-    'LINE_CHANNEL_ID' => env('LINE_CHANNEL_ID', null),
-    'LINE_CHANNEL_SCRET' => env('LINE_CHANNEL_SCRET', null),
-    'LINE_MESSAGE_API_CHANNEL_ACCESS_TOKEN' => env('LINE_MESSAGE_API_CHANNEL_ACCESS_TOKEN', null),
-    'LINE_TEST_USER_ID' => env('LINE_TEST_USER_ID', null),
-    'LINE_IMG_CACHE_TIME' => env('LINE_IMG_CACHE_TIME', null),
-
-    'EASY_GO_SMS_API_URL' => env('EASY_GO_SMS_API_URL', null),
-    'EASY_GO_SMS_ACCOUNT' => env('EASY_GO_SMS_ACCOUNT', null),
-    'EASY_GO_SMS_PASSWORD' => env('EASY_GO_SMS_PASSWORD', null),
-    
-    'RECOGNIZE'         => env('RECOGNIZE', in_array(config('env.APP_ENV'),['production']) ),
-    'RECOGNIZE_API_URL' => env('RECOGNIZE_API_URL', null),
-    'RECOGNIZE_ACCOUNT' => env('RECOGNIZE_ACCOUNT', null),
-    'RECOGNIZE_PASSWORD' => env('RECOGNIZE_PASSWORD', null)
 
 ];
