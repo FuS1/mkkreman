@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class seminar_media extends BaseModel
+class SeminarMedia extends BaseModel
 {
     use HasFactory,SoftDeletes;
     protected $table = 'seminar_media';

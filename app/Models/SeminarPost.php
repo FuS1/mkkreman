@@ -8,17 +8,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class Seminar_content extends BaseModel
+class SeminarPost extends BaseModel
 {
     use HasFactory,SoftDeletes;
-    protected $table = 'seminar_content';
+    protected $table = 'seminar_post';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $guarded = [];
+    
+    protected $appends = ['file_url'];
 
-    public function seminar_content_content()
+
+    // 取得圖檔於Public資料夾的URL
+    public function getFileUrlAttribute() 
     {
-        return $this->hasMany(Seminar_content_content::class);
+        return empty($this->file_path) ? null : asset('storage/'.$this->file_path);
     }
+    
 
 }

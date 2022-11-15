@@ -6,9 +6,6 @@
 		$(function() {
 			var table = initTabulator("#seminar-table",{
 				// rowHeight:250,
-				initialSort:[
-					{column:"is_top", dir:"desc"}, 
-				],
 				columns: [{
 						title: "講座名稱",
 						field: "title",
@@ -45,7 +42,7 @@
 					{
 						title: "",
 						field: "",
-						width: 200,
+						width: 250,
 						responsive:false,
 						headerSort: false,
 						formatter: function(cell, formatterParams) {
@@ -53,7 +50,7 @@
 										'<a href="./seminar?seminar_id='+cell.getRow().getData()['id']+'" class="bg-[#062851] hover:bg-[#03152b] text-gray-100 font-bold py-2 px-4 rounded">'+
 											'編輯'+
 										'</a>'+
-										'<a href="./seminar_participant_list?seminar_id='+cell.getRow().getData()['id']+'" class="bg-green-700 hover:bg-green-800 text-gray-100 font-bold py-2 px-4 rounded">'+
+										'<a href="./seminar_participant_list?seminar_id='+cell.getRow().getData()['id']+'" class="bg-green-700 hover:bg-green-800 text-gray-100 font-bold py-2 px-4 rounded ml-2">'+
 											'報名人員'+
 										'</a>'+
 										'<button class="bg-red-700 hover:bg-red-800 text-gray-100 font-bold py-2 px-4 rounded ml-2" onclick="deleteSeminar('+cell.getRow().getData()['id']+')">'+

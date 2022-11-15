@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class Seminar_participant extends BaseModel
+class SeminarParticipant extends BaseModel
 {
     use HasFactory,SoftDeletes;
     protected $table = 'seminar_participant';
@@ -16,9 +16,9 @@ class Seminar_participant extends BaseModel
     public $incrementing = true;
     protected $guarded = [];
 
-    public function seminar_content()
+    public function seminar()
     {
-        return $this->belongsTo(Seminar_content::class);
+        return $this->belongsTo(Seminar::class);
     }
 
 }

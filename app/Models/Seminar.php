@@ -16,9 +16,9 @@ class Seminar extends BaseModel
     public $incrementing = true;
     protected $guarded = [];
     
-    public function seminar_participant()
+    public function seminarParticipant()
     {
-        return $this->hasMany(Seminar_participant::class);
+        return $this->hasMany(SeminarParticipant::class);
     }
 
 }

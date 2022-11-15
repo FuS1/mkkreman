@@ -7,6 +7,7 @@ use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\SeminarController;
+use App\Http\Controllers\API\SeminarParticipantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,18 @@ Route::group([
             Route::get  ('',      [SeminarController::class, 'getSeminar'] );
             Route::post ('',      [SeminarController::class, 'saveSeminar'] );
             Route::delete('',     [SeminarController::class, 'deleteSeminar'] );
+
+            Route::group([
+                'prefix' => 'participant',
+            ], function () {
+                Route::get  ('',      [SeminarParticipantController::class, 'getSeminarParticipant'] );
+                Route::post ('',      [SeminarParticipantController::class, 'saveSeminarParticipant'] );
+                Route::delete('',     [SeminarParticipantController::class, 'deleteSeminarParticipant'] );
+            });
+            
         });
+
+
 
         Route::group([
             'prefix' => 'admin',
@@ -67,10 +79,11 @@ Route::group([
         Route::group([
             'prefix' => 'tabulator',
         ], function () {
-            Route::get ('banner', [BannerController::class, 'tabulator'] );
-            Route::get ('news',   [NewsController::class,   'tabulator'] );
-            Route::get ('seminar',[SeminarController::class,   'tabulator'] );
-            Route::get ('admin',  [AdminController::class,   'tabulator'] );
+            Route::get ('banner',               [BannerController::class, 'tabulator'] );
+            Route::get ('news',                 [NewsController::class,   'tabulator'] );
+            Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
+            Route::get ('seminar_participant',  [SeminarParticipantController::class,   'tabulator'] );
+            Route::get ('admin',                [AdminController::class,   'tabulator'] );
         });
 
         Route::post ('tinymce/image',      [TinymceController::class, 'saveImage'] );

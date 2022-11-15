@@ -53,45 +53,8 @@ class SeminarController extends Controller
 
     public function deleteSeminar(Request $request)
     {
-        Seminar::where('id',$request->seminar_id)->delete();
-        //$this->resetSortIdx();
-    }
-
-    public function changeSeminarSort(Request $request)
-    {
-        
         $seminar = Seminar::where('id',$request->seminar_id)->first();
-        
-        
-        $afterSortIdx = $seminar->sort_idx;
-        if($request->action == 'forward'){
-            $afterSortIdx -= 1 ;
-        }else if($request->action =='backward'){
-            $afterSortIdx += 1 ;
-        }
-
-        Seminar::where('sort_idx',$afterSortIdx)->update([
-            'sort_idx' => $seminar->sort_idx
-        ]);
-
-        $seminar->update([
-            'sort_idx' => $afterSortIdx
-        ]);
-
-        $this->resetSortIdx();
-
-        return response($seminar->refresh(),200);
+        $seminar->seminarParticipant()->delete();
+        $seminar->delete();
     }
-
-    // 將每一個Seminar取出來重新排序
-    private function resetSortIdx()
-    {
-        $seminars = Seminar::orderBy('sort_idx','asc')->get();
-        $seminars->each(function($seminar, $key){
-            $seminar->update([
-                'sort_idx'=>$key+1
-            ]);
-        });
-    }
-
 }
