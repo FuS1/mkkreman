@@ -11,15 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js([
-    "resources/views/AdminPage/js/app.js",
-], "public/AdminPage/js");
+mix.js(
+    [
+        "resources/views/AdminPage/js/app.js",
+    ], 
+    "public/AdminPage/js"
+)
+.version();
 
-mix.postCss("resources/views/AdminPage/css/app.css", "public/AdminPage/css", [
-    'tailwindcss',
-]);
+mix.postCss(
+    "resources/views/AdminPage/css/app.css", 
+    "public/AdminPage/css", 
+    [
+        'tailwindcss',
+    ]
+)
+.version();
 
-mix.copy("resources/views/AdminPage/img","public/AdminPage/img");
+mix.copy("resources/views/AdminPage/img","public/AdminPage/img").version();
 
 mix.copy("resources/views/lib","public/lib");
 mix.copy("node_modules/flowbite/dist","public/lib/flowbite");

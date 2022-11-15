@@ -25,5 +25,5 @@
 <script src="{{ asset('lib/tinymce/tinymce.min.js') }}"></script>
  
 <!-- app -->
-<link  href="{{ asset('AdminPage/css/app.css') }}" rel="stylesheet">
-<script src="{{ asset('AdminPage/js/app.js') }}" type="text/javascript" ></script>
+<link  href="{{ mix('AdminPage/css/app.css') }}" rel="stylesheet">
+<script src="{{ mix('AdminPage/js/app.js') }}" type="text/javascript" ></script>
