@@ -37,6 +37,7 @@ class CreateSeminarParticipantTable extends Migration
                 $table->string('email')->nullable()->comment('電子信箱');
                 $table->integer('amount')->default(1)->comment('出席人數');
                 $table->mediumText('memo')->nullable()->comment('備註');
+                $table->integer('is_check')->default(0)->comment('是否已確認');
                 $table->nullableTimestamps();
                 $table->softDeletes();
             });

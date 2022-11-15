@@ -24,11 +24,13 @@ Route::get('/', function () {
 Route::group([
     'prefix' => '_admin_',
 ], function () {
-    Route::get('',              function () { return redirect('_admin_/main');      });
-    Route::get('main',          function () { return view('AdminPage.main');        });
-    Route::get('login',         function () { return view('AdminPage.login');       });
-    Route::get('banner_list',   function () { return view('AdminPage.banner_list'); });
-    Route::get('news_list',     function () { return view('AdminPage.news_list');   });
-    Route::get('news',          function () { return view('AdminPage.news');        });
-    Route::get('admin_list',    function () { return view('AdminPage.admin_list');  });
+    Route::get('',              function () { return redirect('_admin_/main');          });
+    Route::get('main',          function () { return view('AdminPage.main');            });
+    Route::get('login',         function () { return view('AdminPage.login');           });
+    Route::get('banner_list',   function () { return view('AdminPage.banner_list');     });
+    Route::get('news_list',     function () { return view('AdminPage.news_list');       });
+    Route::get('news',          function () { return view('AdminPage.news');            });
+    Route::get('admin_list',    function () { return view('AdminPage.admin_list');      });
+    Route::get('seminar_list',  function () { return view('AdminPage.seminar_list');    });
+    Route::get('seminar',       function () { return view('AdminPage.seminar');         });
 });

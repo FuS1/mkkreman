@@ -48,7 +48,7 @@
 				console.log(data)
 				exec('news','POST',data,function(response){
 					console.log(response);
-					//window.location.assign('./news_list');
+					window.location.assign('./news_list');
 				});
 			});
 		});
@@ -103,15 +103,7 @@
 			<a href="./news_list" class="px-6 py-3 text-black font-medium rounded-lg text-sm no-underline bg-gray-200 hover:bg-gray-300">返回</a>	
 			<button class="px-6 py-3 ml-6 text-white font-medium rounded-lg text-sm no-underline bg-cyan-800 hover:bg-cyan-900 btn-save-news">儲存</button>	
 		</div>
-
-		
-	
 	</div>
-
-	<script>
-</script>
-
-
 </body>
 </html>
 

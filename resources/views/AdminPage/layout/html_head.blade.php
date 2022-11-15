@@ -14,6 +14,7 @@
 
 <!-- flowbite -->
 <script src="{{ asset('lib/flowbite/flowbite.js') }}" type="text/javascript" ></script>
+<script src="{{ asset('lib/flowbite/datepicker.js') }}" type="text/javascript" ></script>
 
 <!-- tabulator -->
 <script src="{{ asset('lib/tabulator/tabulator.min.js') }}" type="text/javascript" ></script>
@@ -22,7 +23,7 @@
 
 <!-- tinymce -->
 <script src="{{ asset('lib/tinymce/tinymce.min.js') }}"></script>
-
+ 
 <!-- app -->
 <link  href="{{ asset('AdminPage/css/app.css') }}" rel="stylesheet">
 <script src="{{ asset('AdminPage/js/app.js') }}" type="text/javascript" ></script>

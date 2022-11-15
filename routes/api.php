@@ -6,6 +6,8 @@ use App\Http\Controllers\API\TinymceController;
 use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
+use App\Http\Controllers\API\SeminarController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -46,6 +48,14 @@ Route::group([
         });
 
         Route::group([
+            'prefix' => 'seminar',
+        ], function () {
+            Route::get  ('',      [SeminarController::class, 'getSeminar'] );
+            Route::post ('',      [SeminarController::class, 'saveSeminar'] );
+            Route::delete('',     [SeminarController::class, 'deleteSeminar'] );
+        });
+
+        Route::group([
             'prefix' => 'admin',
         ], function () {
             Route::post('',                [AdminController::class, 'saveAdmin'] );
@@ -59,6 +69,7 @@ Route::group([
         ], function () {
             Route::get ('banner', [BannerController::class, 'tabulator'] );
             Route::get ('news',   [NewsController::class,   'tabulator'] );
+            Route::get ('seminar',[SeminarController::class,   'tabulator'] );
             Route::get ('admin',  [AdminController::class,   'tabulator'] );
         });
 

@@ -38,7 +38,7 @@
             </button>
             <ul id="dropdown-join-seminar" class="py-2 space-y-2">
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">講座列表</a>
+                  <a href="./seminar_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">講座列表</a>
                </li>
                <li>
                   <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">課程簡介</a>
