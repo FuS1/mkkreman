@@ -1505,6 +1505,9 @@ input:checked + .toggle-bg {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.pl-10 {
+  padding-left: 2.5rem;
+}
 .pl-2\.5 {
   padding-left: 0.625rem;
 }
@@ -1853,6 +1856,10 @@ input:checked + .toggle-bg {
   --tw-text-opacity: 1;
   color: rgb(225 239 254 / var(--tw-text-opacity));
 }
+.hover\:text-blue-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 66 159 / var(--tw-text-opacity));
+}
 .hover\:text-\[\#062851\]:hover {
   --tw-text-opacity: 1;
   color: rgb(6 40 81 / var(--tw-text-opacity));
@@ -2032,6 +2039,11 @@ input:checked + .toggle-bg {
   .sm\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 @media (min-width: 768px) {
