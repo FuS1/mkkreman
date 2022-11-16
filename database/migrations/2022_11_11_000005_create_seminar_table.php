@@ -26,7 +26,7 @@ class CreateSeminarTable extends Migration
             Schema::create($this->tableName, function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('title')->nullable()->comment('講座名稱');
-                $table->string('address')->nullable()->comment('講座地址');
+                $table->string('address',2048)->nullable()->comment('講座地址');
                 $table->dateTime('started_at')->nullable()->comment('講座開始時間');
                 $table->dateTime('ended_at')->nullable()->comment('講座結束時間');
                 $table->integer('qop')->default(0)->comment('剩餘名額（僅顯示於前台，無其他邏輯判定）');

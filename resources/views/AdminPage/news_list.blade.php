@@ -5,7 +5,7 @@
 	<script>
 		$(function() {
 			var table = initTabulator("#news-table",{
-				// rowHeight:250,
+				rowHeight:200,
 				initialSort:[
 					{column:"is_top", dir:"desc"}, 
 				],
@@ -20,6 +20,17 @@
 						title: "置頂",
 						field: "is_top",
 						headerSort: true,
+					},
+					{
+						title: "縮圖",
+						field: "file_url",
+						width: '',
+						headerSort: false,
+						formatter: function(cell, formatterParams){
+							if(cell.getValue()){
+								return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800" src="'+cell.getValue()+'">';
+							}
+						}
 					},
 					{
 						title: "建立時間",

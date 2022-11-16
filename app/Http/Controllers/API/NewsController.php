@@ -40,7 +40,7 @@ class NewsController extends Controller
 
         $news = News::updateOrCreate(
         [
-            'id'        => $request->news_id ?? null,             
+            'id'        => !$request->news_id || $request->news_id==='null' ? null : $request->news_id ,             
         ],[
             'title'     => $request->title ?? null,
             'content'   => $request->content ?? null,

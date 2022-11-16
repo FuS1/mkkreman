@@ -5,7 +5,7 @@
 	<script>
 		$(function() {
 			var table = initTabulator("#seminar-media-table",{
-				rowHeight:250,
+				rowHeight:200,
 				initialSort:[
 					{column:"sort_idx", dir:"asc"},
 				],
