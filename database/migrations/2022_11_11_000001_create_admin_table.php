@@ -3,8 +3,10 @@
 
 
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\Admin;
 
 class CreateAdminTable extends Migration
 {
@@ -32,6 +34,11 @@ class CreateAdminTable extends Migration
                 $table->nullableTimestamps();
                 $table->unique(["account"], 'account');
             });
+            Admin::create([
+                'name'     => '系統管理員',
+                'account'  => 'Heathcliff',
+                'password' => Hash::make('iAmSuperAdmin') 
+            ]);
         }
     }
 
