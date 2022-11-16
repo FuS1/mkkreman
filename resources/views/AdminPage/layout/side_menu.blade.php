@@ -111,15 +111,15 @@
 					<form class="space-y-6" action="#">
 						<div>
 							<label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">原始密碼</label>
-							<input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="系統管理員" required>
+							<input type="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
 						</div>
 						<div>
 							<label for="new_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">新密碼</label>
-							<input type="password" name="password_new" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="登入帳號" required>
+							<input type="password" name="password_new" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
 						</div>
 						<div>
 							<label for="new_password_2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">再次輸入新密碼</label>
-							<input type="password" name="password_new_2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="登入帳號" required>
+							<input type="password" name="password_new_2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
 						</div>
 					</form>
 				</div>
