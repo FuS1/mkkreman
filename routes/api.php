@@ -6,6 +6,7 @@ use App\Http\Controllers\API\TinymceController;
 use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
+use App\Http\Controllers\API\StoreController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
 use App\Http\Controllers\API\SeminarMediaController;
@@ -49,6 +50,15 @@ Route::group([
             Route::post ('',      [NewsController::class, 'saveNews'] );
             Route::delete('',     [NewsController::class, 'deleteNews'] );
         });
+
+        Route::group([
+            'prefix' => 'store',
+        ], function () {
+            Route::post ('',      [StoreController::class, 'saveStore'] );
+            Route::delete('',     [StoreController::class, 'deleteStore'] );
+            Route::put  ('sort',  [StoreController::class, 'changeStoreSort'] );
+        });
+        
 
         Route::group([
             'prefix' => 'seminar',
@@ -99,6 +109,7 @@ Route::group([
         ], function () {
             Route::get ('banner',               [BannerController::class, 'tabulator'] );
             Route::get ('news',                 [NewsController::class,   'tabulator'] );
+            Route::get ('store',                [StoreController::class,   'tabulator'] );
             Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
             Route::get ('seminar/participant',  [SeminarParticipantController::class,   'tabulator'] );
             Route::get ('seminar/media',        [SeminarMediaController::class,   'tabulator'] );
