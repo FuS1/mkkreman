@@ -18,6 +18,8 @@
 								$(this).val(news_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(news_data[i]);
+							}else if($(this).is('div')){
+								$(this).html(news_data[i]);
 							}
 						});
 					}

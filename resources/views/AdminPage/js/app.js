@@ -37,12 +37,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window._typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 window.getFormData = function(form,mergeData={}){
-    return form.serializeArray().filter(function(item){
+    let data = form.serializeArray().filter(function(item){
         return item !== '';
     }).reduce(function(obj, item) {
         obj[item.name] = item.value;
         return obj;
-    }, mergeData);
+    });
+
+    return Object.assign(data, mergeData);
 }
 
 window.setLocalStorage = function(storageName, obj) {
