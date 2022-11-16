@@ -25,6 +25,7 @@
     "dotenv": "^16.0.3",
     "flowbite": "^1.5.3",
     "flowbite-datepicker": "^1.2.2",
+    "form-serializer": "^2.5.0",
     "jquery": "^3.6.1",
     "sweetalert2": "^11.6.8",
     "tinymce": "^5.10.6",

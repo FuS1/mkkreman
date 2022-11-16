@@ -8,6 +8,7 @@ use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
+use App\Http\Controllers\API\SeminarMediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,13 @@ Route::group([
                 Route::delete('',     [SeminarParticipantController::class, 'deleteSeminarParticipant'] );
             });
             
+            Route::group([
+                'prefix' => 'media',
+            ], function () {
+                Route::post ('',      [SeminarMediaController::class, 'saveSeminarMedia'] );
+                Route::delete('',     [SeminarMediaController::class, 'deleteSeminarMedia'] );
+                Route::put  ('sort',  [SeminarMediaController::class, 'changeSeminarMediaSort'] );
+            });
         });
 
 
@@ -82,7 +90,8 @@ Route::group([
             Route::get ('banner',               [BannerController::class, 'tabulator'] );
             Route::get ('news',                 [NewsController::class,   'tabulator'] );
             Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
-            Route::get ('seminar_participant',  [SeminarParticipantController::class,   'tabulator'] );
+            Route::get ('seminar/participant',  [SeminarParticipantController::class,   'tabulator'] );
+            Route::get ('seminar/media',        [SeminarMediaController::class,   'tabulator'] );
             Route::get ('admin',                [AdminController::class,   'tabulator'] );
         });
 

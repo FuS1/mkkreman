@@ -121,7 +121,7 @@
 						}
 					},
 				],
-				ajaxURL: ENV['APP_API_URL'] + "admin/tabulator/seminar_participant",
+				ajaxURL: ENV['APP_API_URL'] + "admin/tabulator/seminar/participant",
 				ajaxURLGenerator: function(url, config, params) {
 					params.filter = params.filter.map(function(e) {
 						return e;

@@ -27,7 +27,7 @@ class CreateSeminarPostTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('title')->nullable()->comment('大圖標題');
                 $table->string('content')->nullable()->comment('文章內容');
-                $table->string('file_path')->comment('檔案儲存位置');
+                $table->string('file_path')->nullable()->comment('檔案儲存位置');
                 $table->integer('sort_idx')->default(99)->comment('排序(越小越前)');
                 $table->nullableTimestamps();
                 $table->softDeletes();

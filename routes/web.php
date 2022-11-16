@@ -34,6 +34,7 @@ Route::group([
     Route::get('seminar_list',  function () { return view('AdminPage.seminar_list');    });
     Route::get('seminar',       function () { return view('AdminPage.seminar');         });
     Route::get('seminar_participant_list',  function () { return view('AdminPage.seminar_participant_list'); });
-    Route::get('seminar_participant',       function () { return view('AdminPage.seminar_participant'); });
+    Route::get('seminar_participant',       function () { return view('AdminPage.seminar_participant');      });
+    Route::get('seminar_media_list',        function () { return view('AdminPage.seminar_media_list');       });
     
 });
