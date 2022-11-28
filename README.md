@@ -16,8 +16,7 @@
 ## How To Start
 - 將此Repository Clone至本地www資料夾
 - 獲取.env檔案至本地
-- MySql的my.ini需另外設定 sql-mode=""，並restart MySql service
-- Database schema 請直接dump測試機資料至本地
+- 於資料夾執行 composer install , npm install , php artisan storage:link , php artisan migrate , npm run dev
 - 設定 Virtual Host，從 Git checkout 下來的目錄可能是 C:\wamp\mkkreman，以設定成 localhost.mkkreman.com 為例
 
 1．本機 hosts 設定 
