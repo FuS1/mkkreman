@@ -44,7 +44,7 @@
     border-top: 6px solid #00ffe3;
 }
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=asc] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
-    border-top: 6px solid #00ffe3;
+    border-bottom: 6px solid #00ffe3;
 }
 .tabulator_link {
     color:#cc7400;
