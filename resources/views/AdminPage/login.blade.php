@@ -15,7 +15,8 @@
 	</script>
 </head>
 <body>
-	<div class="lg:flex items-center justify-center bg-black bg-[url('https://picsum.photos/500/')] bg-opacity-5 bg-no-repeat bg-cover">
+	<!-- <div class="lg:flex items-center justify-center bg-black bg-[url('https://picsum.photos/500/')] bg-opacity-5 bg-no-repeat bg-cover"> -->
+	<div class="lg:flex items-center justify-center bg-black bg-[url('{{ mix('/AdminPage/img/bg.jpg') }}')] bg-opacity-5 bg-no-repeat bg-cover">
 		<div class="lg:w-1/2 xl:max-w-screen-sm rounded shadow-lg bg-indigo-100 bg-slate-100 py-12 h-screen">
 			<div class="py-6 flex justify-center lg:px-12">
 				<div class="cursor-pointer flex items-center">
