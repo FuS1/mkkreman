@@ -90,7 +90,7 @@
 				if( form[0].reportValidity() ){
 					let data = getFormData(form,{
 						file:form.find('#food_file')[0].files[0],
-						description:form.find('[name=description]').val()
+						description:form.find('[name=description]').val().replace(/\r?\n/g, '<br />')
 					});
 					console.log(data)
 					exec('food','POST',data,function(response){
