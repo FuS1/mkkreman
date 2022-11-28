@@ -33,6 +33,7 @@ Route::group([
     Route::get('store_list',    function () { return view('AdminPage.store_list');      });
     Route::get('food_list',     function () { return view('AdminPage.food_list');       });
     Route::get('admin_list',    function () { return view('AdminPage.admin_list');      });
+    Route::get('contact_us',    function () { return view('AdminPage.contact_us');      });
     Route::get('seminar_list',  function () { return view('AdminPage.seminar_list');    });
     Route::get('seminar',       function () { return view('AdminPage.seminar');         });
     Route::get('seminar_participant_list',  function () { return view('AdminPage.seminar_participant_list'); });
@@ -40,5 +41,6 @@ Route::group([
     Route::get('seminar_media_list',        function () { return view('AdminPage.seminar_media_list');       });
     Route::get('seminar_post_list',         function () { return view('AdminPage.seminar_post_list');        });
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
+    
     
 });

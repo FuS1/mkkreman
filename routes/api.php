@@ -8,6 +8,7 @@ use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\StoreController;
 use App\Http\Controllers\API\FoodController;
+use App\Http\Controllers\API\SystemVariableController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
 use App\Http\Controllers\API\SeminarMediaController;
@@ -101,7 +102,9 @@ Route::group([
             });
         });
 
-
+        Route::resource('system_variable', SystemVariableController::class)->only([
+            'index', 'update'
+        ]);
 
         Route::group([
             'prefix' => 'admin',
