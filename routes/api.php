@@ -7,6 +7,7 @@ use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\StoreController;
+use App\Http\Controllers\API\FoodController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
 use App\Http\Controllers\API\SeminarMediaController;
@@ -58,7 +59,14 @@ Route::group([
             Route::delete('',     [StoreController::class, 'deleteStore'] );
             Route::put  ('sort',  [StoreController::class, 'changeStoreSort'] );
         });
-        
+
+        Route::group([
+            'prefix' => 'food',
+        ], function () {
+            Route::post ('',      [FoodController::class, 'saveFood'] );
+            Route::delete('',     [FoodController::class, 'deleteFood'] );
+            Route::put  ('sort',  [FoodController::class, 'changeFoodSort'] );
+        });
 
         Route::group([
             'prefix' => 'seminar',
@@ -110,6 +118,7 @@ Route::group([
             Route::get ('banner',               [BannerController::class, 'tabulator'] );
             Route::get ('news',                 [NewsController::class,   'tabulator'] );
             Route::get ('store',                [StoreController::class,   'tabulator'] );
+            Route::get ('food',                 [FoodController::class,   'tabulator'] );
             Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
             Route::get ('seminar/participant',  [SeminarParticipantController::class,   'tabulator'] );
             Route::get ('seminar/media',        [SeminarMediaController::class,   'tabulator'] );
