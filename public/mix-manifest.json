@@ -1,6 +1,6 @@
 {
-    "/AdminPage/js/app.js": "/AdminPage/js/app.js?id=0681a8399dc4875954b1a73074e098ea",
-    "/AdminPage/css/app.css": "/AdminPage/css/app.css?id=b6f99a80dfcecefa594a497ab37a4b3f",
+    "/AdminPage/js/app.js": "/AdminPage/js/app.js?id=88f57a61900fa5af926e2bb8136bce7f",
+    "/AdminPage/css/app.css": "/AdminPage/css/app.css?id=3ba2e1f75f0dcba9383327cca263b65b",
     "/AdminPage/img/bg.jpg": "/AdminPage/img/bg.jpg?id=f7ce7827f81789a667febadded650c0e",
     "/AdminPage/img/favicon.ico": "/AdminPage/img/favicon.ico?id=4ff44496b34bf0b7fd2dbbebfdde5a6c",
     "/AdminPage/img/favicon.png": "/AdminPage/img/favicon.png?id=9698ecc0fbd8fde6cb6a10cb8c117fea",
@@ -841,5 +841,6 @@
     "/lib/tinymce/themes/silver/theme.min.js": "/lib/tinymce/themes/silver/theme.min.js?id=4830c574be54f2ab108ca9349d09705c",
     "/lib/tinymce/tinymce.d.ts": "/lib/tinymce/tinymce.d.ts?id=23fc47c13998ceff4da0587cae545e86",
     "/lib/tinymce/tinymce.js": "/lib/tinymce/tinymce.js?id=977c099f5b92a14f7cdcc054826d6c4e",
-    "/lib/tinymce/tinymce.min.js": "/lib/tinymce/tinymce.min.js?id=8ae9d15d1983bf4163fcb01d66a74d39"
+    "/lib/tinymce/tinymce.min.js": "/lib/tinymce/tinymce.min.js?id=8ae9d15d1983bf4163fcb01d66a74d39",
+    "/lib/xlsx.full.min.js": "/lib/xlsx.full.min.js?id=636a0447073cc745dd89a44b65f0e2ee"
 }

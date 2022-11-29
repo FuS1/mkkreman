@@ -8,6 +8,7 @@ window.$    = require("jquery");
 require("form-serializer");
 window._    = require('lodash'); 
 window.Swal = require("sweetalert2");
+window.moment = require("moment");
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

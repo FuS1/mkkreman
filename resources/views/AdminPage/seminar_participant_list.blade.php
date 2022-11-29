@@ -5,6 +5,9 @@
 	<script>
 		$(function() {
 			var table = initTabulator("#seminar-participant-table",{
+				downloadRowRange : "all",
+				responsiveLayout:false,// 不可取消，否則Excel輸出時不會有被隱藏的Column
+				paginationSize:true,
 				// rowHeight:250,
 				columns: [{
 						title: "姓名",
@@ -137,6 +140,12 @@
 				}
 			});
 
+			$("#btn-download-excel").on('click',function(){
+				
+				table.download("xlsx", moment().format('YYYYMMDDHHmmss')+".xlsx", {}, "all");
+				
+			}); 
+
 		});
 
 		var deleteSeminarParticipant = function(seminar_participant_id){
@@ -162,6 +171,9 @@
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
 			<a href="./seminar_list" class="px-6 py-3 text-black font-medium rounded-lg text-sm no-underline bg-gray-200 hover:bg-gray-300 hover:text-blue-800">返回講座列表</a>
+			<button id="btn-download-excel" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200" type="button">
+				匯出Excel
+			</button>
 			<hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
 			<div class="table-responsive" id="seminar-participant-table"></div>
 		</div>

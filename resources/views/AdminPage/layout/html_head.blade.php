@@ -21,6 +21,8 @@
 <link  href="{{ asset('lib/tabulator/tabulator.min.css') }}" rel="stylesheet">
 <link  href="{{ asset('lib/tabulator/tabulator_bootstrap4.min.css') }}" rel="stylesheet">
 
+<script src="{{ asset('lib/xlsx.full.min.js') }}" type="text/javascript" ></script>
+
 <!-- tinymce -->
 <script src="{{ asset('lib/tinymce/tinymce.min.js') }}"></script>
  
