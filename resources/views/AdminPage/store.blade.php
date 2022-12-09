@@ -38,17 +38,22 @@
 			
 			$(".btn-save-store").on('click',function(){
 				let form = $("#store-form");
-				let data = getFormData(form,{
-					store_id : store_id,
-					file	: form.find('#store_file')[0].files[0],
-				});
 
-				
-				console.log(data)
-				exec('store','POST',data,function(response){
-					console.log(response);
-					window.location.assign('./store_list');
-				});
+				if( form[0].reportValidity() ){
+					
+					let data = getFormData(form,{
+						store_id : store_id,
+						file	: form.find('#store_file')[0].files[0],
+					});
+
+					
+					console.log(data)
+					exec('store','POST',data,function(response){
+						console.log(response);
+						window.location.assign('./store_list');
+					});
+				}
+
 			});
 		});
 

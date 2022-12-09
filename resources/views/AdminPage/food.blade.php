@@ -38,18 +38,21 @@
 			
 			$(".btn-save-food").on('click',function(){
 				let form = $("#food-form");
-				let data = getFormData(form,{
-					food_id : food_id,
-					file	: form.find('#food_file')[0].files[0],
-					content : tinymce.get("content").getContent(),
-				});
+				if( form[0].reportValidity() ){
+					let data = getFormData(form,{
+						food_id : food_id,
+						file	: form.find('#food_file')[0].files[0],
+						content : tinymce.get("content").getContent(),
+					});
 
-				
-				console.log(data)
-				exec('food','POST',data,function(response){
-					console.log(response);
-					window.location.assign('./food_list');
-				});
+					
+					console.log(data)
+					exec('food','POST',data,function(response){
+						console.log(response);
+						window.location.assign('./food_list');
+					});
+				}
+
 			});
 		});
 
