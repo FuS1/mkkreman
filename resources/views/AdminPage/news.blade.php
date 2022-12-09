@@ -101,7 +101,7 @@
 
 		<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
 
-		<div class="container mx-auto px-8 flex justify-center">
+		<div class="container mx-auto mb-8 px-8 flex justify-center">
 			<a href="./news_list" class="px-6 py-3 text-black font-medium rounded-lg text-sm no-underline bg-gray-200 hover:bg-gray-300">返回</a>	
 			<button class="px-6 py-3 ml-6 text-white font-medium rounded-lg text-sm no-underline bg-cyan-800 hover:bg-cyan-900 btn-save-news">儲存</button>	
 		</div>

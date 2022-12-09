@@ -99,7 +99,7 @@
 					</div>
 				</div>
 			</form>
-			<div class="container mx-auto px-8 flex justify-center">
+			<div class="container mx-auto mb-8 px-8 flex justify-center">
 				<button class="px-6 py-3 ml-6 text-white font-medium rounded-lg text-sm no-underline bg-cyan-800 hover:bg-cyan-900 btn-save-email-recipient">儲存</button>	
 			</div>
 		</div>
