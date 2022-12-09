@@ -28,6 +28,7 @@ Route::group([
     Route::get('news_list',     function () { return view('AdminPage.news_list');       });
     Route::get('news',          function () { return view('AdminPage.news');            });
     Route::get('store_list',    function () { return view('AdminPage.store_list');      });
+    Route::get('store',         function () { return view('AdminPage.store');           });
     Route::get('food_list',     function () { return view('AdminPage.food_list');       });
     Route::get('food',          function () { return view('AdminPage.food');            });
     Route::get('admin_list',    function () { return view('AdminPage.admin_list');      });

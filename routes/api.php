@@ -56,6 +56,7 @@ Route::group([
         Route::group([
             'prefix' => 'store',
         ], function () {
+            Route::get  ('',      [StoreController::class, 'getStore'] );
             Route::post ('',      [StoreController::class, 'saveStore'] );
             Route::delete('',     [StoreController::class, 'deleteStore'] );
             Route::put  ('sort',  [StoreController::class, 'changeStoreSort'] );

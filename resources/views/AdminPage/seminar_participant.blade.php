@@ -68,11 +68,11 @@
 			<form id="seminar-participant-form">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<div class="justify-center">	
-						<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">姓名</label>
+						<label for="name" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">姓名</label>
 						<input type="input" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
 					</div>
 					<div class="justify-center">	
-						<label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">性別</label>
+						<label for="gender" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">性別</label>
 						<select name="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 							<option selected></option>
 							<option value="男">男</option>
@@ -81,7 +81,7 @@
 						</select>
 					</div>
 					<div class="justify-center">	
-						<label for="age_range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">年齡區間</label>
+						<label for="age_range" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">年齡區間</label>
 						<select name="age_range" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 							<option selected></option>
 							<option value="20-29">20-29歲</option>
@@ -92,15 +92,15 @@
 						</select>
 					</div>
 					<div class="justify-center">	
-						<label for="phone_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">手機號碼</label>
+						<label for="phone_number" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">手機號碼</label>
 						<input type="input" name="phone_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 					</div>
 					<div class="justify-center">	
-						<label for="contact_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">聯絡電話</label>
+						<label for="contact_number" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">聯絡電話</label>
 						<input type="input" name="contact_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 					</div>
 					<div class="justify-center">	
-						<label for="contact_time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">方便聯絡時間</label>
+						<label for="contact_time" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">方便聯絡時間</label>
 						<select name="contact_time" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 							<option selected></option>
 							<option value="上午 09:00-12:00">上午 09:00-12:00</option>
@@ -110,26 +110,26 @@
 						</select>
 					</div>
 					<div class="justify-center">	
-						<label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">出席人數</label>
+						<label for="amount" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">出席人數</label>
 						<input type="number" name="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" min="0" required>
 					</div>
 					<div class="justify-center">	
-						<label for="receive_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">收件方式</label>
+						<label for="receive_type" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">收件方式</label>
 						<input type="input" name="receive_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 					</div>
 					<div class="justify-center">	
-						<label for="receive_detail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">LINE / Email</label>
+						<label for="receive_detail" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">LINE / Email</label>
 						<input type="input" name="receive_detail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 					</div>
 					<div class="justify-center">	
-						<label for="is_check" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">是否已確認</label>
+						<label for="is_check" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">是否已確認</label>
 						<select name="is_check" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
 							<option selected value="0">尚未確認</option>
 							<option value="1">已確認</option>
 						</select>					
 					</div>
 					<div class="justify-center">	
-						<label for="memo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">備註</label>
+						<label for="memo" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">備註</label>
 						<div name="memo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" contenteditable="true" ></div>					
 					</div>
 				</div>

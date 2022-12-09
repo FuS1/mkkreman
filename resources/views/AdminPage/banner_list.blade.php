@@ -38,13 +38,6 @@
 						headerSort: true,
 					},
 					{
-						title: "建立時間",
-						field: "created_at",
-						width: 130,
-						headerFilter: "input",
-						headerSort: true,
-					},
-					{
 						title: "",
 						field: "",
 						width: 200,
@@ -161,15 +154,15 @@
 				<div class="py-6 px-6 lg:px-8">
 					<form class="space-y-6" action="#">
 						<div>
-							<label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner標題</label>
+							<label for="title" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner標題</label>
 							<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="開幕式買二送一" required>
 						</div>
 						<div>
-							<label for="url" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">網址</label>
+							<label for="url" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">網址</label>
 							<input type="input" name="url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="https://google.com" required>
 						</div>
 						<div>
-							<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">圖檔</label>
+							<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">圖檔</label>
 							<input id="banner_file" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
 							<p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">限 PNG, JPG, GIF，解析度____ * ____ px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
 						</div>

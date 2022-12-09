@@ -33,13 +33,6 @@
 						headerSort: true,
 					},
 					{
-						title: "建立時間",
-						field: "created_at",
-						width: 130,
-						headerFilter: "input",
-						headerSort: true,
-					},
-					{
 						title: "",
 						field: "",
 						width: 250,

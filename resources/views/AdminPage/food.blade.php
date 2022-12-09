@@ -71,21 +71,21 @@
 			<form id="food-form">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<div class="justify-center">	
-						<label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">品名</label>
+						<label for="title" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">品名</label>
 						<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="招牌豚骨拉麵" required>
 					</div>
 					<div class="justify-center">	
-						<label for="short_description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">短描述（建議50字以內）</label>
+						<label for="short_description" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">短描述（建議50字以內）</label>
 						<textarea style="height:100px;" name="short_description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="豬大骨湯底，透著淡淡的牡蠣白，營養不油膩；&#10;搭配武火炙燒的叉燒肉，&#10;香氣撲鼻，美味無雙，初訪必點。" required></textarea>
 					</div>
 					<div class="justify-center">
-						<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="food_file">圖檔</label>
+						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="food_file">圖檔</label>
 						<img class="max-w-full min-h-10 max-h-48 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 mb-3 hidden mx-auto" src="">
 						<input id="food_file" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" type="file">
 						<p class="mt-1 text-sm text-gray-500 dark:text-gray-300">限 PNG, JPG, GIF，解析度500 * 500 px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
 					</div>
 					<div class="justify-center">	
-						<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="is_recommendation">顯示於人氣推薦</label>
+						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="is_recommendation">顯示於人氣推薦</label>
 						<select id="is_recommendation" name="is_recommendation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 							<option value="0">否</option>
 							<option value="1">是</option>
@@ -94,7 +94,7 @@
 				</div>
 				<div>
 					<div class="justify-center">	
-						<label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">內文</label>
+						<label for="content" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">內文</label>
 						<div id="content" name="content"></div>
 					</div>
 				</div>

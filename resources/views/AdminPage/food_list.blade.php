@@ -150,43 +150,6 @@
 			<div class="table-responsive" id="food-table"></div>
 		</div>
 	</div>
-
-	<!-- Main modal -->
-	<div id="add-food-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-		<div class="relative p-4 w-full max-w-md h-full md:h-auto">
-			<!-- Modal content -->
-			<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-				<!-- Modal header -->
-				<div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
-					<a href="./food" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200">增加餐點</a>
-				</div>
-				<!-- Modal body -->
-				<div class="py-6 px-6 lg:px-8">
-					<form class="space-y-6" action="#">
-						<div>
-							<label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">商品名</label>
-							<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="招牌拉麵" required>
-						</div>
-						<div>
-							<label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">商品資訊</label>
-							<textarea type="input" name="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required></textarea>
-						</div>
-						<div>
-							<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">圖檔</label>
-							<input id="food_file" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" required>
-							<p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">限 PNG, JPG, GIF，解析度____ * ____ px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
-						</div>
-					</form>
-				</div>
-				<!-- Modal footer -->
-				<div class="py-6 text-center">
-					<button id="btn-save-food" type="button" class="text-white bg-[#062851] hover:bg-[#03152b] focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-blue-100 focus:z-10">儲存</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
 </body>
 </html>
 

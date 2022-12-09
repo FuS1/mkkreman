@@ -77,25 +77,25 @@
 			<form id="seminar-form">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<div class="justify-center">	
-						<label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座名稱</label>
+						<label for="title" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座名稱</label>
 						<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="台北內湖場" required>
 					</div>
 					<div class="justify-center">	
-						<label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座地址</label>
+						<label for="address" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座地址</label>
 						<input type="input" name="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="台北市內湖區新湖二路68號6樓" required>
 					</div>
 					<div class="justify-center">	
-						<label for="qop" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座剩餘名額</label>
+						<label for="qop" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座剩餘名額</label>
 						<input type="number" name="qop" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="10" placeholder="請輸入數字" required>
 						<p class="mt-1 text-sm text-red-700">僅顯示於前台用</p>
 					</div>
 					<div class="justify-center">	
-						<label for="started_at" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座開始時間</label>
+						<label for="started_at" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座開始時間</label>
 						<input datepicker datepicker-format="yyyy-mm-dd" type="text" name="started_at_date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="請選擇日期" required>
 						<input type="time" name="started_at_time" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="07:30" max="21:00" step="300" required >
 					</div>
 					<div class="justify-center">	
-						<label for="ended_at" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座結束時間</label>
+						<label for="ended_at" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">講座結束時間</label>
 						<input datepicker datepicker-format="yyyy-mm-dd" type="text" name="ended_at_date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="請選擇日期" required>
 						<input type="time" name="ended_at_time" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="07:30" max="21:00" step="300" required>
 					</div>

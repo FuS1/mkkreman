@@ -19,13 +19,6 @@
 						responsive:false,
 					},
 					{
-						title: "建立時間",
-						field: "created_at",
-						width: 130,
-						headerFilter: "input",
-						headerSort: true,
-					},
-					{
 						title: "",
 						field: "",
 						width: 200,
@@ -154,11 +147,11 @@
 				<div class="py-6 px-6 lg:px-8">
 					<form class="space-y-6" action="#">
 						<div>
-							<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">姓名</label>
+							<label for="name" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">姓名</label>
 							<input type="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="系統管理員" required>
 						</div>
 						<div>
-							<label for="account" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">帳號</label>
+							<label for="account" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">帳號</label>
 							<input type="account" name="account" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="登入帳號" required>
 						</div>
 					</form>

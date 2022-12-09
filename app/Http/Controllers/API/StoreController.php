@@ -19,6 +19,13 @@ class StoreController extends Controller
         $this->baseService = $baseService;
     }
 
+    public function getStore(Request $request)
+    {
+        $store = Store::where('id',$request->store_id)->first();
+
+        return response($store,200);
+    }
+
     public function tabulator(Request $request)
     {
         $store_query = Store::query();
@@ -31,21 +38,43 @@ class StoreController extends Controller
     public function saveStore(Request $request)
     {
 
-        $fileInfo = [
-            'filePath' => 'store',
-            'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
-        ];
-        
-        $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));
-
-        $store = Store::create([
-            'title'     => $request->title ?? null,
-            'city'      => $request->city ?? null,
-            'address'   => $request->address ?? null,
-            'status'    => $request->status ?? null,
-            'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
+        $store = Store::updateOrCreate(
+        [
+            'id'        => !$request->store_id || $request->store_id==='null' ? null : $request->store_id ,             
+        ],[
+            'title'             => $request->title          ?? null,
+            'city'              => $request->city           ?? null,
+            'address'           => $request->address        ?? null,
+            'status'            => $request->status         ?? null,
+            'job_ma'            => $request->job_ma         ?? 0,
+            'job_full_time'     => $request->job_full_time  ?? 0,
+            'job_part_time'     => $request->job_part_time  ?? 0,
+            'job_url'           => $request->job_url        ?? null,
+            'pay_cash'          => $request->pay_cash       ?? 0,
+            'pay_credit_card'   => $request->pay_credit_card ?? 0,
+            'pay_line_pay'      => $request->pay_line_pay   ?? 0,
+            'can_to_go'         => $request->can_to_go      ?? 0,
+            'can_delivery'      => $request->can_delivery   ?? 0,
+            'maifood_url'       => $request->maifood_url    ?? null,
+            'uber_eat_url'      => $request->uber_eat_url   ?? null,
+            'food_panda_url'    => $request->food_panda_url ?? null
         ]);
 
+        // 如果有上傳新的檔案，則更新
+        if( !empty($request->file) ){
+
+            $fileInfo = [
+                'filePath' => 'store',
+                'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
+            ];
+            
+            $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));    
+
+            $store->update([
+                'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
+            ]);
+        }
+        
         $this->resetSortIdx();
 
         return response($store->refresh(),200);
