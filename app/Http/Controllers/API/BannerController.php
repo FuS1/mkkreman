@@ -41,6 +41,7 @@ class BannerController extends Controller
         $banner = Banner::create([
             'title'     => $request->title ?? null,
             'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
+            'url'       => $request->url ?? null
         ]);
 
         $this->resetSortIdx();
