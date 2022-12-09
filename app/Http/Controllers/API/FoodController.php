@@ -28,6 +28,13 @@ class FoodController extends Controller
         return response($foods,200);
     }
 
+    public function getFood(Request $request)
+    {
+        $food = Food::where('id',$request->food_id)->first();
+
+        return response($food,200);
+    }
+
     public function saveFood(Request $request)
     {
 
@@ -39,9 +46,11 @@ class FoodController extends Controller
         $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));
 
         $food = Food::create([
-            'title'         => $request->title ?? null,
-            'description'   => $request->description ?? null,
-            'file_path'     => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
+            'title'             => $request->title ?? null,
+            'short_description' => $request->short_description ?? null,
+            'is_recommendation' => $request->is_recommendation ?? 0,
+            'content'           => $request->content ?? null,
+            'file_path'         => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
         ]);
 
         $this->resetSortIdx();

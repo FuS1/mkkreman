@@ -30,6 +30,8 @@ mix.postCss(
 
 mix.copy("resources/views/AdminPage/img","public/AdminPage/img").version();
 
+mix.copy("resources/views/FrontPage/lib","public/FrontPage/public");
+mix.copy("resources/views/FrontPage/public","public/FrontPage/public");
 mix.copy("resources/views/lib","public/lib");
 mix.copy("node_modules/flowbite/dist","public/lib/flowbite");
 mix.copy("node_modules/tinymce","public/lib/tinymce");

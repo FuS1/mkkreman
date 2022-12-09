@@ -64,6 +64,7 @@ Route::group([
         Route::group([
             'prefix' => 'food',
         ], function () {
+            Route::get  ('',      [FoodController::class, 'getFood'] );
             Route::post ('',      [FoodController::class, 'saveFood'] );
             Route::delete('',     [FoodController::class, 'deleteFood'] );
             Route::put  ('sort',  [FoodController::class, 'changeFoodSort'] );

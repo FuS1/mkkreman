@@ -44,7 +44,7 @@
 						headerSort: false,
 						formatter: function(cell, formatterParams){
 							if(cell.getValue()){
-								return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800" src="'+cell.getValue()+'">';
+								return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 mx-auto" src="'+cell.getValue()+'">';
 							}
 						}
 					},

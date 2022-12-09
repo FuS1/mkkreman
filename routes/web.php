@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('',          function () { return view('FrontPage.index');            });
 
 
 // 以下為後臺
@@ -32,6 +29,7 @@ Route::group([
     Route::get('news',          function () { return view('AdminPage.news');            });
     Route::get('store_list',    function () { return view('AdminPage.store_list');      });
     Route::get('food_list',     function () { return view('AdminPage.food_list');       });
+    Route::get('food',          function () { return view('AdminPage.food');            });
     Route::get('admin_list',    function () { return view('AdminPage.admin_list');      });
     Route::get('contact_us',    function () { return view('AdminPage.contact_us');      });
     Route::get('seminar_list',  function () { return view('AdminPage.seminar_list');    });
