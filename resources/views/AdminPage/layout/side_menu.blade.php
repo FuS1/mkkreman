@@ -1,4 +1,4 @@
-<aside class="w-full bg-[#062851]" aria-label="Sidebar">
+<aside class="w-full" aria-label="Sidebar">
    <div class="overflow-y-auto overflow-x-hidden py-4 px-3 rounded h-screen w-full">
       <a href="/" target="_blank" class="flex items-center pl-2.5 mb-5">
          <img src="/AdminPage/img/favicon.png" class="mr-3 h-6" alt="Logo" />

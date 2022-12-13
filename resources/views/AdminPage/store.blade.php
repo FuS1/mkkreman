@@ -61,7 +61,7 @@
 </head>
 
 <body class="flex bg-gray-50">
-	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7">
+	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7 bg-[#062851]">
 		@relativeInclude('layout.side_menu')
 	</div>
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
@@ -94,7 +94,7 @@
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">門市位置</label>
 						<div class="flex mb-2">
 							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle" for="city">縣市</label>
-							<select id="city" name="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+							<select id="city" name="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
 								<option value="臺北市">臺北市</option>
 								<option value="基隆市">基隆市</option>
 								<option value="新北市">新北市</option>
@@ -157,7 +157,7 @@
 						</div>
 						<div class="mb-2">
 							<label for="job_url" class="items-center text-sm font-medium text-gray-900 dark:text-gray-300 align-middle">職缺資訊網址</label>
-							<input type="input" name="job_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="新北市三重區重新路一段10號之1" required>
+							<input type="input" name="job_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="新北市三重區重新路一段10號之1">
 						</div>
 					</div>
 					<div class="justify-center">	
@@ -204,15 +204,15 @@
 					<div class="justify-center">	
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">訂餐網址（未開放則不需輸入）</label>
 						<div class="flex mb-2">
-							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">自取</label>
+							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">大麥</label>
 							<input type="input" name="maifood_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="https://www.maifood.com.tw/">
 						</div>
 						<div class="flex mb-2">
-							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">外送</label>
+							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">Uber Eat</label>
 							<input type="input" name="uber_eat_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="https://www.ubereats.com/">
 						</div>
 						<div class="flex mb-2">
-							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">外送</label>
+							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">Food Panda</label>
 							<input type="input" name="food_panda_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="https://www.foodpanda.com.tw/">
 						</div>
 					</div>

@@ -54,7 +54,7 @@
 </head>
 
 <body class="flex bg-gray-50">
-	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7">
+	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7 bg-[#062851]">
 		@relativeInclude('layout.side_menu')
 	</div>
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
@@ -139,7 +139,7 @@
 		<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
 
 		<div class="container mx-auto mb-8 px-8 flex justify-center">
-			<a href="./seminar_list" class="px-6 py-3 text-black font-medium rounded-lg text-sm no-underline bg-gray-200 hover:bg-gray-300">返回</a>	
+			<a href="javascript:history.back();" class="px-6 py-3 text-black font-medium rounded-lg text-sm no-underline bg-gray-200 hover:bg-gray-300">返回</a>	
 			<button class="px-6 py-3 ml-6 text-white font-medium rounded-lg text-sm no-underline bg-cyan-800 hover:bg-cyan-900 btn-save-seminar-participant">儲存</button>	
 		</div>
 	</div>

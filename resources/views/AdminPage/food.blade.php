@@ -60,7 +60,7 @@
 </head>
 
 <body class="flex bg-gray-50">
-	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7">
+	<div class="md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/7 bg-[#062851]">
 		@relativeInclude('layout.side_menu')
 	</div>
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
@@ -72,7 +72,7 @@
 		</div>
 		<div class="container mx-auto px-8">
 			<form id="food-form">
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-1 mb-2">
 					<div class="justify-center">	
 						<label for="title" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">品名</label>
 						<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="招牌豚骨拉麵" required>
@@ -97,7 +97,7 @@
 				</div>
 				<div>
 					<div class="justify-center">	
-						<label for="content" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">內文</label>
+						<label for="content" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">詳細介紹</label>
 						<div id="content" name="content"></div>
 					</div>
 				</div>
