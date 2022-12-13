@@ -2443,6 +2443,23 @@ window.initTinymce = function (dom_id, customConfig) {
       success(response.location);
     });
   };
+
+  // 不可放入前面的Object中進行深拷貝，會導致此function失效
+  tinyConfig.file_picker_callback = function (callback, value, meta) {
+    var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+    var y = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+    tinymce.activeEditor.windowManager.openUrl({
+      url: '/file-manager/tinymce5',
+      title: 'Laravel File manager',
+      width: x * 0.8,
+      height: y * 0.8,
+      onMessage: function onMessage(api, message) {
+        callback(message.content, {
+          text: message.text
+        });
+      }
+    });
+  };
   return tinymce.init(tinyConfig);
 };
 $(function () {
