@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "alexusmai/laravel-file-manager": "2.5.4",
         "awobaz/compoships": "^2.1",
         "az13js/desensitization": "^0.1.14",
         "doctrine/dbal": "^3.3",

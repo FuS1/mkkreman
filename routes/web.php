@@ -40,6 +40,6 @@ Route::group([
     Route::get('seminar_media_list',        function () { return view('AdminPage.seminar_media_list');       });
     Route::get('seminar_post_list',         function () { return view('AdminPage.seminar_post_list');        });
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
-    
+    Route::get('file_manager',              function () { return view('AdminPage.file_manager');             });
     
 });
