@@ -2418,13 +2418,18 @@ window.initTinymce = function (dom_id, customConfig) {
     automatic_uploads: true,
     plugins: ['advlist autolink lists link image charmap print preview anchor emoticons help', 'searchreplace visualblocks code fullscreen', 'insertdatetime media table paste wordcount'],
     menubar: 'file edit view tools help',
-    toolbar: 'undo redo | fontselect fontsizeselect formatselect | forecolor backcolor lineheight bold italic underline strikethrough alignleft aligncenter alignright alignjustify formatpainter removeformat | bullist numlist outdent indent | link image media | table | charmap emoticons',
+    toolbar: 'undo redo | fontselect fontsizeselect formatselect | forecolor backcolor lineheight letterspacing bold italic underline strikethrough alignleft aligncenter alignright alignjustify formatpainter removeformat | bullist numlist outdent indent | link image media | table | charmap emoticons',
     // icons: 'material',
     image_advtab: true,
     toolbar_mode: 'sliding',
     skin: 'oxide',
     // useDarkMode ? 'oxide-dark' : 'oxide',
-    content_css: 'default',
+    content_css: ['default',
+    //'dark'
+    'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap'],
+    content_style: "@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');",
+    font_formats: "Noto Sans TC=noto sans tC;Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+    letterspacing_formats: '0 0.5pt 1pt 1.5pt 2pt 3pt',
     fullscreen_native: true,
     statusbar: false,
     default_link_target: '_blank',
@@ -2433,6 +2438,28 @@ window.initTinymce = function (dom_id, customConfig) {
     image_file_types: 'jpg,jpeg,svg,png,webp,gif'
     // images_upload_url: ENV['APP_API_URL'] + 'admin/tinymce/image',
   })), customConfig);
+  tinyConfig.setup = function (editor) {
+    /* example, adding a toolbar menu button */
+    editor.ui.registry.addMenuButton('letterspacing', {
+      text: '字距',
+      fetch: function fetch(callback) {
+        var items = [];
+        var letterspacing_formats = editor.settings.letterspacing_formats || '0 0.5px 1px 1.5px 2px 3px';
+        letterspacing_formats = letterspacing_formats.split(' ').map(function (item) {
+          items.push({
+            type: 'menuitem',
+            text: item,
+            value: item,
+            onAction: function onAction() {
+              var html = tinymce.activeEditor.selection.getContent().replaceAll('letter-spacing', '');
+              editor.insertContent('<span style="letter-spacing: ' + item + ';">' + html + '</span>');
+            }
+          });
+        });
+        callback(items);
+      }
+    });
+  };
 
   // 不可放入前面的Object中進行深拷貝，會導致此function失效
   tinyConfig.images_upload_handler = function (blobInfo, success, failure, progress) {
@@ -2462,6 +2489,84 @@ window.initTinymce = function (dom_id, customConfig) {
   };
   return tinymce.init(tinyConfig);
 };
+
+// 擴充Tinymce功能，目前只有字距
+//   tinymce.PluginManager.add('letterspacing', function(editor, url, $) {
+//     editor.on('init', function() {
+//       editor.formatter.register({
+//         letterspacing: {
+//           inline: 'span',
+//           styles: {
+//             'letter-spacing': '%value'
+//           }
+//         }
+//       })
+//     })
+
+//     editor.ui.registry.addButton('letterspacingselect', function() {
+//       var items = [];
+//       var letterspacing_formats = editor.settings.letterspacing_formats || '0 0.5pt 1pt 1.5pt 2pt 3pt'
+//       letterspacing_formats.split(' ').forEach(function(item) {
+//         var text = item,
+//           value = item
+//         // Allow text=value for line-height formats
+//         var values = item.split('=')
+//         if (values.length > 1) {
+//           text = values[0]
+//           value = values[1]
+//         }
+//         items.push({
+//           text: text,
+//           value: value
+//         })
+//       })
+//       return {
+//         type: 'listbox',
+//         text: '字距',
+//         tooltip: '字距',
+//         values: items,
+//         fixedWidth: true,
+//         onPostRender: function() {
+//           var self = this
+//           editor.on('nodeChange', function(e) {
+//             var formatName = 'letterspacing'
+//             var formatter = editor.formatter
+//             var value = null
+//             e.parents.forEach(function(node) {
+//               items.forEach(function(item) {
+//                 if (formatName) {
+//                   if (formatter.matchNode(node, formatName, {
+//                     value: item.value
+//                   })) {
+//                     value = item.value
+//                   }
+//                 } else {
+//                   if (formatter.matchNode(node, item.value)) {
+//                     value = item.value
+//                   }
+//                 }
+//                 if (value) {
+//                   return false
+//                 }
+//               })
+//               if (value) {
+//                 return false
+//               }
+//             })
+//             self.value(value)
+//           })
+//         },
+//         onselect: function(e) {
+//           tinymce.activeEditor.formatter.apply('letterspacing', {
+//             value: this.value()
+//           })
+//         }
+//       }
+//     })
+//   })
+
+//   tinymce.PluginManager.requireLangPack('letterspacing', 'de');
+
 $(function () {
   // 取消form按鈕預設功能
   $("form").on('submit', function (e) {
