@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
+use Carbon\Carbon;
 
 class News extends BaseModel
 {
@@ -24,6 +25,11 @@ class News extends BaseModel
     {
         return empty($this->file_path) ? null : asset('storage/'.$this->file_path);
     }
-    
+
+    // 取得圖檔於Public資料夾的URL
+    public function getDateYmdAttribute() 
+    {
+        return Carbon::parse($this->created_at)->format('Y.m.d');
+    }
 
 }

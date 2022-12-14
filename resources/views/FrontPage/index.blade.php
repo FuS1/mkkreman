@@ -9,15 +9,11 @@
         <div class="banner">
             <div class="swiper-container banner_slider">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="" class="banner_link"><img src="{{ asset('storage/banner/banner.png') }}" alt=""></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="" class="banner_link"><img src="{{ asset('storage/banner/banner.png') }}" alt=""></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="" class="banner_link"><img src="{{ asset('storage/banner/banner.png') }}" alt=""></a>
-                  </div>
+                @foreach ($banners as $banner)
+                    <div class="swiper-slide">
+                        <a href="{{ $banner->url }}" target="_blank" class="banner_link"><img src="{{ asset( 'storage/'.$banner->file_path ) }}" alt=""></a>
+                    </div>
+                @endforeach
                 </div>     
                 <div class="swiper-button-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
                 <div class="swiper-button-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
@@ -207,46 +203,22 @@
                 </div>
                 <div class="swiper-container news_slider">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a href="" class="news_item">
-                            <div class="news_item_pic">
-                                <img src="{{ asset('storage/news/news-pic-1.png') }}" alt="">
-                                <div class="news_item_title"><h3>麵匡匡內湖金湖店正式開幕</h3></div>
-                            </div>
-                            <p class="date">2022.8.1</p>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="" class="news_item">
-                            <div class="news_item_pic">
-                                <img src="{{ asset('storage/news/news-pic-2.png') }}" alt="">
-                                <div class="news_item_title"><h3>麵匡匡台北莊敬店試營運</h3></div>
-                            </div>
-                            <p class="date">2022.11.26</p>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="" class="news_item">
-                            <div class="news_item_pic">
-                                <img src="{{ asset('storage/news/news-pic-3.png') }}" alt="">
-                                <div class="news_item_title"><h3>辣麼香 川味培根牛 新上市!!</h3></div>
-                            </div>
-                            <p class="date">2022.10.15</p>
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a href="" class="news_item">
-                            <div class="news_item_pic">
-                                <img src="{{ asset('storage/news/news-pic-3.png') }}" alt="">
-                                <div class="news_item_title"><h3>辣麼香 川味培根牛 新上市!!</h3></div>
-                            </div>
-                            <p class="date">2022.10.15</p>
-                        </a>
-                      </div>
+                        
+                    @foreach ($news as $_news)
+                        <div class="swiper-slide">
+                            <a href="/news/?news_id={{ $_news->id }}" class="news_item">
+                                <div class="news_item_pic">
+                                    <img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt="">
+                                    <div class="news_item_title"><h3>{{ $_news->title }}</h3></div>
+                                </div>
+                                <p class="date">{{ $_news->date_ymd }}</p>
+                            </a>
+                        </div>
+                    @endforeach
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <a href="" class="more">全部展開</a>
+                <a href="#" class="more">全部展開</a>
             </div>
         </div>
     </main>

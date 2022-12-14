@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('',          function () { return view('FrontPage.index');            });
-
+Route::get('',      [WebPageController::class, 'index'] );
 
 // 以下為後臺
 Route::group([
