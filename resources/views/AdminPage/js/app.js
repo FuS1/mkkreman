@@ -409,7 +409,7 @@ window.initTinymce = function(dom_id, customConfig){
         ], 
         content_style:"@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');",
         font_formats: "Noto Sans TC=noto sans tC;Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
-        letterspacing_formats: '0 0.5pt 1pt 1.5pt 2pt 3pt',
+        letterspacing_formats: '0 0.5pt 1pt 1.5pt 2pt 3pt 4pt 5pt',
         fullscreen_native: true,
         statusbar: false,
         default_link_target: '_blank',
@@ -419,14 +419,20 @@ window.initTinymce = function(dom_id, customConfig){
         // images_upload_url: ENV['APP_API_URL'] + 'admin/tinymce/image',
     })), customConfig);
 
-
+    // 不可放入前面的Object中進行深拷貝，會導致此function失效
+    // 初始化時，增加客製化按鈕功能
     tinyConfig.setup = function (editor) {
+
+        editor.ui.registry.addIcon('letterSpace', '<svg version="1.1" width="22px" height="22px" viewBox="0 0 22 22" enable-background="0 0 22 22" ><g><path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M15.016,11.971c0.099,0.254,0.343,0.42,0.614,0.42s0.517-0.166,0.615-0.42l3.639-9.255c0.134-0.34-0.034-0.724-0.376-0.857c-0.338-0.134-0.722,0.034-0.855,0.374L15.63,9.923l-3.022-7.691c-0.133-0.34-0.518-0.508-0.856-0.374c-0.341,0.134-0.508,0.517-0.374,0.857L15.016,11.971z"/><path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M2.809,12.328c0.335,0.146,0.725-0.01,0.868-0.346l1.29-3.009h4.132l1.29,3.009c0.145,0.336,0.533,0.492,0.868,0.346c0.336-0.143,0.491-0.531,0.347-0.867L7.642,2.213C7.537,1.97,7.298,1.812,7.033,1.812c-0.264,0-0.502,0.158-0.607,0.401l-3.963,9.249C2.317,11.797,2.473,12.188,2.809,12.328z M7.033,4.151L8.618,7.85H5.448L7.033,4.151z"/><path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M20.626,16.641l-2.643-2.645c-0.207-0.205-0.54-0.205-0.747,0c-0.207,0.207-0.207,0.541,0,0.748l1.74,1.74H3.023l1.74-1.74c0.207-0.207,0.207-0.541,0-0.748c-0.206-0.205-0.541-0.205-0.748,0l-2.644,2.645c-0.1,0.098-0.155,0.232-0.155,0.373s0.056,0.273,0.155,0.373l2.644,2.646c0.207,0.205,0.542,0.205,0.748,0c0.207-0.209,0.207-0.543,0-0.75l-1.74-1.74h15.953l-1.74,1.74c-0.207,0.207-0.207,0.541,0,0.75c0.207,0.205,0.54,0.205,0.747,0l2.643-2.646c0.101-0.1,0.155-0.232,0.155-0.373C20.782,16.873,20.729,16.74,20.626,16.641z"/></g></svg>' );
+
         /* example, adding a toolbar menu button */
         editor.ui.registry.addMenuButton('letterspacing', {
-            text: '字距',
+            icon: 'letterSpace',
+            tooltip : '字距',
+            fixedWidth: true,
             fetch: function (callback) {
                 var items = [];
-                var letterspacing_formats = editor.settings.letterspacing_formats || '0 0.5px 1px 1.5px 2px 3px';
+                var letterspacing_formats = editor.settings.letterspacing_formats || '0 0.5pt 1pt 1.5pt 2pt 3pt 4pt 5pt';
                 letterspacing_formats = letterspacing_formats.split(' ').map(function(item) {
                     items.push({
                         type: 'menuitem',
@@ -472,83 +478,6 @@ window.initTinymce = function(dom_id, customConfig){
 
     return tinymce.init(tinyConfig);
 }
-
-// 擴充Tinymce功能，目前只有字距
-//   tinymce.PluginManager.add('letterspacing', function(editor, url, $) {
-//     editor.on('init', function() {
-//       editor.formatter.register({
-//         letterspacing: {
-//           inline: 'span',
-//           styles: {
-//             'letter-spacing': '%value'
-//           }
-//         }
-//       })
-//     })
-
-//     editor.ui.registry.addButton('letterspacingselect', function() {
-//       var items = [];
-//       var letterspacing_formats = editor.settings.letterspacing_formats || '0 0.5pt 1pt 1.5pt 2pt 3pt'
-//       letterspacing_formats.split(' ').forEach(function(item) {
-//         var text = item,
-//           value = item
-//         // Allow text=value for line-height formats
-//         var values = item.split('=')
-//         if (values.length > 1) {
-//           text = values[0]
-//           value = values[1]
-//         }
-//         items.push({
-//           text: text,
-//           value: value
-//         })
-//       })
-//       return {
-//         type: 'listbox',
-//         text: '字距',
-//         tooltip: '字距',
-//         values: items,
-//         fixedWidth: true,
-//         onPostRender: function() {
-//           var self = this
-//           editor.on('nodeChange', function(e) {
-//             var formatName = 'letterspacing'
-//             var formatter = editor.formatter
-//             var value = null
-//             e.parents.forEach(function(node) {
-//               items.forEach(function(item) {
-//                 if (formatName) {
-//                   if (formatter.matchNode(node, formatName, {
-//                     value: item.value
-//                   })) {
-//                     value = item.value
-//                   }
-//                 } else {
-//                   if (formatter.matchNode(node, item.value)) {
-//                     value = item.value
-//                   }
-//                 }
-//                 if (value) {
-//                   return false
-//                 }
-//               })
-//               if (value) {
-//                 return false
-//               }
-//             })
-//             self.value(value)
-//           })
-//         },
-//         onselect: function(e) {
-//           tinymce.activeEditor.formatter.apply('letterspacing', {
-//             value: this.value()
-//           })
-//         }
-//       }
-//     })
-//   })
-
-//   tinymce.PluginManager.requireLangPack('letterspacing', 'de');
 
 $(function() {
     // 取消form按鈕預設功能
