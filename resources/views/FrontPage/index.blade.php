@@ -280,11 +280,12 @@
             speed: 800,
         });
         var swiperNews = new Swiper(".news_slider", {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             spaceBetween: 30,
-            loop: true,
+            // loop: true,
             speed: 800,     
-            slidesPerGroup: 2,   
+            slidesPerGroup: 1,   
+            centeredSlides:true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -293,11 +294,13 @@
                 768: {
                     slidesPerView: 2,
                     slidesPerGroup: 2,
+                    centeredSlides:false,
                 },
                 1200: {
                     slidesPerView: 3,
                     slidesPerGroup: 3,  
                     spaceBetween: 60,
+                    centeredSlides:false,
                 }
             }
         });
