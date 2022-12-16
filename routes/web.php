@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebPageController;
+use App\Http\Controllers\API\PageContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,7 @@ Route::group([
     Route::get('seminar_post_list',         function () { return view('AdminPage.seminar_post_list');        });
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
 
+    Route::get('recruitment_main_content',              function () { return view('AdminPage.recruitment_main_content');             });
     Route::group([
         'prefix' => 'about_us',
     ], function () {
@@ -51,5 +53,6 @@ Route::group([
     });
 
     Route::get('file_manager',              function () { return view('AdminPage.file_manager');             });
-    
+    Route::get('page_editor',  [PageContentController::class, 'editor']);
+
 });

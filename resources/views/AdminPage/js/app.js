@@ -218,7 +218,7 @@ window.exec = function(url,type,data,successFunction,failFunction){
 
     let haveFile=false;
     for(var i in data){
-        if(i=="file" && data[i]!==undefined){
+        if( (i=="file" || i=="banner_file") && data[i]!==undefined){
             haveFile=true;
         }
     }
@@ -226,7 +226,7 @@ window.exec = function(url,type,data,successFunction,failFunction){
     if(haveFile){
         formData = new FormData();
         for(var i in data){
-            if(i=="file"){
+            if(i=="file" || i=="banner_file"){
                 if( data[i]!==undefined){
                     formData.append(i, data[i], data[i].name);
                 }
@@ -399,9 +399,10 @@ window.initTinymce = function(dom_id, customConfig){
         ],
         menubar: 'file edit view tools help',
         toolbar: 'undo redo | fontselect fontsizeselect formatselect | forecolor backcolor lineheight letterspacing bold italic underline strikethrough alignleft aligncenter alignright alignjustify formatpainter removeformat | bullist numlist outdent indent | link image media | table | charmap emoticons',
+		toolbar_location: 'top',
+        toolbar_mode: 'sliding',
         // icons: 'material',
         image_advtab: true,
-        toolbar_mode: 'sliding',
         skin: 'oxide',// useDarkMode ? 'oxide-dark' : 'oxide',
         content_css: [
             'default',//'dark'

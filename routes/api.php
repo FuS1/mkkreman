@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\TinymceController;
 use App\Http\Controllers\API\AdminController;
+use App\Http\Controllers\API\PageContentController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\StoreController;
@@ -123,6 +124,13 @@ Route::group([
         Route::resource('system_variable', SystemVariableController::class)->only([
             'index', 'update'
         ]);
+
+        Route::group([
+            'prefix' => 'pageContent',
+        ], function () {
+            Route::get  ('',      [PageContentController::class, 'getPageContent'] );
+            Route::post ('',      [PageContentController::class, 'savePageContent'] );
+        });
 
         Route::group([
             'prefix' => 'admin',
