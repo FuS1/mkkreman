@@ -41,6 +41,15 @@ Route::group([
     Route::get('seminar_media_list',        function () { return view('AdminPage.seminar_media_list');       });
     Route::get('seminar_post_list',         function () { return view('AdminPage.seminar_post_list');        });
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
+
+    Route::group([
+        'prefix' => 'about_us',
+    ], function () {
+        Route::get('person_list',           function () { return view('AdminPage.about_us_person_list');     });
+        Route::get('person',                function () { return view('AdminPage.about_us_person');     });
+    
+    });
+
     Route::get('file_manager',              function () { return view('AdminPage.file_manager');             });
     
 });

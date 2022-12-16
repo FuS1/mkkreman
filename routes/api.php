@@ -13,6 +13,8 @@ use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
 use App\Http\Controllers\API\SeminarMediaController;
 use App\Http\Controllers\API\SeminarPostController;
+use App\Http\Controllers\API\AboutUsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +71,20 @@ Route::group([
             Route::post ('',      [FoodController::class, 'saveFood'] );
             Route::delete('',     [FoodController::class, 'deleteFood'] );
             Route::put  ('sort',  [FoodController::class, 'changeFoodSort'] );
+        });
+
+        Route::group([
+            'prefix' => 'about_us',
+        ], function () {
+            Route::group([
+                'prefix' => 'person',
+            ], function () {
+
+                Route::get  ('',      [AboutUsController::class, 'getAboutUsPerson'] );
+                Route::post ('',      [AboutUsController::class, 'saveAboutUsPerson'] );
+                Route::delete('',     [AboutUsController::class, 'deleteAboutUsPerson'] );
+                Route::put  ('sort',  [AboutUsController::class, 'changeAboutUsPersonSort'] );
+            });
         });
 
         Route::group([
@@ -129,6 +145,7 @@ Route::group([
             Route::get ('seminar/media',        [SeminarMediaController::class,   'tabulator'] );
             Route::get ('seminar/post',         [SeminarPostController::class,   'tabulator'] );
             Route::get ('admin',                [AdminController::class,   'tabulator'] );
+            Route::get ('about_us/person',      [AboutUsController::class,   'personTabulator'] );
         });
 
         Route::post ('tinymce/image',      [TinymceController::class, 'saveImage'] );
