@@ -79,18 +79,6 @@
 						<input type="input" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="招牌豚骨拉麵" required>
 					</div>
 					<div class="justify-center">	
-						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="city">門市狀態</label>
-						<select name="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-							<option value="籌備中"  >籌備中  </option>
-							<option value="半日試賣">半日試賣</option>
-							<option value="全日試賣">全日試賣</option>
-							<option value="正常營運">正常營運</option>
-							<option value="裝修中"  >裝修中  </option>
-							<option value="暫停營業">暫停營業</option>
-							<option value="已停業"  >已停業  </option>
-						</select>
-					</div>
-					<div class="justify-center">	
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">門市位置</label>
 						<div class="flex mb-2">
 							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle" for="city">縣市</label>
@@ -155,10 +143,6 @@
 								<option value="0">未招募</option>
 							</select>
 						</div>
-						<div class="mb-2">
-							<label for="job_url" class="items-center text-sm font-medium text-gray-900 dark:text-gray-300 align-middle">職缺資訊網址</label>
-							<input type="input" name="job_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="新北市三重區重新路一段10號之1">
-						</div>
 					</div>
 					<div class="justify-center">	
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">付款方式</label>
@@ -179,23 +163,6 @@
 						<div class="flex mb-2">
 							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">LINE PAY</label>
 							<select id="pay_line_pay" name="pay_line_pay" class="flex-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-								<option value="1">可</option>
-								<option value="0">不可</option>
-							</select>
-						</div>
-					</div>
-					<div class="justify-center">	
-						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">運送方式</label>
-						<div class="flex mb-2">
-							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">自取</label>
-							<select id="can_to_go" name="can_to_go" class="flex-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-								<option value="1">可</option>
-								<option value="0">不可</option>
-							</select>
-						</div>
-						<div class="flex mb-2">
-							<label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 w-10 align-middle">外送</label>
-							<select id="can_delivery" name="can_delivery" class="flex-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 								<option value="1">可</option>
 								<option value="0">不可</option>
 							</select>

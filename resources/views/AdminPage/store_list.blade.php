@@ -17,13 +17,6 @@
 						responsive:false,
 					},
 					{
-						title: "門市狀態",
-						field: "status",
-						width: '',
-						headerFilter: "input",
-						headerSort: true,
-					},
-					{
 						title: "詳細地址",
 						field: "address",
 						width: '',
