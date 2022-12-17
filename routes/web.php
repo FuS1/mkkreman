@@ -44,6 +44,8 @@ Route::group([
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
 
     Route::get('about_us_main_content',                 function () { return view('AdminPage.about_us_main_content');             });
+    Route::get('food_main_content',                     function () { return view('AdminPage.food_main_content');                 });
+    Route::get('store_main_content',                    function () { return view('AdminPage.store_main_content');                });
     Route::get('recruitment_main_content',              function () { return view('AdminPage.recruitment_main_content');          });
     Route::get('contact_us_main_content',               function () { return view('AdminPage.contact_us_main_content');           });
     

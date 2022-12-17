@@ -28,21 +28,16 @@
 						}
 					},
 					{
-						title: "商品短描述",
-						field: "short_description",
+						title: "商品分類",
+						field: "type",
 						width: '',
 						headerFilter: "input",
-						headerSort: false,
-						formatter: function(cell, formatterParams) {
-							return cell.getValue().replaceAll('\r\n','<br>');
-						}
 					},
 					{
 						title: "顯示於人氣推薦",
 						field: "is_recommendation",
 						width: '',
 						responsive:false,
-						headerSort: false,
 						formatter: function(cell, formatterParams) {
 							return cell.getValue() ? '是':'否';
 						}
