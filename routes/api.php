@@ -12,7 +12,7 @@ use App\Http\Controllers\API\FoodController;
 use App\Http\Controllers\API\SystemVariableController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
-use App\Http\Controllers\API\SeminarMediaController;
+use App\Http\Controllers\API\SeminarStoryController;
 use App\Http\Controllers\API\SeminarPostController;
 use App\Http\Controllers\API\AboutUsController;
 
@@ -104,11 +104,12 @@ Route::group([
             });
             
             Route::group([
-                'prefix' => 'media',
+                'prefix' => 'story',
             ], function () {
-                Route::post ('',      [SeminarMediaController::class, 'saveSeminarMedia'] );
-                Route::delete('',     [SeminarMediaController::class, 'deleteSeminarMedia'] );
-                Route::put  ('sort',  [SeminarMediaController::class, 'changeSeminarMediaSort'] );
+                Route::get  ('',      [SeminarStoryController::class, 'getSeminarStory'] );
+                Route::post ('',      [SeminarStoryController::class, 'saveSeminarStory'] );
+                Route::delete('',     [SeminarStoryController::class, 'deleteSeminarStory'] );
+                Route::put  ('sort',  [SeminarStoryController::class, 'changeSeminarStorySort'] );
             });
 
             Route::group([
@@ -150,7 +151,7 @@ Route::group([
             Route::get ('food',                 [FoodController::class,   'tabulator'] );
             Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
             Route::get ('seminar/participant',  [SeminarParticipantController::class,   'tabulator'] );
-            Route::get ('seminar/media',        [SeminarMediaController::class,   'tabulator'] );
+            Route::get ('seminar/story',        [SeminarStoryController::class,   'tabulator'] );
             Route::get ('seminar/post',         [SeminarPostController::class,   'tabulator'] );
             Route::get ('admin',                [AdminController::class,   'tabulator'] );
             Route::get ('about_us/person',      [AboutUsController::class,   'personTabulator'] );

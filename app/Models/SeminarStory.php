@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class SeminarMedia extends BaseModel
+class SeminarStory extends BaseModel
 {
     use HasFactory,SoftDeletes;
-    protected $table = 'seminar_media';
+    protected $table = 'seminar_story';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $guarded = [];

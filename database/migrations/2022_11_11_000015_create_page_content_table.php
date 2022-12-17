@@ -41,6 +41,41 @@ class CreatePageContentTable extends Migration
                 'bottom_content'=> null,
             ]);
 
+            // 關於我們資訊
+            PageContent::create([
+                'page'   => 'about_us',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+
+            // 聯絡我們資訊
+            PageContent::create([
+                'page'   => 'contact_us',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+
+            // 美味餐點資訊
+            PageContent::create([
+                'page'   => 'food',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+
+            // 最新消息資訊
+            PageContent::create([
+                'page'   => 'food',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+
+            // 我要加盟資訊
+            PageContent::create([
+                'page'   => 'seminar',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+            
         }
     }
 
