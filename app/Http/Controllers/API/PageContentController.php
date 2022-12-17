@@ -15,7 +15,19 @@ class PageContentController extends Controller
     public function editor(Request $request)
     {
         $pageContent = PageContent::where('page',$request->page)->first();
-        
+
+        switch ($request->position) {
+            case 'top':
+                $pageContent->editor_content = $pageContent->content ?? '';
+                break;
+            case 'bottom':
+                $pageContent->editor_content = $pageContent->bottom_content ?? '';
+                break;   
+            default:
+                $pageContent->editor_content = null;
+                break;
+        }
+
         return view('AdminPage.page_editor', [
             'pageContent' => $pageContent
         ]);
@@ -35,6 +47,7 @@ class PageContentController extends Controller
             'page'   => $request->page,
         ],[
             'content'=> empty($request->content) ? null : $request->content,
+            'bottom_content'=> empty($request->bottom_content) ? null : $request->bottom_content,
         ]);
 
         // 如果有上傳新的檔案，則更新

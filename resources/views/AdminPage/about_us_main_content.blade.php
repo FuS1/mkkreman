@@ -3,7 +3,7 @@
 <head>
 	@relativeInclude('layout.html_head')
 	<script>
-		const page = 'recruitment';
+		const page = 'about_us';
 		$(function() {
 
 			exec('pageContent','GET',{
@@ -29,7 +29,7 @@
 					img.removeClass('hidden');	
 				}
 				$('#iframe').attr('src',"/_admin_/page_editor?page="+page+"&position=top");
-
+				$('#bottom_iframe').attr('src',"/_admin_/page_editor?page="+page+"&position=bottom");
 			});
 			
 			
@@ -41,7 +41,8 @@
 					let data = getFormData(form,{
 						page : page,
 						banner_file	: form.find('#banner_file')[0].files[0],
-						content : document.getElementById('iframe').contentWindow.getEditorContent()
+						content : document.getElementById('iframe').contentWindow.getEditorContent(),
+						bottom_content : document.getElementById('bottom_iframe').contentWindow.getEditorContent()
 					});
 					
 					console.log(data)
@@ -64,7 +65,7 @@
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
 		<div class="py-5 px-5 w-full">
 			<div class="mb-2">
-				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">人才招募頁面設定</h1>
+				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">關於我們頁面設定</h1>
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
 		</div>
@@ -84,6 +85,14 @@
 					<div class="justify-center">	
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">頁面內容</label>
 						<iframe id="iframe" class="w-full" style="max-width:1280px;" height="800px">
+
+						</iframe>
+					</div>
+				</div>
+				<div class="w-full">
+					<div class="justify-center">	
+						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">底部頁面內容</label>
+						<iframe id="bottom_iframe" class="w-full" style="max-width:1280px;" height="800px">
 
 						</iframe>
 					</div>

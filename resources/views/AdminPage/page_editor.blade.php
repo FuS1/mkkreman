@@ -12,7 +12,7 @@
 		$(function() {
 			initTinymce('#content',{
 				// theme_advanced_menubar_location : "top",
-				menubar:false,
+				// menubar:false,
 				inline: true,
 				height:'100%'
 			});
@@ -23,7 +23,7 @@
 
 <body style="border:3px solid rgb(209 213 219); height:99vh;">
 	<div id="content" class="tinymce-body" name="content">
-		{!! $pageContent->content !!}
+		{!! $pageContent->editor_content ?? null !!}
 	</div>
 </body>
 </html>

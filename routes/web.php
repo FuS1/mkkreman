@@ -34,7 +34,7 @@ Route::group([
     Route::get('food_list',     function () { return view('AdminPage.food_list');       });
     Route::get('food',          function () { return view('AdminPage.food');            });
     Route::get('admin_list',    function () { return view('AdminPage.admin_list');      });
-    Route::get('contact_us',    function () { return view('AdminPage.contact_us');      });
+    Route::get('contact_us_email',    function () { return view('AdminPage.contact_us_email');      });
     Route::get('seminar_list',  function () { return view('AdminPage.seminar_list');    });
     Route::get('seminar',       function () { return view('AdminPage.seminar');         });
     Route::get('seminar_participant_list',  function () { return view('AdminPage.seminar_participant_list'); });
@@ -43,7 +43,9 @@ Route::group([
     Route::get('seminar_post_list',         function () { return view('AdminPage.seminar_post_list');        });
     Route::get('seminar_post',              function () { return view('AdminPage.seminar_post');             });
 
+    Route::get('about_us_main_content',              function () { return view('AdminPage.about_us_main_content');             });
     Route::get('recruitment_main_content',              function () { return view('AdminPage.recruitment_main_content');             });
+    
     Route::group([
         'prefix' => 'about_us',
     ], function () {

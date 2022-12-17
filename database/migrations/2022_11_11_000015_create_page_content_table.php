@@ -5,6 +5,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\PageContent;
 
 class CreatePageContentTable extends Migration
 {
@@ -28,9 +29,18 @@ class CreatePageContentTable extends Migration
                 $table->string('page')->nullable()->comment('頁面代碼');
                 $table->string('banner_file_path',2048)->nullable()->comment('頁面上方大圖檔案儲存位置');
                 $table->mediumText('content')->nullable()->comment('頁面內容');
+                $table->mediumText('bottom_content')->nullable()->comment('底部頁面內容');
                 $table->nullableTimestamps();
                 $table->softDeletes();
             });
+
+            // 徵才資訊
+            PageContent::create([
+                'page'   => 'recruitment',
+                'content'=> null,
+                'bottom_content'=> null,
+            ]);
+
         }
     }
 

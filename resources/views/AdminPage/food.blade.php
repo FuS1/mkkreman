@@ -42,7 +42,7 @@
 					let data = getFormData(form,{
 						food_id : food_id,
 						file	: form.find('#food_file')[0].files[0],
-						content : tinymce.get("content").getContent(),
+						// content : tinymce.get("content").getContent(),
 					});
 
 					
@@ -88,6 +88,14 @@
 						<p class="mt-1 text-sm text-gray-500 dark:text-gray-300">限 PNG, JPG, GIF，解析度500 * 500 px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
 					</div>
 					<div class="justify-center">	
+						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="type">商品分類</label>
+						<select id="type" name="type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+							<option value="拉麵系列">拉麵系列</option>
+							<option value="美味小菜">美味小菜</option>
+							<option value="清爽飲品">清爽飲品</option>
+						</select>
+					</div>
+					<div class="justify-center">	
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="is_recommendation">顯示於人氣推薦</label>
 						<select id="is_recommendation" name="is_recommendation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 							<option value="0">否</option>
@@ -95,12 +103,12 @@
 						</select>
 					</div>
 				</div>
-				<div>
+				<!-- <div>
 					<div class="justify-center">	
 						<label for="content" class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">詳細介紹</label>
 						<div id="content" name="content"></div>
 					</div>
-				</div>
+				</div> -->
 			</form>
 		</div>
 

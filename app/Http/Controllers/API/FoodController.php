@@ -38,24 +38,35 @@ class FoodController extends Controller
     public function saveFood(Request $request)
     {
 
-        $fileInfo = [
-            'filePath' => 'food',
-            'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
-        ];
-        
-        $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));
 
-        $food = Food::create([
+        $food = Food::updateOrCreate(
+        [
+            'id'        => !$request->food_id || $request->food_id==='null' ? null : $request->food_id ,             
+        ],[
             'title'             => $request->title ?? null,
             'short_description' => $request->short_description ?? null,
+            'type'              => $request->type ?? null,
             'is_recommendation' => $request->is_recommendation ?? 0,
             'content'           => $request->content ?? null,
-            'file_path'         => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
         ]);
 
-        $this->resetSortIdx();
+        // 如果有上傳新的檔案，則更新
+        if( !empty($request->file) ){
+
+            $fileInfo = [
+                'filePath' => 'food',
+                'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),
+            ];
+            
+            $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));    
+
+            $food->update([
+                'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
+            ]);
+        }
 
         return response($food->refresh(),200);
+
     }
 
     public function deleteFood(Request $request)
