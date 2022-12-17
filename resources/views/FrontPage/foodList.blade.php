@@ -11,7 +11,7 @@
     @media screen and (min-width: 768px) {
     
         .food-swiper .swiper-slide .content-bottom > img {
-            transform: scale(0.75);
+            transform: scale(0.6);
             margin-top: 3rem;
         }
         .food-swiper .swiper-slide-next .content-bottom > img{
@@ -21,7 +21,6 @@
     }
 
     .food_info{
-        margin-top: 3rem;
         text-align:center;
     }
     .mainFood > h2{
@@ -110,7 +109,7 @@
                     loop: true,
                     slidesPerView: 3,
                     slidesPerGroup: 1,  
-                    spaceBetween: 60,
+                    spaceBetween: 0,
                     centeredSlides:false,
                 }
             }
