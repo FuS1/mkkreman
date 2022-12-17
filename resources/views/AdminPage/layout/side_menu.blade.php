@@ -9,9 +9,6 @@
             <a href="/_admin_/banner_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">首頁Banner</a>
          </li>
          <li>
-            <a href="/_admin_/news_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">最新消息</a>
-         </li>
-         <li>
             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-about-us" data-collapse-toggle="dropdown-about-us">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-duotone fa-seal-question"></i>
@@ -24,11 +21,10 @@
                   <a href="/_admin_/about_us_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
                </li>
                <li>
-                  <a href="/_admin_/about_us/person_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">麵匡匡人物</a>
+                  <a href="/_admin_/about_us/person_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">麵匡匡人物列表</a>
                </li>
             </ul>
          </li>
-         
          <li>
             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-food" data-collapse-toggle="dropdown-food">
                <div class="w-4">
@@ -42,7 +38,24 @@
                   <a href="/_admin_/food_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
                </li>
                <li>
-                  <a href="/_admin_/food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">餐點列表</a>
+                  <a href="/_admin_/food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">美味餐點列表</a>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-news" data-collapse-toggle="dropdown-news">
+               <div class="w-4">
+                  <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-solid fa-message-lines"></i>
+               </div>                 
+               <div class="flex-1 ml-5 text-left whitespace-nowrap" sidebar-toggle-item>最新消息</div>
+               <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <ul id="dropdown-news" class="hidden py-2 space-y-2">
+               <li>
+                  <a href="/_admin_/news_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
+               </li>
+               <li>
+                  <a href="/_admin_/news_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">最新消息列表</a>
                </li>
             </ul>
          </li>
@@ -59,7 +72,7 @@
                   <a href="/_admin_/store_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
                </li>
                <li>
-                  <a href="/_admin_/store_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">門市列表</a>
+                  <a href="/_admin_/store_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">門市資訊列表</a>
                </li>
             </ul>
          </li>
@@ -113,7 +126,7 @@
                   <a href="/_admin_/contact_us_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
                </li>
                <li>
-                  <a href="/_admin_/contact_us_email" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">Email收件人</a>
+                  <a href="/_admin_/contact_us_email" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">Email 收件人</a>
                </li>
             </ul>
          </li>
