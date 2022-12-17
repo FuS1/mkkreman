@@ -47,7 +47,7 @@ class FoodController extends Controller
             'short_description' => $request->short_description ?? null,
             'type'              => $request->type ?? null,
             'is_recommendation' => $request->is_recommendation ?? 0,
-            'content'           => $request->content ?? null,
+            // 'content'           => $request->content ?? null,
         ]);
 
         // 如果有上傳新的檔案，則更新

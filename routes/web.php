@@ -17,7 +17,8 @@ use App\Http\Controllers\API\PageContentController;
 */
 
 Route::get('',          function () { return view('FrontPage.index');            });
-Route::get('',      [WebPageController::class, 'index'] );
+Route::get('',          [WebPageController::class, 'index'] );
+Route::get('foodList',  [WebPageController::class, 'foodList'] );
 
 // 以下為後臺
 Route::group([

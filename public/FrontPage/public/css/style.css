@@ -90,7 +90,7 @@ ul {
 }
 
 .header_nav ul li {
-  margin: 0 35px;
+  margin: 0 30px;
 }
 
 .header_nav_space {
@@ -440,6 +440,10 @@ main {
 
 .banner_slider .swiper-button-next {
   right: 0;
+}
+
+.page_banner > img{
+  width:100%;
 }
 
 @media screen and (max-width: 767px) {
