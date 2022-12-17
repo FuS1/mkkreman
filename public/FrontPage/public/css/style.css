@@ -5,6 +5,16 @@
   src: url(../font/CenturyGothic.woff) format("woff"), url(../font/CenturyGothic.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "KaiminSoStd";
+  src: url(../font/A-OTF-KaiminSoStd-Heavy-2.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "KaiminTuStd";
+  src: url(../font/A-OTF-KaiminTuStd-Heavy-2.otf) format("opentype");
+}
+
 body {
   color: #122C52;
   font-size: 18px;
