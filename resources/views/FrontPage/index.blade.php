@@ -70,6 +70,11 @@
                                 </a>
                             </li>
                         @endforeach
+                            <li data-index="7" data-intro="#intro0" class="recc_slider_item last">
+                                <a href="">
+                                    <img class="recc_slider_img" src="" alt="">
+                                </a>
+                            </li>
 <!-- 
                             <li data-index="1" data-intro="#intro1" class="recc_slider_item">
                                 <a href="">
