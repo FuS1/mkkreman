@@ -1,3 +1,7 @@
+body {
+    height: fit-content !important;
+}
+
 .banner {
     &_link {
         display: block;
@@ -46,6 +50,7 @@
         text-align: center;
         margin: 0;
         color: $second-blue;
+        letter-spacing: 0;
     }
     @media screen and (max-width: 450px) {
         img {
@@ -71,83 +76,103 @@
     padding-top: 20px;
     position: relative;
     overflow: hidden;
+    // height: 750px;
+    width: 100%;
     .smoke {
         position: absolute;
-        filter: blur(5px);
+        pointer-events: none;
+        // filter: blur(5px);
         transform-origin: 50% 50%;
         &-1 {
             bottom: -14.64vw;
             right: -12.86vw;
             width: 90vw;
-            animation: smoke1 3s linear infinite;
         }
         &-2 {
-            bottom: -14.64vw;
-            right: -30vw;
-            width: 90vw;
-            animation: smoke2 5s linear infinite;
+            top: -13.6vw;
+            left: -16.4vw;
+            width: 75vw;
+            // animation: smoke2 5s linear infinite;
         }
         &-3 {
-            bottom: -14.64vw;
-            right: -80vw;
-            width: 90vw;
-            animation: smoke3 7s linear infinite;
+            top: -8.6vw;
+            left: 22.6vw;
+            width: 45vw;
+            // transform: rotate(30deg);
+            // animation: smoke3 7s linear infinite;
         }
         &-4 {
-            top: 2.4vw;
-            left: -8.4vw;
-            width: 67vw;
-            animation: smoke1 7s linear infinite;
+            top: 4vw;
+            left: -8vw;
+            width: 52vw;
+            // animation: smoke1 7s linear infinite;
+            // animation: smoke4 3s linear infinite;
         }
         &-5 {
-            top: 2.4vw;
-            left: -8.4vw;
-            width: 67vw;
-            animation: smoke2 5s linear infinite;
+            top: -9vw;
+            left: -4vw;
+            width: 40vw;
         }
         &-6 {
-            top: 2.4vw;
-            left: -8.4vw;
-            width: 67vw;
-            animation: smoke3 3s linear infinite;
+            top: 9vw;
+            left: -10vw;
+            width: 53vw;
+        }
+        &-7 {
+            top: -12vw;
+            left: 54vw;
+            width: 52vw;
         }
     }
     &_slider {
-        width: 90vw;
-        height: 90vw;
-        position: relative;
+        width: 176vw;
+        height: 176vw;
+        // position: relative;
+        position: absolute;
+        top: 6vw;
+        left: 50%;
+        transform: translateX(-50%);
         margin: 0 auto;
         ul {
             position: absolute;
+            top: 0;
+            // left: 50%;
+            left: 0;
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             border-radius: 50%;
             justify-content: center;
+            // transform: translateX(-50%);
+            // background-color: rgb(255, 219, 219);
             li {
                 position: absolute;
                 width: 11.46vw;
                 height: 11.46vw;
                 left: 0;
-                transform-origin: 45vw;
-                transform: rotateZ(calc(360deg / 12 * var(--li-no)));
+                transform-origin: 88vw;
+                // transform: rotateZ(calc(70deg / 6 * var(--li-no) + 55deg));
                 transition: $transition-common;
                 &.active {
                     width: 20vw;
                     height: 20vw;
-                    transform: rotateZ(calc(360deg / 12 * var(--li-no)));
-                    a {
-                        transform: translateX(-10vw);
+                    // transform: rotateZ(calc(70deg / 6 * var(--li-no) + 55deg));
+                    >a {
+                        transform: translateX(-5vw);
                     }
                 }
-                a {
+                &.last {
+                    opacity: 0;
+                }
+                >a {
                     display: block;
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
                     position: absolute;
+                    // pointer-events: none;
                 }
                 img {
                     width: 100%;
@@ -157,40 +182,52 @@
                     left: 0;
                     position: absolute;
                     object-fit: contain;
-                    transform: rotateZ(calc(360deg / 12 * var(--img-no)));
+                    pointer-events: none;
+                    transition: $transition-common;
+                    // transform: rotateZ(calc(70deg / 6 * var(--img-no) - 55deg));
+                }
+                .mark {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 18px;
+                    background-color: $main-blue;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                 }
             }
         }
         &-box {
-            overflow: hidden;
-            width: 90vw;
-            height: 45vw;
+            // overflow: hidden;
+            width: 176vw;
+            height: 100%;
+            // height: 75vw;
             margin: 0 auto;
             padding-top: 10vw;
         }
     }
     &_inner {
         position: relative;
-        .slider-arrow {
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            &-prev {
-                left: 0;
-            }
-            &-next {
-                right: 0;
-            }
-        }
+        width: 100%;
+        height: 35vw;
     }
     &_intro {
         &_item {
             position: absolute;
-            bottom: 20%;
+            // bottom: 20%;
+            top: 60%;
             left: 50%;
             transform: translateX(-50%);
             transition: $transition-common;
             opacity: 0;
+            width: 50%;
             p {
                 text-align: center;
                 margin: 0;
@@ -200,17 +237,17 @@
             }
         }
         &_title {
-            border: 4px solid $third-blue;
-            padding: 4px;
+            border: 3px solid $third-blue;
+            padding: 3px;
             width: fit-content;
             margin: 0 auto 20px;
             h3 {
-                font-size: 26px;
+                font-size: 22px;
                 color: $main-blue;
                 margin: 0;
                 border: 2px solid $third-blue;
                 background-color: $white;
-                padding: 12px 80px;
+                padding: 8px 50px 10px;
                 font-family: $notosansTC;
                 font-weight: normal;
             }
@@ -220,63 +257,141 @@
     .flavor {
         width: 6.5vw;
         position: absolute;
-        left: 50vw;
-        top: 1vw;
+        left: 52.5vw;
+        top: -0.5vw;
+    }
+    .slider-arrow {
+        top: 67%;
+        // transform: translateY(-50%);
+        position: absolute;
+        &-prev {
+            left: 0;
+        }
+        &-next {
+            right: 0;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        &_intro {
+            &_item {
+                top: 56%;
+            }
+        }
     }
     @media screen and (max-width: 991px) {
         &_inner {
-            height: 500px;
+            height: 50vw;
         }
-        &_slider { 
-            width: 1000px;
-            height: 1000px;
-            &-box {
-                width: 1000px;
-                height: 500px;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
+        &_intro {
+            &_item {
+                top: 55%;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
             }
+        }
+        .flavor {
+            width: 90px;
+            left: 53%;
+            top: -1.5vw;
+        }
+        &_slider {
             ul {
-                text-align: center;
                 li {
-                    transform-origin: 500px;
-                    width: 120px;
-                    height: 120px;
+                    width: 18vw;
+                    height: 18vw;
                     &.active {
-                        width: 250px;
-                        height: 250px;
+                        width: 27vw;
+                        height: 27vw;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &_inner {
+            height: 55vw;
+        }
+        &_intro {
+            &_item {
+                top: 50%;
+            }
+        }
+        .flavor {
+            width: 90px;
+            left: 52.5%;
+            top: -3.5vw;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_inner {
+            height: 90vw;
+        }
+        &_slider {
+            ul {
+                li {
+                    width: 40vw;
+                    height: 40vw;
+                    &.active {
+                        width: 60vw;
+                        height: 60vw;
                     }
                 }
             }
         }
         &_intro {
             &_item {
-                max-width: 100vw;
-                padding: 0 20px;
+                top: 65%;
             }
             &_title {
                 h3 {
-                    padding: 12px 50px;
-                    font-size: 22px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    font-size: 18px;
                 }
             }
         }
         .flavor {
-            width: 90px;
-            left: 50%;
-
+            left: 58.5%;
+            top: -1.5vw;
         }
     }
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 500px) {
+        &_inner {
+            height: 100vw;
+        }
         &_intro {
-            &_title {
-                h3 {
-                    padding: 12px 30px;
-                    font-size: 20px;
-                }
+            &_item {
+                top: 60%;
             }
+        }
+        .flavor {
+            left: 57.5%;
+            top: -4.5vw;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &_inner {
+            height: 106vw;
+        }
+        &_intro {
+            &_item {
+                top: 56%;
+            }
+        }
+    }
+    @media screen and (max-width: 375px) {
+        &_inner {
+            height: 115vw;
+        }
+        &_intro {
+            &_item {
+                top: 51%;
+            }
+        }
+        .flavor {
+            left: 56.5%;
+            top: -9.5vw;
         }
     }
 }
@@ -362,6 +477,34 @@
     100% {
         filter: blur(7px);
         transform: translateX(-110px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke4 {
+    0% {
+        filter: blur(0px);
+        transform: translateX(30px) translateY(-10px);
+        opacity: 0;
+    }
+    25% {
+        filter: blur(3px);
+        transform: translateX(50px) translateY(-20px);
+        opacity: 0.5;
+    }
+    50% {
+        filter: blur(5px);
+        transform: translateX(70px) translateY(-30px);
+        opacity: 1;
+    }
+    75% {
+        filter: blur(5px);
+        transform: translateX(90px) translateY(-40px);
+        opacity: 0.5;
+    }
+    100% {
+        filter: blur(7px);
+        transform: translateX(110px) translateY(-50px);
         opacity: 0;
     }
 }

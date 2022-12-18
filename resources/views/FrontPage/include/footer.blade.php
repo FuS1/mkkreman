@@ -1,18 +1,19 @@
+
 <footer class="footer">
     <div class="container d-flex align-items-center justify-content-center flex-wrap">
-        <a href="./index.html" class="footer_logo"><img src="{{ asset('FrontPage/public/img/logo-footer.svg') }}" alt=""></a>
+        <a href="/" class="footer_logo"><img src="{{ asset('FrontPage/public/img/logo-footer.svg') }} " alt=""></a>
         <div class="footer_list">
             <nav class="footer_nav">
                 <ul>
-                    <li><a href="">聯絡我們</a></li>
+                    <li><a href="/contact_us">聯絡我們</a></li>
                     <li><a href="">網站地圖</a></li>
                     <li><a href="">麵匡匡隱私權保護聲明</a></li>
                 </ul>
             </nav>
             <ul class="footer_social">
-                <li><a href=""><img src="{{ asset('FrontPage/public/img/fb.svg') }}" alt=""></a></li>
-                <li><a href=""><img src="{{ asset('FrontPage/public/img/ig.svg') }}" alt=""></a></li>
-                <li><a href=""><img src="{{ asset('FrontPage/public/img/line.svg') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('FrontPage/public/img/fb.svg') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('FrontPage/public/img/ig.svg') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('FrontPage/public/img/line.svg') }}" alt=""></a></li>
             </ul>
         </div>
         <div class="footer_inform">
@@ -33,12 +34,10 @@
             </ul>
         </div>
     </div>
-    <div class="footer_bottom"></div>
+    <!-- <div class="footer_bottom"></div> -->
+    <div class="btn-top">
+        <div class="btn-top_pic">
+            <img src="{{ asset('FrontPage/public/img/arrow-top.svg') }}" alt="">
+        </div>
+    </div>
 </footer>
-
-<div class="btn-top"><img src="{{ asset('FrontPage/public/img/arrow-top.svg') }}" alt=""></div>
-
-<div class="fixed-btn">
-    <a href="" class="btn-order"><img src="{{ asset('FrontPage/public/img/here.svg') }}" alt=""><span>線上<br class="d-sm-none">訂餐</span></a>
-    <a href=""><span>完整<br class="d-sm-none">菜單</span></a>
-</div>
