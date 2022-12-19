@@ -52,13 +52,13 @@
                         <ul id="wheel">
                         
 
-                        
+                        @if (count($foods))
                         <li data-index="0" data-intro="#intro0" class="recc_slider_item last">
                             <a href="#">
                                 <img class="recc_slider_img" src="{{ asset( 'storage/'.$foods->get(1)->file_path ) }}" alt="">
                             </a>
                         </li>
-                        
+                        @endif
                         @foreach ($foods as $key => $food)
                             @if ($key > 5)
                                 <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item last">
