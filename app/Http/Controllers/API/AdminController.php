@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 use App\Exceptions\ErrorException;
 use App\Services\BaseService;
 use Browser;
-use Crypt;
 use Carbon\Carbon;
 use App\Models\Admin;
 
