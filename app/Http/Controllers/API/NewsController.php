@@ -42,9 +42,13 @@ class NewsController extends Controller
         [
             'id'        => !$request->news_id || $request->news_id==='null' ? null : $request->news_id ,             
         ],[
-            'title'     => $request->title ?? null,
-            'content'   => $request->content ?? null,
-            'is_top'    => $request->is_top ?? 0,
+            'title'             => $request->title              ?? null,
+            'short_description' => $request->short_description  ?? null,
+            'is_top'            => $request->is_top             ?? 0,
+            'show_in_index'     => $request->show_in_index      ?? 0,
+            'started_at'        => $request->started_at         ?? null,
+            'ended_at'          => $request->ended_at           ?? null,
+            'content'           => $request->content            ?? null,
         ]);
 
         // 如果有上傳新的檔案，則更新
@@ -62,6 +66,22 @@ class NewsController extends Controller
             ]);
         }
 
+        // 如果有上傳新的檔案，則更新
+        if( !empty($request->banner_file) ){
+
+            $fileInfo = [
+                'filePath' => 'news',
+                'fileName' => Str::orderedUuid().".".($request->banner_file->getClientOriginalExtension()==='' ? $request->banner_file->clientExtension():$request->banner_file->getClientOriginalExtension()),
+            ];
+            
+            $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->banner_file));    
+
+            $news->update([
+                'banner_file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
+            ]);
+        }
+
+        
         return response($news->refresh(),200);
     }
 

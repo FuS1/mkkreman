@@ -22,10 +22,15 @@
 						});
 					}
 
-					$('[name="started_at_date"]').val(seminar_data['started_at'].split(' ')[0]);
-					$('[name="started_at_time"]').val(seminar_data['started_at'].split(' ')[1]);
-					$('[name="ended_at_date"]'	).val(seminar_data['ended_at'].split(' ')[0]);
-					$('[name="ended_at_time"]'	).val(seminar_data['ended_at'].split(' ')[1]);
+					if(seminar_data['started_at']){
+						$('[name="started_at_date"]').val(seminar_data['started_at'].split(' ')[0]);
+						$('[name="started_at_time"]').val(seminar_data['started_at'].split(' ')[1]);
+					}
+
+					if(seminar_data['ended_at']){
+						$('[name="ended_at_date"]'	).val(seminar_data['ended_at'].split(' ')[0]);
+						$('[name="ended_at_time"]'	).val(seminar_data['ended_at'].split(' ')[1]);
+					}
 				});
 			}
 			
