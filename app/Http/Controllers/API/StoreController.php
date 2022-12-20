@@ -45,6 +45,7 @@ class StoreController extends Controller
             'title'             => $request->title          ?? null,
             'city'              => $request->city           ?? null,
             'address'           => $request->address        ?? null,
+            'phone'             => $request->phone          ?? null,
             'job_ma'            => $request->job_ma         ?? 0,
             'job_full_time'     => $request->job_full_time  ?? 0,
             'job_part_time'     => $request->job_part_time  ?? 0,
