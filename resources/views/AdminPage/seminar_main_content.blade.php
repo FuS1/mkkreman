@@ -3,7 +3,7 @@
 <head>
 	@relativeInclude('layout.html_head')
 	<script>
-		const page = 'recruitment';
+		const page = 'seminar';
 		$(function() {
 
 			exec('pageContent','GET',{
@@ -65,7 +65,7 @@
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
 		<div class="py-5 px-5 w-full">
 			<div class="mb-2">
-				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">人才招募頁面設定</h1>
+				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">我要加盟頁面設定</h1>
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
 		</div>

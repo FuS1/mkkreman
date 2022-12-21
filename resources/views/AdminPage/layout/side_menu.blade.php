@@ -100,13 +100,13 @@
             </button>
             <ul id="dropdown-join-seminar" class="hidden py-2 space-y-2">
                <li>
+                  <a href="/_admin_/seminar_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
+               </li>
+               <li>
                   <a href="/_admin_/seminar_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">講座列表</a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">課程簡介</a>
-               </li>
-               <li>
-                  <a href="/_admin_/seminar_post_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">講座文章</a>
+                  <a href="/_admin_/seminar_post_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">創業知識部落格</a>
                </li>
                <li>
                   <a href="/_admin_/seminar_story_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">創業故事</a>
