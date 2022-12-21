@@ -2,9 +2,12 @@
 <html lang="zh">
 <head>
     @relativeInclude('include.meta')
+    @relativeInclude('include.script')
+    <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script>
 </head>
 <body>
     @relativeInclude('include.header')
+    
     <main>
         <div class="banner">
             <div class="swiper-container banner_slider">
@@ -50,6 +53,92 @@
                 <div class="recc_slider-box">
                     <div class="recc_slider d-flex justify-content-center">
                         <ul id="wheel">
+
+                        @foreach ($foods as $key => $food)
+                            @if ($key+1 === count($foods) )
+                            <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item opa-0">
+                            @else
+                            <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item">
+                            @endif
+                                <a href="#">
+                                    <img class="recc_slider_img" src="{{ asset( 'storage/'.$food->file_path ) }}" alt="">
+                                </a>
+                            </li>
+                        @endforeach
+                            <!-- <li data-index="1" data-intro="#intro1" class="recc_slider_item">
+                                <a href="11">
+                                    <img class="recc_slider_img" src="./public/img/product-mark1.png" alt="">
+                                </a>
+                            </li>
+                            <li data-index="2" data-intro="#intro2" class="recc_slider_item">
+                                <a href="22">
+                                    <img class="recc_slider_img" src="./public/img/product-mark2.png" alt="">
+                                </a>
+                            </li>
+                            <li data-index="3" data-intro="#intro3" class="recc_slider_item active">
+                                <a href="33">
+                                    <img class="recc_slider_img" src="./public/img/product-mark3.png" alt="">
+                                </a>
+                            </li>
+                            <li data-index="4" data-intro="#intro4" class="recc_slider_item">
+                                <a href="44">
+                                    <img class="recc_slider_img" src="./public/img/product-mark4.png" alt="">
+                                </a>
+                            </li>
+                            <li data-index="5" data-intro="#intro5" class="recc_slider_item">
+                                <a href="55">
+                                    <img class="recc_slider_img" src="./public/img/product-mark5.png" alt="">
+                                </a>
+                            </li>
+                            <li data-index="6" data-intro="#intro6" class="recc_slider_item opa-0">
+                                <a href="66">
+                                    <img class="recc_slider_img" src="./public/img/product-mark6.png" alt="">
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <ul class="recc_intro">
+
+                    @foreach ($foods as $key => $food)
+                        @if ($key === 2)
+                        <li class="recc_intro_item active" id="intro{{ $key+1 }}">
+                        @else
+                        <li class="recc_intro_item" id="intro{{ $key+1 }}">
+                        @endif
+                            <div class="recc_intro_title">
+                                <h3>{{$food->title}}</h3>
+                            </div>
+                            <p>
+                                {{$food->short_description}}
+                            </p>
+                        </li>
+                    @endforeach
+                    </ul>
+                    <img class="flavor" src="{{ asset('FrontPage/public/img/flavor.svg') }}" alt="">
+                </div>
+            </div>
+            <img src="{{ asset('FrontPage/public/img/smoke-4.png') }}" alt="" class="smoke smoke-4" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(0px) translateY(-52px); opacity: 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
+            <div class="slider-arrow-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
+            <div class="slider-arrow-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
+
+
+        </div>
+
+        <!-- <div class="recc">
+            <img src="{{ asset('FrontPage/public/img/smoke-1.png') }}" alt="" class="smoke smoke-1" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-6" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-2.png') }}" alt="" class="smoke smoke-2" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
+            <div class="title">
+                <img src="{{ asset('FrontPage/public/img/title-reccomend.svg') }}" alt="人氣推薦">
+                <h2>Top Recommendations</h2>
+            </div>
+            <div class="recc_inner">
+                <div class="recc_slider-box">
+                    <div class="recc_slider d-flex justify-content-center">
+                        <ul id="wheel">
                         
 
                         @if (count($foods))
@@ -75,37 +164,6 @@
                                     <img class="recc_slider_img" src="" alt="">
                                 </a>
                             </li>
-<!-- 
-                            <li data-index="1" data-intro="#intro1" class="recc_slider_item">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/product-2.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="2" data-intro="#intro2" class="recc_slider_item">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/product-3.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="3" data-intro="#intro3" class="recc_slider_item active">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/product-5.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="4" data-intro="#intro4" class="recc_slider_item">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/product-4.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="5" data-intro="#intro5" class="recc_slider_item">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/product-1.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="6" data-intro="#intro6" class="recc_slider_item last">
-                                <a href="">
-                                    <img class="recc_slider_img" src="./public/img/noodle.svg" alt="">
-                                </a>
-                            </li>-->
                         </ul>
                     </div>
                     <ul class="recc_intro">
@@ -134,7 +192,7 @@
             <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
             <div class="slider-arrow-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
             <div class="slider-arrow-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
-        </div>
+        </div> -->
 
         <div class="news">
             <div class="container">
@@ -164,7 +222,6 @@
         </div>
     </main>
     @relativeInclude('include.footer')
-    @relativeInclude('include.script')
     <script>
         var swiperBanner = new Swiper(".banner_slider", {
             slidesPerView: 1,
@@ -198,164 +255,20 @@
             }
         });
         // 滾動
-        var skrollr_obj = skrollr.init();
-        // 預設
-        let range = 80;
-        let rotateUnit = range / 6;
-        let rotateOffset = 90 - (range / 2);
-        const activeIndex = 3;
-        let deg, reverse;
-        let Firstimg, FirstLink, FirstMark;
-        function reccSliderItem(){
-            if($(window).width()>991){
-                range = 80;
-            }else if($(window).width()>575) {
-                range = 130;
-            }else {
-                range = 320;
-            }
-            rotateUnit = range / 6;
-            rotateOffset = 90 - (range / 2);
-            $(".recc_slider_item").each(function(){
-                let index = $(this).attr("data-index");
-                deg = rotateUnit * index + rotateOffset;
-                reverse = rotateUnit * index * (-1) - rotateOffset;
-                $(this).css("transform","rotateZ(" + deg + "deg)");
-                $(this).find(".recc_slider_img").css("transform","rotateZ(" + reverse + "deg)");
-                if(index == 1){
-                    Firstimg = $(this).find(".recc_slider_img").attr("src");
-                    FirstLink = $(this).find("a").attr("href");
-                    FirstMark = $(this).find(".mark").text();
-                }
-            })
-            $(".recc_slider_item[data-index='7']").find(".recc_slider_img").attr("src",Firstimg);
-            $(".recc_slider_item[data-index='7']").find("a").attr("href",FirstLink);
-            if($(window).width()>991) {
-                $(".recc_slider_item").removeClass("last");
-                $(".recc_slider_item[data-index='0'],.recc_slider_item[data-index='6'],.recc_slider_item[data-index='7']").addClass("last");
-            }else if($(window).width()>575) {
-                $(".recc_slider_item").removeClass("last");
-                $(".recc_slider_item[data-index='0'],.recc_slider_item[data-index='1'],.recc_slider_item[data-index='5'],.recc_slider_item[data-index='6'],.recc_slider_item[data-index='7']").addClass("last");
-            }else {
-                $(".recc_slider_item").addClass("last");
-                $(".recc_slider_item[data-index='" + activeIndex + "']").removeClass("last");
-            }
-            $(".recc_slider_item[data-index='" + activeIndex + "']").addClass("active");
-        };
-        reccSliderItem();
-        // Range();
+        // var skrollr_obj = skrollr.init();
+        // 煙霧
         $(window).on("resize scroll",function(){
-            // Range();
-            reccSliderItem();
-        })
-
-        // 點選箭頭
-        $(".slider-arrow").click(function(){
-            let length = $(".recc_slider_item").length - 1;
-            let newIndex, thisIndex;
-            if($(this).hasClass("slider-arrow-next")){
-                let Secondimg = $(".recc_slider_item[data-index='2']").find(".recc_slider_img").attr("src");
-                let SecondLink = $(".recc_slider_item[data-index='2']").find("a").attr("href");  
-                let SecondIntro = $(".recc_slider_item[data-index='2']").attr("data-intro");
-                $(".recc_slider_item[data-index='0']").find(".recc_slider_img").attr("src",Secondimg);
-                $(".recc_slider_item[data-index='0']").find("a").attr("href",SecondLink);  
-                $(".recc_slider_item[data-index='0']").attr("data-intro",SecondIntro);
-                $(".recc_slider_item").each(function(){
-                    thisIndex = parseInt($(this).attr("data-index"));
-                    if(thisIndex == 0){
-                        newIndex = length;
-                    }else {
-                        newIndex = thisIndex - 1;
-                    }
-
-                    if($(window).width()>991){
-                        if(thisIndex == 1) {
-                            $(this).addClass("last");
-                        }else if(thisIndex == 6) {
-                            $(this).removeClass("last");
-                        }
-                    }else if($(window).width()>575){
-                        if(thisIndex == 2) {
-                            $(this).addClass("last");
-                        }else if(thisIndex == 5) {
-                            $(this).removeClass("last");
-                        }
-                    }else {
-                        if(thisIndex == 3) {
-                            $(this).addClass("last");
-                        }else if(thisIndex == 4) {
-                            $(this).removeClass("last");
-                        }
-                    }
-
-                    if($(this).hasClass("active")){
-                        $(this).removeClass("active");
-                    }
-
-                    $(this).attr("data-index",newIndex);
-                    deg = rotateUnit * newIndex + rotateOffset;
-                    reverse = rotateUnit * newIndex * (-1) - rotateOffset;
-                    $(this).css("transform","rotateZ(" + deg + "deg)");
-                    $(this).find(".recc_slider_img").css("transform","rotateZ(" + reverse + "deg)");
-                })  
-            }else if($(this).hasClass("slider-arrow-prev")){
-                let Sixthimg = $(".recc_slider_item[data-index='6']").find(".recc_slider_img").attr("src");
-                let SixthLink = $(".recc_slider_item[data-index='6']").find("a").attr("href");  
-                let SixthIntro = $(".recc_slider_item[data-index='6']").attr("data-intro");
-                $(".recc_slider_item[data-index='0']").find(".recc_slider_img").attr("src",Sixthimg);
-                $(".recc_slider_item[data-index='0']").find("a").attr("href",SixthLink);  
-                $(".recc_slider_item[data-index='0']").attr("data-intro",SixthIntro);
-                $(".recc_slider_item").each(function(){
-                    thisIndex = parseInt($(this).attr("data-index"));
-
-                    if(thisIndex == length){
-                        newIndex = 0;
-                    }else {
-                        newIndex = thisIndex + 1;
-                    }
-
-                    if(thisIndex == 0) {
-                        $(this).removeClass("last");
-                    }else if(thisIndex == 5) {
-                        $(this).addClass("last");
-                    }
-
-                    if($(window).width()>991){
-                        if(thisIndex == 0) {
-                            $(this).removeClass("last");
-                        }else if(thisIndex == 5) {
-                            $(this).addClass("last");
-                        }
-                    }else if($(window).width()>575){
-                        if(thisIndex == 1) {
-                            $(this).removeClass("last");
-                        }else if(thisIndex == 4) {
-                            $(this).addClass("last");
-                        }
-                    }else {
-                        if(thisIndex == 2) {
-                            $(this).removeClass("last");
-                        }else {
-                            $(this).addClass("last");
-                        }
-                    }
-
-                    if($(this).hasClass("active")){
-                        $(this).removeClass("active");
-                    }
-
-                    $(this).attr("data-index",newIndex);
-                    deg = rotateUnit * newIndex + rotateOffset;
-                    reverse = rotateUnit * newIndex * (-1) - rotateOffset;
-                    $(this).css("transform","rotateZ(" + deg + "deg)");
-                    $(this).find(".recc_slider_img").css("transform","rotateZ(" + reverse + "deg)");
-                });
+            let headerHeight;
+            if($(window).width() <= 991){
+                headerHeight = 100;
+            }else {
+                headerHeight = 300;
             }
-            $(".recc_slider_item[data-index='" + activeIndex + "']").addClass("active");
-            let activeIntro = $(".recc_slider_item[data-index='" + activeIndex + "']").attr("data-intro");
-            $(activeIntro).addClass("active").siblings(".recc_intro_item").removeClass("active");
-
+            let reccTop = $(".recc").offset().top - headerHeight;
+            if($(window).scrollTop() >= reccTop){
+                $(".smoke").addClass("active");
+            }else {
+                $(".smoke").removeClass("active");
+            }
         })
-
-        
     </script>
