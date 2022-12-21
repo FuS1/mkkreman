@@ -24,7 +24,7 @@
 						headerSort: true,
 					},
 					{
-						title: "地址縮圖",
+						title: "地址圖檔",
 						field: "file_url",
 						width: '',
 						headerSort: false,

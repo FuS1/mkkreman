@@ -22,7 +22,7 @@
 						headerSort: true,
 					},
 					{
-						title: "縮圖",
+						title: "圖檔",
 						field: "file_url",
 						width: '',
 						headerSort: false,

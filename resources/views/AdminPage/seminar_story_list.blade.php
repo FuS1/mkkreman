@@ -17,7 +17,7 @@
 						responsive:false,
 					},
 					{
-						title: "講座縮圖",
+						title: "講座圖檔",
 						field: "file_url",
 						width: '',
 						headerSort: false,

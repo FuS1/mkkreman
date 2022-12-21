@@ -41,12 +41,14 @@ class SeminarPostController extends Controller
         [
             'id'        => !$request->seminar_post_id || $request->seminar_post_id==='null' ? null : $request->seminar_post_id , 
         ],[
-            'title'     => $request->title ?? null,          
-            'content'   => $request->content ?? null,      
+            'title'             => $request->title              ?? null,     
+            'short_description' => $request->short_description  ?? null,     
+            'show_in_index'     => $request->show_in_index      ?? 0,  
+            'content'           => $request->content            ?? null,      
         ]);
 
         $this->resetSortIdx();
-        
+         
         // 如果有上傳新的檔案，則更新
         if( !empty($request->file) ){
 
@@ -59,6 +61,21 @@ class SeminarPostController extends Controller
 
             $seminarPost->update([
                 'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
+            ]);
+        }
+
+        // 如果有上傳新的檔案，則更新
+        if( !empty($request->banner_file) ){
+
+            $fileInfo = [
+                'filePath' => 'seminar/post',
+                'fileName' => Str::orderedUuid().".".($request->banner_file->getClientOriginalExtension()==='' ? $request->banner_file->clientExtension():$request->banner_file->getClientOriginalExtension()),
+            ];
+            
+            $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->banner_file));    
+
+            $seminarPost->update([
+                'banner_file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
             ]);
         }
 

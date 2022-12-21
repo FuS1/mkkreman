@@ -17,7 +17,7 @@
 						responsive:false,
 					},
 					{
-						title: "商品縮圖",
+						title: "商品圖檔",
 						field: "file_url",
 						width: '',
 						headerSort: false,

@@ -17,7 +17,7 @@
 						responsive:false,
 					},
 					{
-						title: "文章縮圖",
+						title: "圖檔",
 						field: "file_url",
 						width: '',
 						headerSort: false,
@@ -121,10 +121,10 @@
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
 		<div class="py-5 px-5 w-full">
 			<div class="mb-2">
-				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">講座文章設定</h1>
+				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">創業知識部落格設定</h1>
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
-			<a href="./seminar_post" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200">增加講座文章</a>
+			<a href="./seminar_post" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200">增加創業知識部落格</a>
 			<hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
 			<div class="table-responsive" id="seminar-post-table"></div>
 		</div>

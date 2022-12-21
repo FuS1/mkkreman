@@ -41,9 +41,10 @@ class SeminarStoryController extends Controller
         [
             'id'          => $request->seminar_story_id ?? null,             
         ],[
-            'title'       => $request->title ?? null,          
-            'short_description'   => $request->short_description ?? null,      
-            'content'     => $request->content ?? null,      
+            'title'             => $request->title              ?? null,     
+            'short_description' => $request->short_description  ?? null,     
+            'show_in_index'     => $request->show_in_index      ?? 0,  
+            'content'           => $request->content            ?? null,    
         ]);
 
         $this->resetSortIdx();
@@ -63,6 +64,21 @@ class SeminarStoryController extends Controller
             ]);
         }
 
+        // 如果有上傳新的檔案，則更新
+        if( !empty($request->banner_file) ){
+
+            $fileInfo = [
+                'filePath' => 'seminar/story',
+                'fileName' => Str::orderedUuid().".".($request->banner_file->getClientOriginalExtension()==='' ? $request->banner_file->clientExtension():$request->banner_file->getClientOriginalExtension()),
+            ];
+            
+            $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->banner_file));    
+
+            $seminarStory->update([
+                'banner_file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'] ,
+            ]);
+        }
+        
         return response($seminarStory->refresh(),200);
     }
 
