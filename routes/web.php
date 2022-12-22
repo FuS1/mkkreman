@@ -16,9 +16,21 @@ use App\Http\Controllers\API\PageContentController;
 |
 */
 
-Route::get('',          function () { return view('FrontPage.index');            });
-Route::get('',          [WebPageController::class, 'index'] );
-Route::get('foodList',  [WebPageController::class, 'foodList'] );
+Route::get('',              function () { return view('FrontPage.index');  });
+Route::get('',              [WebPageController::class, 'index']         );
+Route::get('aboutUs',       [WebPageController::class, 'aboutUs']       );
+Route::get('food',          [WebPageController::class, 'foods']      );
+Route::get('food/{id}',      function ($id) {
+    return 'User '.$id;
+});
+Route::get('news',          [WebPageController::class, 'newses']      );
+Route::get('store',         [WebPageController::class, 'stores']     );
+Route::get('recruitment',   [WebPageController::class, 'recruitment']   );
+Route::get('seminar',       [WebPageController::class, 'seminar']       );
+Route::get('seminar/post',  [WebPageController::class, 'seminarPost']       );
+Route::get('seminar/story', [WebPageController::class, 'seminarStory']       );
+Route::get('contactUs',     [WebPageController::class, 'contactUs']     );
+
 
 // 以下為後臺
 Route::group([

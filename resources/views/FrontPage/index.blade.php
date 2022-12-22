@@ -65,36 +65,6 @@
                                 </a>
                             </li>
                         @endforeach
-                            <!-- <li data-index="1" data-intro="#intro1" class="recc_slider_item">
-                                <a href="11">
-                                    <img class="recc_slider_img" src="./public/img/product-mark1.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="2" data-intro="#intro2" class="recc_slider_item">
-                                <a href="22">
-                                    <img class="recc_slider_img" src="./public/img/product-mark2.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="3" data-intro="#intro3" class="recc_slider_item active">
-                                <a href="33">
-                                    <img class="recc_slider_img" src="./public/img/product-mark3.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="4" data-intro="#intro4" class="recc_slider_item">
-                                <a href="44">
-                                    <img class="recc_slider_img" src="./public/img/product-mark4.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="5" data-intro="#intro5" class="recc_slider_item">
-                                <a href="55">
-                                    <img class="recc_slider_img" src="./public/img/product-mark5.png" alt="">
-                                </a>
-                            </li>
-                            <li data-index="6" data-intro="#intro6" class="recc_slider_item opa-0">
-                                <a href="66">
-                                    <img class="recc_slider_img" src="./public/img/product-mark6.png" alt="">
-                                </a>
-                            </li> -->
                         </ul>
                     </div>
                     <ul class="recc_intro">
@@ -126,74 +96,6 @@
 
         </div>
 
-        <!-- <div class="recc">
-            <img src="{{ asset('FrontPage/public/img/smoke-1.png') }}" alt="" class="smoke smoke-1" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-6" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-2.png') }}" alt="" class="smoke smoke-2" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <div class="title">
-                <img src="{{ asset('FrontPage/public/img/title-reccomend.svg') }}" alt="人氣推薦">
-                <h2>Top Recommendations</h2>
-            </div>
-            <div class="recc_inner">
-                <div class="recc_slider-box">
-                    <div class="recc_slider d-flex justify-content-center">
-                        <ul id="wheel">
-                        
-
-                        @if (count($foods))
-                        <li data-index="0" data-intro="#intro0" class="recc_slider_item last">
-                            <a href="#">
-                                <img class="recc_slider_img" src="{{ asset( 'storage/'.$foods->get(1)->file_path ) }}" alt="">
-                            </a>
-                        </li>
-                        @endif
-                        @foreach ($foods as $key => $food)
-                            @if ($key > 5)
-                                <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item last">
-                            @else
-                                <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key }}" class="recc_slider_item">
-                            @endif
-                                <a href="#">
-                                    <img class="recc_slider_img" src="{{ asset( 'storage/'.$food->file_path ) }}" alt="">
-                                </a>
-                            </li>
-                        @endforeach
-                            <li data-index="7" data-intro="#intro0" class="recc_slider_item last">
-                                <a href="">
-                                    <img class="recc_slider_img" src="" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="recc_intro">
-
-                    
-                    @foreach ($foods as $key => $food)
-                        @if ($key === 2)
-                        <li class="recc_intro_item active" id="intro{{ $key }}">
-                        @else
-                        <li class="recc_intro_item" id="intro{{ $key }}">
-                        @endif
-                            <div class="recc_intro_title">
-                                <h3>{{$food->title}}</h3>
-                            </div>
-                            <p>
-                                {{$food->short_description}}
-                            </p>
-                        </li>
-                    @endforeach
-                    </ul>
-                    <img class="flavor" src="{{ asset('FrontPage/public/img/flavor.svg') }}" alt="">
-                </div>
-            </div>
-            <img src="{{ asset('FrontPage/public/img/smoke-4.png') }}" alt="" class="smoke smoke-4" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(0px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
-            <div class="slider-arrow-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
-            <div class="slider-arrow-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
-        </div> -->
-
         <div class="news">
             <div class="container">
                 <div class="title">
@@ -205,21 +107,88 @@
                         
                     @foreach ($news as $_news)
                         <div class="swiper-slide">
-                            <a href="/news/?news_id={{ $_news->id }}" class="news_item">
+                            <a href="/news/{{ $_news->id }}" class="news_item">
                                 <div class="news_item_pic">
                                     <img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt="">
-                                    <div class="news_item_title"><h3>{{ $_news->title }}</h3></div>
                                 </div>
-                                <p class="date">{{ $_news->date_ymd }}</p>
+                                <div class="news_item_title">
+                                    <h4>{{ $_news->title }}</h4>
+                                    <p>{{ $_news->short_description }}</p>
+                                    <p style="text-align:right;">{{ $_news->started_at }} - {{ $_news->ended_at }}</p>
+                                </div>
                             </a>
                         </div>
                     @endforeach
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <a href="#" class="more">全部展開</a>
+                <a href="/news" class="more">全部活動</a>
             </div>
         </div>
+
+        <div class="seminarStory" style="background-color: #efefef; padding: 70px 0;">
+            <div class="container">
+                <div class="title">
+                    <img style="width: 270px; padding-left: 40px;" src="{{ asset('FrontPage/public/img/index-seminar-title.png') }}" alt="加盟專區">
+                </div>
+                <div class="title">
+                    <img src="{{ asset('FrontPage/public/img/index-seminar-story.png') }}" alt="創業故事">
+                    <h2>Story</h2>
+                </div>
+                <div class="swiper-container news_slider">
+                    <div class="swiper-wrapper">
+                        
+                    @foreach ($seminarStory as $_seminarStory)
+                        <div class="swiper-slide">
+                            <a href="/seminarStory/{{ $_seminarStory->id }}" class="seminarStory_item">
+                                <div class="news_item_pic">
+                                    <img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt="">
+                                </div>
+                                <div class="seminarStory_item_title">
+                                    <h4>{{ $_seminarStory->title }}</h4>
+                                    <p>{{ $_seminarStory->short_description }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <a href="/seminarStory" class="more">看更多</a>
+            </div>
+        </div>
+        
+        <div class="seminarPost" style="background-color: #efefef; padding: 70px 0;">
+            <div class="container">
+                <div class="title">
+                    <img style="width:305px;" src="{{ asset('FrontPage/public/img/index-seminar-post.png') }}" alt="創業知識部落格">
+                    <h2>You must know !</h2>
+                </div>
+                <div class="swiper-container news_slider">
+                    <div class="swiper-wrapper">
+                        
+                    @foreach ($seminarPost as $_seminarPost)
+                        <div class="swiper-slide">
+                            <a href="/seminarPost/{{ $_seminarPost->id }}" class="seminarPost_item">
+                                <div class="news_item_pic">
+                                    <img src="{{ asset( 'storage/'.$_seminarPost->file_path ) }}" alt="">
+                                </div>
+                                <div class="seminarPost_item_title">
+                                    <h4>{{ $_seminarPost->title }}</h4>
+                                    <p>{{ $_seminarPost->short_description }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <a href="/seminarPost" class="more">看更多</a>
+            </div>
+        </div>
+        
+
+
     </main>
     @relativeInclude('include.footer')
     <script>
@@ -233,14 +202,19 @@
             speed: 800,
         });
         var swiperNews = new Swiper(".news_slider", {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             spaceBetween: 30,
             loop: true,
             speed: 800,     
-            slidesPerGroup: 1,   
+            slidesPerGroup: 1,    
+            centeredSlides:true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             breakpoints: {
                 768: {
@@ -254,9 +228,7 @@
                 }
             }
         });
-        // 滾動
-        // var skrollr_obj = skrollr.init();
-        // 煙霧
+
         $(window).on("resize scroll",function(){
             let headerHeight;
             if($(window).width() <= 991){

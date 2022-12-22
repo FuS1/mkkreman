@@ -12,17 +12,17 @@
         <div class="header_mask"></div>
         <nav class="header_nav">
             <ul class="d-flex align-items-center justify-content-center">
-            <li><a href="/aboutUsPage">關於我們</a></li>
-                <li><a href="/foodList">美味餐點</a></li>
-                <li><a href="/newsPage">最新消息</a></li>
+            <li><a href="/aboutUs">關於我們</a></li>
+                <li><a href="/food">美味餐點</a></li>
+                <li><a href="/news">最新消息</a></li>
                 <li class="header_nav_space"><a href="/"></a></li>
-                <li><a href="/storePage">門市資訊</a></li>
-                <li><a href="/recruitmentPage">人才招募</a></li>
-                <li><a href="/seminarPage">我要加盟</a></li>
+                <li><a href="/store">門市資訊</a></li>
+                <li><a href="/recruitment">人才招募</a></li>
+                <li><a href="/seminar">我要加盟</a></li>
             </ul>
         </nav>
         <div class="header_logo">
-            <a href="./index.html" class="header_logo_box"></a>
+            <a href="/" class="header_logo_box"></a>
             <div class="header_logo_mask d-lg-block d-none"></div>
             <img class="header_logo_pic" src="{{ asset('FrontPage/public/img/logo.svg') }}" alt="">
         </div>

@@ -5,7 +5,7 @@
         <div class="footer_list">
             <nav class="footer_nav">
                 <ul>
-                    <li><a href="/contact_us">聯絡我們</a></li>
+                    <li><a href="/contactUs">聯絡我們</a></li>
                     <li><a href="">網站地圖</a></li>
                     <li><a href="">麵匡匡隱私權保護聲明</a></li>
                 </ul>
