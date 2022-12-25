@@ -15,6 +15,7 @@ use App\Http\Controllers\API\SeminarParticipantController;
 use App\Http\Controllers\API\SeminarStoryController;
 use App\Http\Controllers\API\SeminarPostController;
 use App\Http\Controllers\API\AboutUsController;
+use App\Http\Controllers\API\ContactUsController;
 
 
 /*
@@ -28,7 +29,9 @@ use App\Http\Controllers\API\AboutUsController;
 |
 */
 
-
+// 以下為前臺
+Route::post('contactUs/mail',   [ContactUsController::class, 'mail'] );
+Route::post('seminar/mail',     [SeminarController::class, 'mail'] );
 
 // 以下為後臺
 Route::group([
