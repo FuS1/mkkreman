@@ -5,6 +5,16 @@
   src: url(../font/CenturyGothic.woff) format("woff"), url(../font/CenturyGothic.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "KaiminSoStd";
+  src: url(../font/A-OTF-KaiminSoStd-Heavy-2.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "KaiminTuStd";
+  src: url(../font/A-OTF-KaiminTuStd-Heavy-2.otf) format("opentype");
+}
+
 body {
   color: #122C52;
   font-size: 17px;
@@ -128,7 +138,14 @@ textarea {
 }
 
 .header_nav ul li {
-  margin: 0 35px;
+  margin: 0 20px;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.5rem;
+  transition: border-bottom 700ms ease-out 100ms
+}
+
+.header_nav ul li:hover {
+  border-bottom: 1px solid #0000aa;
 }
 
 .header_nav_space {
@@ -164,7 +181,7 @@ textarea {
 
 @media screen and (max-width: 1199px) {
   .header_nav ul li {
-    margin: 0 15px;
+    margin: 0 5px;
   }
 }
 
@@ -260,7 +277,7 @@ main {
 
 .footer {
   background-color: #DCDDDD;
-  padding: 60px 0 160px;
+  padding: 60px 0 0 0;
 }
 
 .footer_logo {
@@ -360,9 +377,10 @@ main {
 }
 
 .btn-top {
-  position: fixed;
-  height: 100px;
+  /* position: fixed; */
+  height: 80px;
   width: 100%;
+  margin-top: 30px;
   background-color: #122C52;
   left: 0;
   bottom: 0;
@@ -401,7 +419,7 @@ main {
 .fixed-btn {
   position: fixed;
   right: 40px;
-  top: 250px;
+  bottom: 365px;
   z-index: 5;
 }
 
@@ -426,7 +444,7 @@ main {
 
 .fixed-btn a span {
   z-index: 1;
-  background-color: #DCDDDD;
+  background-color: #0f2c51;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -441,7 +459,12 @@ main {
   border-radius: 10px;
   border: 1px solid #132C53;
   letter-spacing: 0.1em;
-  color: #122C52;
+  color: #ffffff;
+  transition: background-color 400ms ease-out 100ms;
+}
+
+.fixed-btn a span:hover {
+  background-color: #5b789e;
 }
 
 .fixed-btn a.btn-order img {
@@ -462,28 +485,6 @@ main {
   }
   .fixed-btn a.btn-order img {
     width: 90px;
-  }
-}
-
-.banner-page {
-  width: 100%;
-  padding-bottom: 30%;
-  position: relative;
-}
-
-.banner-page img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .banner-page {
-    padding-bottom: 60%;
   }
 }
 
@@ -520,6 +521,10 @@ body {
 
 .banner_slider .swiper-button-next {
   right: 0;
+}
+
+.page_banner > img{
+  width:100%;
 }
 
 @media screen and (max-width: 767px) {
