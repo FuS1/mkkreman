@@ -397,6 +397,7 @@ window.initTinymce = function(dom_id, customConfig){
           'searchreplace visualblocks code fullscreen',
           'insertdatetime media table paste wordcount'
         ],
+        extended_valid_elements : "iframe[src|frameborder|style|scrolling|class|width|height|name|align]",
         menubar: 'file edit view tools help',
         toolbar: 'undo redo | fontselect fontsizeselect formatselect | forecolor backcolor lineheight letterspacing bold italic underline strikethrough alignleft aligncenter alignright alignjustify formatpainter removeformat | bullist numlist outdent indent | link image media | table | charmap emoticons',
 		toolbar_location: 'top',

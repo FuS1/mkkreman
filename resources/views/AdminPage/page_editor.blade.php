@@ -22,7 +22,7 @@
 </head>
 
 <body style="height:99vh;">
-	<div id="content" class="tinymce-body" name="content" style="border: 3px solid rgb(219 213 219); margin-top: 78px; height: 670px;">
+	<div id="content" class="tinymce-body" name="content" style="border: 3px solid rgb(219 213 219); margin-top: 78px;">
 		{!! $pageContent->editor_content ?? null !!}
 	</div>
 </body>
