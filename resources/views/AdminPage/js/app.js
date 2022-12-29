@@ -119,13 +119,13 @@ window.delUrlParam = function(key,url1) {
         return url;
     }
 }
-
 window.exec = function(url,type,data,successFunction,failFunction){
     let adminData = getLocalStorage('adminData');
+    let isAbsoluteURL = url.toLowerCase().startsWith('http') || url.toLowerCase().startsWith('//');
     let config = {
         type: type,
         dataType: 'json',
-        url: ENV['APP_API_URL'] + 'admin/' + url,
+        url: isAbsoluteURL ? url : ENV['APP_API_URL'] + 'admin/' + url,
         dataType:'json',
         headers: {
             Authorization: "Bearer "+(adminData ? adminData['token']['plainTextToken'] : '')
