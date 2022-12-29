@@ -24,7 +24,7 @@
         <div class="header_logo">
             <a href="/" class="header_logo_box"></a>
             <div class="header_logo_mask d-lg-block d-none"></div>
-            <img class="header_logo_pic" src="{{ asset('FrontPage/public/img/logo.svg') }}" alt="">
+            <a href="/"> <img class="header_logo_pic" src="{{ asset('FrontPage/public/img/logo.svg') }}" alt=""></a>
         </div>
         <div class="header_menu d-lg-none"><img src="{{ asset('FrontPage/public/img/icon_menu.png') }}" alt=""></div>
     </div>

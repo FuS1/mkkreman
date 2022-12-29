@@ -6,7 +6,7 @@
 <body>
     @relativeInclude('include.header')
     <main>
-        <div class="banner-page"><img src="{{ asset('FrontPage/public/img/join-banner.png') }}" alt=""></div>
+        <div class="page_banner"><img src="{{ asset('FrontPage/public/img/join-banner.png') }}" alt=""></div>
 
         <div class="join_video">
             <div class="container">
