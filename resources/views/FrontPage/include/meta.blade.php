@@ -4,6 +4,7 @@
 <title>麵匡匡</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('FrontPage/lib/css/bootstrap/bootstrap.css') }}">
 <link rel="stylesheet" href="{{ asset('FrontPage/lib/css/swiper/swiper-bundle.min.css') }}">

@@ -2,6 +2,7 @@
 <html lang="zh_tw">
 <head>
 	@relativeInclude('layout.html_head')
+	<link rel="stylesheet" href="{{ asset('FrontPage/lib/css/bootstrap/bootstrap.css') }}">
 	<link  href="{{ mix('FrontPage/public/css/style.css') }}" rel="stylesheet"><!-- tinymce -->
 	<script>
 

@@ -29,7 +29,7 @@ class StoreController extends Controller
     public function getStores(Request $request)
     {
         
-        $store = Store::query();
+        $store = Store::query()->orderBy('sort_idx','asc');
         switch ($request->area) {
             case '中部':
                 $store->whereIn('city',['苗栗縣','臺中市','彰化縣','南投縣','嘉義市','嘉義縣','雲林縣']);
