@@ -26,6 +26,29 @@ class StoreController extends Controller
         return response($store,200);
     }
 
+    public function getStores(Request $request)
+    {
+        
+        $store = Store::query();
+        switch ($request->area) {
+            case '中部':
+                $store->whereIn('city',['苗栗縣','臺中市','彰化縣','南投縣','嘉義市','嘉義縣','雲林縣']);
+                break;
+            case '南部':
+                $store->whereIn('city',['臺南市','高雄市','屏東縣','澎湖縣','金門縣','連江縣','南海島']);
+                break;
+            case '東部':
+                $store->whereIn('city',['宜蘭縣','臺東縣','花蓮縣']);
+                break;
+            case '北部':
+            default:
+            $store->whereIn('city',['臺北市','基隆市','新北市','新竹市','新竹縣','桃園市']);
+                break;
+        }
+
+        return response($store->get(),200);
+    }
+
     public function tabulator(Request $request)
     {
         $store_query = Store::query();

@@ -5,7 +5,7 @@
 	<script>
 		$(function() {
 			var table = initTabulator("#store-table",{
-				rowHeight:200,
+				// rowHeight:200,
 				initialSort:[
 					{column:"sort_idx", dir:"asc"},
 				],
@@ -23,17 +23,17 @@
 						headerFilter: "input",
 						headerSort: true,
 					},
-					{
-						title: "地址圖檔",
-						field: "file_url",
-						width: '',
-						headerSort: false,
-						formatter: function(cell, formatterParams){
-							if(cell.getValue()){
-								return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 mx-auto" src="'+cell.getValue()+'">';
-							}
-						}
-					},
+					// {
+					// 	title: "地址圖檔",
+					// 	field: "file_url",
+					// 	width: '',
+					// 	headerSort: false,
+					// 	formatter: function(cell, formatterParams){
+					// 		if(cell.getValue()){
+					// 			return '<img class="max-w-full min-h-2 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 mx-auto" src="'+cell.getValue()+'">';
+					// 		}
+					// 	}
+					// },
 					{
 						title: "排序",
 						field: "sort_idx",
