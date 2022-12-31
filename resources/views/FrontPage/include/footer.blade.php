@@ -17,7 +17,7 @@
                 </li>
             </ul>
         </div>
-        <p class="footer_intro">123123</p>
+        <!-- <p class="footer_intro">123123</p> -->
         <div class="footer_brand">
             <h3>旗下品牌</h3>
             <div class="footer_brand_content">
@@ -35,9 +35,9 @@
             <nav class="footer_nav ps-sm-3 ps-0 mt-sm-0 mt-4">
                 <ul>
                     <li class="mb-2"><a href="/contactUs">聯絡我們</a></li>
-                    <li class="mb-2"><a href="#">加盟主專區</a></li><br>
+                    <!-- <li class="mb-2"><a href="#">加盟主專區</a></li><br>
                     <li><a href="#">網站地圖</a></li>
-                    <li><a href="#">麵匡匡隱私權保護聲明</a></li>
+                    <li><a href="#">麵匡匡隱私權保護聲明</a></li> -->
                 </ul>
             </nav>
         </div>

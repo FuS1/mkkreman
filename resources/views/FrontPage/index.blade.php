@@ -3,7 +3,6 @@
 <head>
     @relativeInclude('include.meta')
     @relativeInclude('include.script')
-    <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script>
 </head>
 <body>
     @relativeInclude('include.header')
@@ -107,14 +106,12 @@
                         
                     @foreach ($news as $_news)
                         <div class="swiper-slide">
-                            <a href="/news/{{ $_news->id }}" class="news_item">
-                                <div class="news_item_pic">
-                                    <img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt="">
-                                </div>
-                                <div class="news_item_title">
-                                    <h4>{{ $_news->title }}</h4>
-                                    <p>{{ $_news->short_description }}</p>
-                                    <p style="text-align:right;">{{ $_news->started_at }} - {{ $_news->ended_at }}</p>
+                            <a href="/news/{{ $_news->id }}" class="news_page_item">
+                                <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt=""></div>
+                                <div class="news_page_text">
+                                    <h3>{{ $_news->title }}</h3>
+                                    <p class="content">{{ $_news->short_description }}</p>
+                                    <p class="date">{{ $_news->started_at }} - {{ $_news->ended_at }}</p>
                                 </div>
                             </a>
                         </div>
@@ -140,11 +137,9 @@
                         
                     @foreach ($seminarStory as $_seminarStory)
                         <div class="swiper-slide">
-                            <a href="/seminarStory/{{ $_seminarStory->id }}" class="seminarStory_item">
-                                <div class="news_item_pic">
-                                    <img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt="">
-                                </div>
-                                <div class="seminarStory_item_title">
+                            <a href="/seminarStory/{{ $_seminarStory->id }}" class="news_page_item">
+                                <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt=""></div>
+                                <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarStory->title }}</h4>
                                     <p>{{ $_seminarStory->short_description }}</p>
                                 </div>
@@ -169,11 +164,9 @@
                         
                     @foreach ($seminarPost as $_seminarPost)
                         <div class="swiper-slide">
-                            <a href="/seminarPost/{{ $_seminarPost->id }}" class="seminarPost_item">
-                                <div class="news_item_pic">
-                                    <img src="{{ asset( 'storage/'.$_seminarPost->file_path ) }}" alt="">
-                                </div>
-                                <div class="seminarPost_item_title">
+                            <a href="/seminarPost/{{ $_seminarPost->id }}" class="news_page_item">
+                                <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarPost->file_path ) }}" alt=""></div>
+                                <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarPost->title }}</h4>
                                     <p>{{ $_seminarPost->short_description }}</p>
                                 </div>
@@ -186,11 +179,9 @@
                 <a href="/seminarPost" class="more">看更多</a>
             </div>
         </div>
-        
-
-
     </main>
     @relativeInclude('include.footer')
+    <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script>
     <script>
         var swiperBanner = new Swiper(".banner_slider", {
             slidesPerView: 1,
@@ -202,29 +193,27 @@
             speed: 800,
         });
         var swiperNews = new Swiper(".news_slider", {
-            slidesPerView: 1.5,
+            slidesPerView: 1.3,
+            slidesPerGroup: 1,    
             spaceBetween: 30,
             loop: true,
-            speed: 800,     
-            slidesPerGroup: 1,    
+            speed: 800,
             centeredSlides:true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
             breakpoints: {
                 768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
+                    slidesPerView: 1.3,
+                    slidesPerGroup: 1,
                 },
                 1200: {
                     slidesPerView: 3,
                     slidesPerGroup: 3,  
                     spaceBetween: 60,
+                    centeredSlides:false,
+                    loop: false,
                 }
             }
         });

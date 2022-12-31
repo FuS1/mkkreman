@@ -2572,7 +2572,7 @@ body {
 }
 
 .news_slider {
-  padding-bottom: 65px;
+  /* padding-bottom: 65px; */
 }
 
 .news_slider .swiper-pagination {
