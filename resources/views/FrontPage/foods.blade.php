@@ -49,7 +49,7 @@
 
         <div class="innerPage">
             
-            <div class="menu_intro">
+            <!-- <div class="menu_intro">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <img class="menu_title" src="{{ asset('FrontPage/public/img/menu-title.svg') }}" alt="阿良真誠推薦">
 
@@ -70,43 +70,37 @@
                     <div class="swiper-container menu-swiper" id="noodle-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-1.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌豚骨拉麵</h3>
-                                        <p>
-                                        豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                        搭配武火炙燒的叉燒肉，<br>
-                                        香氣撲鼻， 美味無雙， 初訪必點。
-                                        </p>
-                                    </div>
-                                </a>
+                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-1.png') }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>招牌豚骨拉麵</h3>
+                                    <p>
+                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
+                                    搭配武火炙燒的叉燒肉，<br>
+                                    香氣撲鼻， 美味無雙， 初訪必點。
+                                    </p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-2.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌豚骨拉麵</h3>
-                                        <p>
-                                        豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                        搭配武火炙燒的叉燒肉，<br>
-                                        香氣撲鼻， 美味無雙， 初訪必點。
-                                        </p>
-                                    </div>
-                                </a>
+                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-2.png') }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>招牌豚骨拉麵</h3>
+                                    <p>
+                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
+                                    搭配武火炙燒的叉燒肉，<br>
+                                    香氣撲鼻， 美味無雙， 初訪必點。
+                                    </p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-3.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌豚骨拉麵</h3>
-                                        <p>
-                                        豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                        搭配武火炙燒的叉燒肉，<br>
-                                        香氣撲鼻， 美味無雙， 初訪必點。
-                                        </p>
-                                    </div>
-                                </a>
+                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-3.png') }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>招牌豚骨拉麵</h3>
+                                    <p>
+                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
+                                    搭配武火炙燒的叉燒肉，<br>
+                                    香氣撲鼻， 美味無雙， 初訪必點。
+                                    </p>
+                                </div>
                             </div>
                         </div>      
                     </div>
