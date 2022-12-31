@@ -31,7 +31,8 @@ use App\Http\Controllers\API\ContactUsController;
 
 // 以下為前臺
 Route::post('contactUs/mail',   [ContactUsController::class, 'mail'] );
-Route::post('seminar/mail',     [SeminarController::class, 'mail'] );
+Route::post('seminar/participant',[SeminarParticipantController::class, 'saveSeminarParticipant'] );
+Route::get ('seminar',          [SeminarController::class, 'getSeminars'] );
 Route::get ('store',            [StoreController::class, 'getStores'] );
 
 

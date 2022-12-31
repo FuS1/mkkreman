@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 use App\Exceptions\ErrorException;
 use App\Services\BaseService;
 use App\Models\Seminar;
@@ -33,6 +34,13 @@ class SeminarController extends Controller
         $seminar = Seminar::where('id',$request->seminar_id)->first();
 
         return response($seminar,200);
+    }
+
+    public function getSeminars(Request $request)
+    {
+        $seminars = Seminar::where('started_at','>=',Carbon::now()->toDateTimeString())->where('qop','>',0)->get();
+
+        return response($seminars,200);
     }
 
     public function saveSeminar(Request $request)

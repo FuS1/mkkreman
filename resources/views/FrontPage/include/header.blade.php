@@ -2,7 +2,7 @@
 
 @if (Request::path() == 'seminar')
     <div class="fixed-btn-join">
-        <a href="" class="btn-reserve"><img src="{{ asset('FrontPage/public/img/btn-reserve.png') }}"></a>
+        <a href="/seminar#seminarForm" class="btn-reserve"><img src="{{ asset('FrontPage/public/img/btn-reserve.png') }}"></a>
         <a href="" class="btn-consult"><img src="{{ asset('FrontPage/public/img/btn-consult.png') }}" ></a>
     </div>
 @else
