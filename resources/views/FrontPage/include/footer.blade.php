@@ -1,23 +1,7 @@
-
 <footer class="footer">
-    <div class="container d-flex align-items-center justify-content-center flex-wrap">
-        <a href="/" class="footer_logo"><img src="{{ asset('FrontPage/public/img/logo-footer.svg') }} " alt=""></a>
-        <div class="footer_list">
-            <nav class="footer_nav">
-                <ul>
-                    <li><a href="/contactUs">聯絡我們</a></li>
-                    <li><a href="">網站地圖</a></li>
-                    <li><a href="">麵匡匡隱私權保護聲明</a></li>
-                </ul>
-            </nav>
-            <ul class="footer_social">
-                <li><a href="#"><img src="{{ asset('FrontPage/public/img/fb.svg') }}" alt=""></a></li>
-                <li><a href="#"><img src="{{ asset('FrontPage/public/img/ig.svg') }}" alt=""></a></li>
-                <li><a href="#"><img src="{{ asset('FrontPage/public/img/line.svg') }}" alt=""></a></li>
-            </ul>
-        </div>
-        <div class="footer_inform">
-            <img class="footer_inform_brand" src="{{ asset('FrontPage/public/img/wube.svg') }}" alt="">
+    <div class="container" style="max-width: 900px;">
+        <div class="footer_inform d-md-flex align-items-center justify-content-between">
+            <div class="footer_inform_brand mb-md-0 mb-4"><img src="{{ asset('FrontPage/public/img/wube.svg') }}" alt=""></div>
             <ul>
                 <li>
                     <img src="{{ asset('FrontPage/public/img/icon-place.svg') }}" alt="">
@@ -33,8 +17,31 @@
                 </li>
             </ul>
         </div>
+        <p class="footer_intro">123123</p>
+        <div class="footer_brand">
+            <h3>旗下品牌</h3>
+            <div class="footer_brand_content">
+                <div class="footer_brand_pic"><img src="{{ asset('FrontPage/public/img/brand-1.png') }}" alt=""></div>
+                <div class="footer_brand_pic"><img src="{{ asset('FrontPage/public/img/brand-2.png') }}" alt=""></div>
+                <div class="footer_brand_pic"><img src="{{ asset('FrontPage/public/img/brand-3.png') }}" alt=""></div>
+            </div>
+        </div>
+        <div class="d-sm-flex align-items-center" style="margin-bottom: 20px;">
+            <ul class="footer_social">
+                <li><a href=""><img src="{{ asset('FrontPage/public/img/fb.svg') }}"   alt=""></a></li>
+                <li><a href=""><img src="{{ asset('FrontPage/public/img/ig.svg') }}"   alt=""></a></li>
+                <li><a href=""><img src="{{ asset('FrontPage/public/img/line.svg') }}" alt=""></a></li>
+            </ul>
+            <nav class="footer_nav ps-sm-3 ps-0 mt-sm-0 mt-4">
+                <ul>
+                    <li class="mb-2"><a href="/contactUs">聯絡我們</a></li>
+                    <li class="mb-2"><a href="#">加盟主專區</a></li><br>
+                    <li><a href="#">網站地圖</a></li>
+                    <li><a href="#">麵匡匡隱私權保護聲明</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <!-- <div class="footer_bottom"></div> -->
     <div class="btn-top">
         <div class="btn-top_pic">
             <img src="{{ asset('FrontPage/public/img/arrow-top.svg') }}" alt="">

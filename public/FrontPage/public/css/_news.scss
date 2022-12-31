@@ -1,0 +1,260 @@
+.news {
+    padding: 75px 0;
+    &_item {
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+        position: relative;
+        &_pic {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+        &_title {
+            padding: 20px 20px 40px;
+            background-color: rgba(0,0,0,0.66);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            h3 {
+                font-family: $notosansTC;
+                color: $white;
+                font-size: 26px;
+                margin: 0;
+                text-align: center;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
+        }
+        .date {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            padding: 10px 25px;
+            border: 1px solid $white;
+            border-radius: 5px;
+            background-color: $second-blue;
+            margin: 0;
+            font-size: 14px;
+            color: $white;
+            letter-spacing: 0.05em;
+        }
+    }
+    &_slider {
+        padding-bottom: 65px;
+        .swiper-pagination {
+            bottom: 0;
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                background-color: transparent;
+                border: 1px solid $main-blue;
+                opacity: 1;
+                &-active {
+                    background-color: $main-blue;
+                }
+            }
+        }
+    }
+    &_page {
+        margin-left: -39px;
+        margin-right: -39px;
+        >div {
+            padding-left: 39px;
+            padding-right: 39px;
+        }
+        &_item {
+            margin-bottom: 92px;
+            position: relative;
+            display: block;
+            &:not(.cutoff) {
+                &:hover {
+                    .news_page {
+                        &_pic {
+                            img {
+                                transform: scale(1.2);
+                            }
+                        }
+                        &_text {
+                            border-radius: 5px;
+                            background-color: #fff;
+                            color: $forth-blue;
+                        }
+                    }
+                }
+
+            }
+            &.cutoff {
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.3);
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 180px;
+                    height: 180px;
+                    background-image: url(../img/deadline.svg);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 2;
+                }
+            }
+        }
+        &_pic {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+                transition: $transition-common;
+            }
+        }
+        &_text {
+            padding: 20px;
+            background-color: $forth-blue;
+            color: #fff;
+            border: 1px solid $forth-blue;
+            transition: $transition-common;
+            h3 {
+                font-size: 26px;
+                font-weight: normal;
+                margin-bottom: 15px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                transition: $transition-common;
+            }
+            .content {
+                font-size: 18px;
+                margin-bottom: 15px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                transition: $transition-common;
+            }
+            .date {
+                font-size: 18px;
+                margin: 0;
+                text-align: right;
+                transition: $transition-common;
+            }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_page {
+            margin-left: -20px;
+            margin-right: -20px;
+            >div {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &_item {
+            &_title {
+                h3 {
+                    font-size: 22px;
+                }
+            }
+        }
+        &_page {
+            &_item {
+                margin-bottom: 45px;
+            }
+            &_text {
+                h3 {
+                    font-size: 22px;
+                }
+                .content {
+                    font-size: 16px;
+                }
+                .date {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_page {
+            margin-left: -10px;
+            margin-right: -10px;
+            >div {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &_item {
+                &.cutoff {
+                    &::after {
+                        width: 130px;
+                        height: 130px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 450px) {
+        &_page {
+            margin-left: 0;
+            margin-right: 0;
+            >div {
+                padding-left: 0;
+                padding-right: 0;
+                width: 100%;
+            }
+            &_item {
+                &.cutoff {
+                    &::after {
+                        // width: 100px;
+                        // height: 100px;
+                    }
+                }
+            }
+            &_text {
+                padding: 15px;
+                h3 {
+                    font-size: 20px;
+                }
+                .content {
+                    font-size: 14px;
+                }
+                .date {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

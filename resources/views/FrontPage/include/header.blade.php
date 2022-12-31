@@ -1,11 +1,16 @@
 
 
-
-
-<div class="fixed-btn">
-    <a href="" class="btn-order"><img src="{{ asset('FrontPage/public/img/here.svg') }}" alt=""><span>線上<br class="d-sm-none">訂餐</span></a>
-    <a href=""><span>完整<br class="d-sm-none">菜單</span></a>
-</div>
+@if (Request::path() == 'seminar')
+    <div class="fixed-btn-join">
+        <a href="" class="btn-reserve"><img src="{{ asset('FrontPage/public/img/btn-reserve.png') }}"></a>
+        <a href="" class="btn-consult"><img src="{{ asset('FrontPage/public/img/btn-consult.png') }}" ></a>
+    </div>
+@else
+    <div class="fixed-btn">
+        <a href="" class="btn-order"><img src="{{ asset('FrontPage/public/img/here.svg') }}"><span>線上<br class="d-sm-none">訂餐</span></a>
+        <a href="/food"><span>完整<br class="d-sm-none">菜單</span></a>
+    </div>
+@endif
 
 <header class="header">
     <div class="container position-relative d-lg-block d-flex align-items-center justify-content-between">

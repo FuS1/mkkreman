@@ -1,0 +1,186 @@
+.about {
+    &_meat {
+        max-width: 800px;
+        width: calc(100% - 40px);
+        margin: 0 auto 75px;
+        display: block;
+        @media screen and (max-width: 575px) {
+            width: 70%;
+        }
+    }
+    &_character {
+        margin-bottom: 120px;
+        >.container {
+            max-width: 1000px;
+        }
+        &_pic {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            // margin-bottom: 55px;
+            img {
+                position: absolute;
+                &.person {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    top: 0;
+                    left: 0;
+                }
+                &.say {
+                    width: 46%;
+                    top: 12%;
+                    right: -2%;
+                    transition: $transition-common;
+                    opacity: 0;
+                }
+            }
+        }
+        &_text {
+            max-width: 420px;
+            width: 100%;
+            margin: 0 auto;
+            border: 5px solid $sixth-blue;
+            padding: 7px;
+            .inner {
+                border: 2px solid $sixth-blue;
+                padding: 20px;
+            }
+            ul {
+                text-align: center;
+                li {
+                    color: $sixth-blue;
+                    font-weight: bold;
+                    &:not(:last-child) {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+        &_title {
+            height: 33px;
+            display: block;
+            margin: 0 auto 13px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+        }
+        @media screen and (max-width: 599px) {
+            &_text {
+                width: calc(100% - 100px);
+            }
+        }
+        @media screen and (max-width: 500px) {
+            &_text {
+                width: calc(100% - 80px);
+                .inner {
+                    padding: 20px 10px;
+                }
+            }
+            &_title {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    &_btn {
+        .container {
+            max-width: 1130px;
+        }
+        .row {
+            margin-left: -18px;
+            margin-right: -18px;
+            >div {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        a {
+            display: block;
+            padding: 30px;
+            background-color: $sixth-blue;
+            border-radius: 8px;
+            border: 1px solid $sixth-blue;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            transition: $transition-common;
+            margin-bottom: 20px;
+            &:hover {
+                background-color: transparent;
+                color: $sixth-blue;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            .row {
+                margin-left: -10px;
+                margin-right: -10px;
+                >div {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+            a {
+                padding: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.characterPic {
+    padding-top: 75px;
+    padding-bottom: 55px;
+    .swiper-slide-active {
+        .about_character_pic {
+            .say {
+                opacity: 1;
+            }
+        }
+        .about_character_text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    @media screen and (max-width: 599px) {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.characterText {
+    .swiper-button-next, .swiper-button-prev {
+        width: 25px;
+        height: 50px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        background-image: url(../img/menu-slider-arrow-next.svg);
+        right: 5%;
+    }
+    .swiper-button-prev {
+        background-image: url(../img/menu-slider-arrow-prev.svg);
+        left: 5%;
+    }
+    @media screen and (max-width: 599px) {
+        .swiper-button-next {
+            right: 0px;
+        }
+        .swiper-button-prev {
+            left: 0px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .swiper-button-next, .swiper-button-prev {
+            width: 20px;
+            height: 40px;
+        }
+    }
+}

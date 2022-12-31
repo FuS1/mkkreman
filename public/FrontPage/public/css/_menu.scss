@@ -1,0 +1,240 @@
+.menu {
+    &_intro {
+        margin-bottom: 110px;
+        .row {
+            margin-left: -28px;
+            margin-right: -28px;
+            >div {
+                padding-left: 28px;
+                padding-right: 28px;
+            }
+        }
+        img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        @media screen and (max-width: 991px) {
+            .row {
+                margin-left: -15px;
+                margin-right: -15px;
+                >div {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 55px;
+        }
+    }
+    &_title {
+        display: block;
+        margin: 0 auto 30px;
+        width: 400px;
+        @media screen and (max-width: 991px) {
+            width: 300px;
+        }
+        @media screen and (max-width: 767px) {
+            width: 200px;
+        }
+    }
+    &_slider {
+        padding-top: 43px;
+        padding-bottom: 97px;
+        &_title {
+            display: block;
+            width: 197px;
+            margin: 0 auto 75px;
+        }
+        .container {
+            position: relative;
+        }
+        &.sideDish {
+            background-color: rgba(216, 212, 210, 0.5);
+        }
+        &.drink {
+            .menu-swiper {
+                .swiper-slide {
+                    &-active {
+                        .menu-swiper_pic {
+                            img {
+                                width: 75%;
+                            }
+                        }
+                    }
+                }
+                &_arrow {
+                    top: 35%;
+                }
+            }
+        }
+        @media screen and (max-width: 1199px) {
+            &.drink {
+                .menu-swiper {
+                    &_arrow {
+                        top: 32%;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 991px) {
+            .container {
+                max-width: inherit;
+            }
+            &_title {
+                width: 150px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            padding-top: 20px;
+            padding-bottom: 50px;
+            &_title {
+                margin-bottom: 35px;
+            }
+            &.drink {
+                .menu-swiper {
+                    &_arrow {
+                        top: 35%;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 350px) {
+            &.drink {
+                .menu-swiper {
+                    &_arrow {
+                        top: 30%;
+                    }
+                }
+            }
+        }
+    }
+    &-swiper {
+        &_pic {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            transition: $transition-common;
+            img {
+                width: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: $transition-common;
+            }
+        }
+        &_text {
+            text-align: center;
+            transition: $transition-common;
+            opacity: 0;
+            visibility: hidden;
+            h3 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: $third-blue;
+            }
+            p {
+                margin: 0;
+                font-size: 18px;
+                color: rgba(14, 44, 80, 0.66);
+                line-height: 1.8;
+                letter-spacing: 0;
+            }
+        }
+        .swiper-slide {
+            &-active {
+                .menu-swiper_pic {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .menu-swiper_text {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            a {
+                &:hover {
+                    .menu-swiper_pic {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &_arrow {
+            position: absolute;
+            width: 25px;
+            top: 30%;
+            z-index: 4;
+            transition: $transition-common;
+            img {
+                width: 100%;
+            }
+            &.next {
+                left: calc(100% + 10px);
+            }
+            &.prev {
+                right: calc(100% + 10px);
+            }
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        @media screen and (max-width: 1300px) {
+            &_arrow {
+                top: 26%;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            &_text {
+                h3 {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            &_arrow {
+                top: 28%;
+                &.next {
+                    left: inherit;
+                    right: 30px;
+                }
+                &.prev {
+                    left: 30px;
+                    right: inherit;
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            &_arrow {
+                top: 23%;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            max-width: 400px;
+            margin: 0 auto;
+            &_arrow {
+                top: 30%;
+                &.prev {
+                    left: 20px;
+                }
+                &.next {
+                    right: 20px;
+                }
+            }
+        }
+        @media screen and (max-width: 575px) {
+            &_pic {
+                width: 80%;
+                padding-bottom: 80%;
+                margin: 0 auto;
+            }
+            &_arrow {
+                width: 20px;
+            }
+        }
+    }
+}

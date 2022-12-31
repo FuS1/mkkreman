@@ -8,7 +8,7 @@
         }
         h2 {
             text-align: center;
-            color: #0F2C51;
+            color: $forth-blue;
             font-size: 36px;
             font-weight: 500;
             margin: 0;
@@ -217,7 +217,7 @@
                     font-size: 17px;
                     margin: 0;
                     font-weight: normal;
-                    color: #231815;
+                    color: $main-black;
                     font-weight: 500;
                 }
             }
@@ -248,7 +248,7 @@
                 }
                 p {
                     margin: 0;
-                    color: #231815;
+                    color: $main-black;
                     font-size: 17px;
                 }
             }
@@ -260,7 +260,7 @@
             &_title {
                 text-align: center;
                 border-radius: 15px 15px 0 0;
-                background-color: #0F2C51;
+                background-color: $forth-blue;
                 color: #fff;
                 padding: 32px 15px;
                 h3 {
@@ -276,7 +276,7 @@
             &_content {
                 padding: 84px 95px;
                 border-radius: 0 0 20px 20px;
-                border: solid #BACBD7;
+                border: solid $fifth-blue;
                 border-width: 0 5px 5px 5px;
                 button {
                     color: #fff;
@@ -318,11 +318,11 @@
                 input {
                     height: 24px;
                     border-radius: 8px;
-                    border: 1px solid #0F2C51;
+                    border: 1px solid $forth-blue;
                 }
                 textarea {
                     border-radius: 8px;
-                    border: 1px solid #0F2C51;
+                    border: 1px solid $forth-blue;
                 }
                 &.name {
                     label {
@@ -471,52 +471,52 @@
             &_select {
                 position: relative;
                 &_active {
-                    width: 100%;
+                    // width: 100%;
                     height: 24px;
-                    border-radius: 8px;
-                    border: 1px solid #0F2C51;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 10px;
-                    cursor: pointer;
+                    // border-radius: 8px;
+                    // border: 1px solid $forth-blue;
+                    // display: flex;
+                    // align-items: center;
+                    // padding: 0 10px;
+                    // cursor: pointer;
                     span {
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        overflow: hidden;
-                        width: calc(100% - 19px);
-                        text-align: center;
+                        // display: -webkit-box;
+                        // -webkit-box-orient: vertical;
+                        // -webkit-line-clamp: 1;
+                        // overflow: hidden;
+                        // width: calc(100% - 19px);
+                        // text-align: center;
                         font-size: 12px;
-                        font-weight: 600;
+                        // font-weight: 600;
                         color: #727171;
                     }
                     img {
-                        width: 19px;
+                        // width: 19px;
                     }
                 }
-                &_list {
-                    position: absolute;
-                    top: calc(100% + 4px);
-                    left: 0;
-                    width: 100%;
-                    display: none;
-                    z-index: 4;
-                    li {
-                        cursor: pointer;
-                        padding: 3px;
-                        background-color: #DCDDDD;
-                        font-size: 12px;
-                        font-weight: 600;
-                        color: #231815;
-                        transition: $transition-common;
-                        text-align: center;
-                        border-bottom: 1px solid #fff;
-                        &:hover {
-                            background-color: $main-blue;
-                            color: #fff;
-                        }
-                    }
-                }
+                // &_list {
+                //     position: absolute;
+                //     top: calc(100% + 4px);
+                //     left: 0;
+                //     width: 100%;
+                //     display: none;
+                //     z-index: 4;
+                //     li {
+                //         cursor: pointer;
+                //         padding: 3px;
+                //         background-color: #DCDDDD;
+                //         font-size: 12px;
+                //         font-weight: 600;
+                //         color: $main-black;
+                //         transition: $transition-common;
+                //         text-align: center;
+                //         border-bottom: 1px solid #fff;
+                //         &:hover {
+                //             background-color: $main-blue;
+                //             color: #fff;
+                //         }
+                //     }
+                // }
             }
         }
         @media screen and (max-width: 991px) {
@@ -665,12 +665,12 @@
                 background-color: #fff;
                 padding: 28px 15px;
                 border-radius: 8px;
-                border: 1px solid #0F2C51;
-                box-shadow: 17px 17px 0 #0F2C51;
+                border: 1px solid $forth-blue;
+                box-shadow: 17px 17px 0 $forth-blue;
                 text-align: center;
                 font-size: 24px;
                 font-weight: 600;
-                color: #0F2C51;
+                color: $forth-blue;
             }
         }
         @media screen and (max-width: 767px) {
@@ -683,7 +683,7 @@
                     width: calc(100% - 80px);
                     padding: 22px 15px;
                     font-size: 20px;
-                    box-shadow: 12px 12px 0 #0f2c51;
+                    box-shadow: 12px 12px 0 $forth-blue;
                 }
             }
         }
@@ -696,7 +696,7 @@
                     width: calc(100% - 60px);
                     padding: 20px 15px;
                     font-size: 18px;
-                    box-shadow: 10px 10px 0 #0f2c51;
+                    box-shadow: 10px 10px 0 $forth-blue;
                 }
             }
         }

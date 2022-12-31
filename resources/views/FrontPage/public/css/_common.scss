@@ -8,7 +8,12 @@
 $main-blue: #122C52;
 $second-blue: #132C53;
 $third-blue: #0E2C50;
+$forth-blue: #0F2C51;
+$fifth-blue: #BACBD7;
+$sixth-blue: #122C53;
 $main-gray: #DCDDDD;
+$second-gray: #727171;
+$main-black: #231815;
 $white: #fff;
 $notosansTC: 'Noto Sans TC', sans-serif;
 $CenturyGothic:  "Century Gothic", sans-serif;
@@ -113,7 +118,27 @@ textarea {
         ul {
             height: 100%;
             li {
-                margin: 0 35px;
+                margin: 0 25px;
+                a {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        // width: 100%;
+                        width: 0;
+                        height: 1px;
+                        background-color: $main-blue;
+                        left: 50%;
+                        bottom: -10px;
+                        transform: translateX(-50%);
+                        transition: $transition-common;
+                    }
+                    &:hover, &.active {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
         &_space {
@@ -141,13 +166,31 @@ textarea {
         left: 0;
         display: none;
     }
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1399px) {
         &_nav {
             ul {
                 li {
                     margin: 0 15px;
                 }
             }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_nav {
+            ul {
+                li {
+                    margin: 0 8px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        >.container {
+            max-width: inherit;
         }
     }
     @media screen and (max-width: 991px) {
@@ -225,7 +268,7 @@ main {
 // footer
 .footer {
     background-color: $main-gray;
-    padding: 60px 0 160px;
+    padding: 46px 0 140px;
     &_logo {
         width: 160px;
         margin-right: 65px;
@@ -238,8 +281,15 @@ main {
         margin-right: 37px;
     }
     &_nav {
+        // padding-left: 15px;
+        ul {
+            // display: flex;
+            // flex-wrap: wrap;
+        }
         li {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
+            margin-right: 30px;
+            display: inline-block;
             a {
                 font-family: $notosansTC;
             }
@@ -261,14 +311,18 @@ main {
         }
     }
     &_inform {
-        padding: 17px 32px;
-        border-radius: 15px;
-        background-color: $white;
+        // padding: 17px 32px;
+        // border-radius: 15px;
+        // background-color: $white;
+        margin-bottom: 22px;
         &_brand {
             max-width: 260px;
             width: 100%;
             display: block;
-            margin-bottom: 16px;
+            // margin-bottom: 16px;
+            img {
+                width: 100%;
+            }
         }
         ul {
             li {
@@ -285,8 +339,36 @@ main {
                     margin: 0;
                     font-size: 13px;
                     font-family: $notosansTC;
-                    color: #727171;
+                    color: $second-gray;
                 }
+            }
+        }
+    }
+    &_intro {
+        color: $second-gray;
+        margin-bottom: 45px;
+        font-size: 18px;
+    }
+    &_brand {
+        margin-bottom: 30px;
+        h3 {
+            color: #595757;
+            font-size: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #595757;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        &_content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        &_pic {
+            height: 80px;
+            margin-right: 40px;
+            img {
+                height: 100%;
             }
         }
     }
@@ -301,6 +383,17 @@ main {
         }
         &_logo {
             margin-bottom: 40px;
+        }
+        &_nav{ 
+            li {
+                margin-right: 15px;
+            }
+        }
+        &_brand {
+            &_pic {
+                height: 60px;
+                margin-right: 20px;
+            }
         }
     }
 }
@@ -368,6 +461,27 @@ main {
             }
         }
     }
+    &-join {
+        position: fixed;
+        z-index: 5;
+        right: 40px;
+        top: 250px;
+        a {
+            width: 45px;
+            display: block;
+            margin-bottom: 25px;
+            // padding: 5px 3px;
+            transition: $transition-common;
+            // border: 1px solid transparent;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                // border-color: $main-blue;
+                transform: scale(1.1);
+            }
+        }
+    }
     @media screen and (max-width: 575px) {
         right: 20px;
         a {
@@ -379,22 +493,167 @@ main {
                 }
             }
         }
+        &-join {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
 
 .banner-page {
     width: 100%;
-    padding-bottom: 30%;
+    // padding-bottom: 30%;
     position: relative;
     img {
-        position: absolute;
+        // position: absolute;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        top: 0;
-        left: 0;
+        // height: 100%;
+        // object-fit: cover;
+        // top: 0;
+        // left: 0;
     }
     @media screen and (max-width: 767px) {
-        padding-bottom: 60%;
+        // padding-bottom: 60%;
+    }
+}
+
+.innerPage {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    @media screen and (max-width: 767px) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+.select-common {
+    position: relative;
+    &_active {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $forth-blue;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+        span {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            width: calc(100% - 19px);
+            text-align: center;
+            font-weight: 600;
+        }
+        img {
+            width: 19px;
+        }
+    }
+    &_list {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        width: 100%;
+        display: none;
+        z-index: 4;
+        li {
+            cursor: pointer;
+            padding: 3px;
+            background-color: #DCDDDD;
+            font-size: 12px;
+            font-weight: 600;
+            color: $main-black;
+            transition: $transition-common;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            &:hover, &.active {
+                background-color: $main-blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.recruit_select {
+    width: calc(100% - 100px);
+    &-box {
+        width: 100%;
+        max-width: 560px;
+        padding: 0 20px;
+        margin: 0 auto 77px;
+        display: flex;
+        align-items: center;
+        label {
+            width: 100px;
+            font-size: 21px;
+            font-weight: bold;
+        }
+    }
+    &_active {
+        height: 37px;
+        span {
+            font-size: 21px;
+        }
+    }
+    &_list {
+        background-color: #F7F8F8;
+        li {
+            font-size: 21px;
+            color: $second-blue;
+            padding: 10px;
+            border-color: $main-blue;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &-box {
+            margin-bottom: 40px;
+            label {
+                font-size: 18px;
+            }
+        }
+        &_active {
+            span {
+                font-size: 18px;
+            }
+        }
+        &_list {
+            li {
+                font-size: 18px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.title {
+    margin-bottom: 35px;
+    img {
+        width: 175px;
+        display: block;
+        margin: 0 auto 8px;
+    }
+    h2 {
+        font-size: 16px;
+        font-family: $CenturyGothic;
+        text-align: center;
+        margin: 0;
+        color: $second-blue;
+        letter-spacing: 0;
+    }
+    &-store {
+        img {
+            width: 258px;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        img {
+            width: 130px;
+        }
+        &-store {
+            img {
+                width: 192px;
+            }
+        }
     }
 }

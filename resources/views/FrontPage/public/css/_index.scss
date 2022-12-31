@@ -37,27 +37,7 @@ body {
     }
 }
 
-.title {
-    margin-bottom: 35px;
-    img {
-        width: 175px;
-        display: block;
-        margin: 0 auto 8px;
-    }
-    h2 {
-        font-size: 16px;
-        font-family: $CenturyGothic;
-        text-align: center;
-        margin: 0;
-        color: $second-blue;
-        letter-spacing: 0;
-    }
-    @media screen and (max-width: 450px) {
-        img {
-            width: 130px;
-        }
-    }
-}
+
 
 .home-about {
     padding: 55px 0 90px;
@@ -552,90 +532,6 @@ body {
         filter: blur(7px);
         transform: translateX(110px) translateY(-50px);
         opacity: 0;
-    }
-}
-
-
-.news {
-    padding: 75px 0;
-    &_item {
-        display: block;
-        width: 100%;
-        padding-bottom: 100%;
-        position: relative;
-        &_pic {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border-radius: 5px;
-            img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                top: 0;
-                left: 0;
-            }
-        }
-        &_title {
-            padding: 20px 20px 40px;
-            background-color: rgba(0,0,0,0.66);
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            h3 {
-                font-family: $notosansTC;
-                color: $white;
-                font-size: 26px;
-                margin: 0;
-                text-align: center;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 1;
-                overflow: hidden;
-            }
-        }
-        .date {
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translate(-50%, 50%);
-            padding: 10px 25px;
-            border: 1px solid $white;
-            border-radius: 5px;
-            background-color: $second-blue;
-            margin: 0;
-            font-size: 14px;
-            color: $white;
-            letter-spacing: 0.05em;
-        }
-    }
-    &_slider {
-        padding-bottom: 65px;
-        .swiper-pagination {
-            bottom: 0;
-            .swiper-pagination-bullet {
-                width: 12px;
-                height: 12px;
-                background-color: transparent;
-                border: 1px solid $main-blue;
-                opacity: 1;
-                &-active {
-                    background-color: $main-blue;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 767px) {
-        &_item {
-            &_title {
-                h3 {
-                    font-size: 22px;
-                }
-            }
-        }
     }
 }
 
