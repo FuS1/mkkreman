@@ -21,46 +21,26 @@
                     <h2>Latest News</h2>
                 </div>
                 <div class="row news_page">
+                @foreach ($news as $_news)
                     <div class="col-lg-4 col-6">
-                        <a href="" class="news_page_item">
-                            <div class="news_page_pic"><img src="{{ asset('FrontPage/public/img/news-pic.png') }}" alt=""></div>
+                    @if ($_news->is_pass) 
+                        <a href="/news/{{ $_news->id }}" class="news_page_item cutoff">
+                    @else
+                        <a href="/news/{{ $_news->id }}" class="news_page_item">
+                    @endif
+                            <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt=""></div>
                             <div class="news_page_text">
-                                <h3>麵匡匡內湖金湖店正式開幕</h3>
-                                <p class="content">開幕活動於OO/OO~OO/OO~~~</p>
-                                <p class="date">2022.08.01-2022.08.31</p>
+                                <h3>{{ $_news->title }}</h3>
+                                <p class="content">{{ $_news->short_description }}</p>
+                            @if (empty($_news->ended_ymd)) 
+                                <p class="date">{{ $_news->started_ymd }}</p>
+                            @else
+                                <p class="date">{{ $_news->started_ymd }} - {{ $_news->ended_ymd }}</p>
+                            @endif
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-6">
-                        <a href="" class="news_page_item">
-                            <div class="news_page_pic"><img src="{{ asset('FrontPage/public/img/news-pic.png') }}" alt=""></div>
-                            <div class="news_page_text">
-                                <h3>麵匡匡內湖金湖店正式開幕</h3>
-                                <p class="content">開幕活動於OO/OO~OO/OO~~~</p>
-                                <p class="date">2022.08.01-2022.08.31</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-6">
-                        <a href="" class="news_page_item">
-                            <div class="news_page_pic"><img src="{{ asset('FrontPage/public/img/news-pic.png') }}" alt=""></div>
-                            <div class="news_page_text">
-                                <h3>麵匡匡內湖金湖店正式開幕</h3>
-                                <p class="content">開幕活動於OO/OO~OO/OO~~~</p>
-                                <p class="date">2022.08.01-2022.08.31</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-6">
-                        <a href="" class="news_page_item cutoff">
-                            <div class="news_page_pic"><img src="{{ asset('FrontPage/public/img/news-pic.png') }}" alt=""></div>
-                            <div class="news_page_text">
-                                <h3>麵匡匡內湖金湖店正式開幕</h3>
-                                <p class="content">開幕活動於OO/OO~OO/OO~~~</p>
-                                <p class="date">2022.08.01-2022.08.31</p>
-                            </div>
-                        </a>
-                    </div>
+                @endforeach
                 </div>
             </div>
         </div>

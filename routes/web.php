@@ -24,6 +24,7 @@ Route::get('food/{id}',      function ($id) {
     return 'User '.$id;
 });
 Route::get('news',          [WebPageController::class, 'newses']      );
+Route::get('news/{id}',     [WebPageController::class, 'news']      );
 Route::get('store',         [WebPageController::class, 'stores']     );
 Route::get('recruitment',   [WebPageController::class, 'recruitment']   );
 Route::get('seminar',       [WebPageController::class, 'seminar']       );

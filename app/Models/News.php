@@ -38,4 +38,18 @@ class News extends BaseModel
         return Carbon::parse($this->created_at)->format('Y.m.d');
     }
 
+    public function getStartedYmdAttribute()
+    {
+        return empty($this->started_at) ? null : Carbon::parse($this->started_at)->format('Y.m.d');
+    }
+
+    public function getEndedYmdAttribute()
+    {
+        return empty($this->ended_at) ? null : Carbon::parse($this->ended_at)->format('Y.m.d');
+    }
+
+    public function getIsPassAttribute()
+    {
+        return empty($this->ended_at) ? false : Carbon::parse($this->ended_at)->isPast();
+    }
 }

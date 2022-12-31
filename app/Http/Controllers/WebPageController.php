@@ -79,6 +79,20 @@ class WebPageController extends Controller
         ]);
     }
 
+    public function news(Request $request, $id)
+    {
+        $news = News::where('id',$id)->first();
+
+        if(!$news){
+            abort(404);
+        }else{
+            return view('FrontPage.news', [
+                'news'        => $news,
+            ]);
+        }
+
+    }
+
     public function stores(Request $request)
     {
         $stores = Store::orderBy('sort_idx', 'asc')->get();

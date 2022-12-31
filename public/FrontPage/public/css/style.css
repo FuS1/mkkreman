@@ -2509,6 +2509,31 @@ body {
   padding: 75px 0;
 }
 
+.news-banner{
+  width: 100%;
+  min-height: 74px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #122C52;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fcfcfc;
+  margin: 42px 0;
+  padding: 16px;
+  text-align: center;
+}
+
+.news-banner:before{
+  display: block;
+  content: '';
+  position: absolute;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 1px solid #ffffff;
+}
+
 .news_item {
   display: block;
   width: 100%;
