@@ -451,6 +451,9 @@ main {
     margin-right: 15px;
   }
   .footer_brand_pic {
+    height: 60px;
+    margin-right: 20px;
+  }
 }
 
 .btn-top {
