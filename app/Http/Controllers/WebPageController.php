@@ -109,22 +109,51 @@ class WebPageController extends Controller
         ]);
     }
 
-    public function seminarPost(Request $request)
+    public function seminarPosts(Request $request)
     {
         $seminarPost = SeminarPost::orderBy('sort_idx', 'asc')->get();
 
-        return view('FrontPage.seminarPost', [
+        return view('FrontPage.seminarPosts', [
             'seminarPost'   => $seminarPost
         ]);
     }
 
-    public function seminarStory(Request $request)
+    public function seminarPost(Request $request, $id)
+    {
+        $seminarPost = SeminarPost::where('id',$id)->first();
+
+        if(!$seminarPost){
+            abort(404);
+        }else{
+            return view('FrontPage.seminarPost', [
+                'seminarPost'        => $seminarPost,
+            ]);
+        }
+
+    }
+
+    public function seminarStorys(Request $request)
     {
         $seminarStory = SeminarStory::orderBy('sort_idx', 'asc')->get();
 
-        return view('FrontPage.seminarStory', [
+        return view('FrontPage.seminarStorys', [
             'seminarStory'   => $seminarStory
         ]);
     }
+
+    public function seminarStory(Request $request, $id)
+    {
+        $seminarStory = SeminarStory::where('id',$id)->first();
+
+        if(!$seminarStory){
+            abort(404);
+        }else{
+            return view('FrontPage.seminarStory', [
+                'seminarStory'        => $seminarStory,
+            ]);
+        }
+
+    }
+
 
 }

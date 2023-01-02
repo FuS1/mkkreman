@@ -25,8 +25,10 @@ Route::get('news/{id}',     [WebPageController::class, 'news']      );
 Route::get('store',         [WebPageController::class, 'stores']     );
 Route::get('recruitment',   [WebPageController::class, 'recruitment']   );
 Route::get('seminar',       [WebPageController::class, 'seminar']       );
-Route::get('seminar/post',  [WebPageController::class, 'seminarPost']       );
-Route::get('seminar/story', [WebPageController::class, 'seminarStory']       );
+Route::get('seminar/post',  [WebPageController::class, 'seminarPosts']       );
+Route::get('seminar/post/{id}',  [WebPageController::class, 'seminarPost']       );
+Route::get('seminar/story', [WebPageController::class, 'seminarStorys']       );
+Route::get('seminar/story/{id}', [WebPageController::class, 'seminarStory']       );
 Route::get('contactUs',     [WebPageController::class, 'contactUs']     );
 
 

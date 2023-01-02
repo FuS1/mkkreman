@@ -6,12 +6,15 @@
 <body>
     @relativeInclude('include.header')
     <main>
-        <div class="container" style="margin-top: 90px;">
-            <div class="title">
-                <img src="{{ asset('FrontPage/public/img/index-seminar-story.png') }}" alt="創業故事">
-                <h2>Story</h2>
-            </div>
+        <div class="page_banner">
+            <img src="{{ asset( 'storage/'.$seminarStory->banner_file_path ) }}" alt="">
         </div>
+        
+        <div class="container">
+            <div class="news-banner"><h1>{{ $seminarStory->title }}</h1></div>
+            {!! $seminarStory->content !!}
+        </div>
+
     </main>
     @relativeInclude('include.footer')
     @relativeInclude('include.script')

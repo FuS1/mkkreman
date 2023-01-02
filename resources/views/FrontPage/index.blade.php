@@ -141,7 +141,7 @@
                         
                     @foreach ($seminarStory as $_seminarStory)
                         <div class="swiper-slide">
-                            <a href="/seminarStory/{{ $_seminarStory->id }}" class="news_page_item">
+                            <a href="/seminar/story/{{ $_seminarStory->id }}" class="news_page_item">
                                 <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt=""></div>
                                 <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarStory->title }}</h4>
@@ -168,7 +168,7 @@
                         
                     @foreach ($seminarPost as $_seminarPost)
                         <div class="swiper-slide">
-                            <a href="/seminarPost/{{ $_seminarPost->id }}" class="news_page_item">
+                            <a href="/seminar/post/{{ $_seminarPost->id }}" class="news_page_item">
                                 <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarPost->file_path ) }}" alt=""></div>
                                 <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarPost->title }}</h4>
