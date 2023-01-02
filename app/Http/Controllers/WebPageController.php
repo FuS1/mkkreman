@@ -8,6 +8,9 @@ use App\Exceptions\ErrorException;
 use App\Models\PageContent;
 use App\Models\Banner;
 use App\Models\HotFood;
+use App\Models\MainFood;
+use App\Models\SideFood;
+use App\Models\Drink;
 use App\Models\News;
 use App\Models\Store;
 use App\Models\AboutUsPerson;
@@ -47,25 +50,11 @@ class WebPageController extends Controller
 
     public function foods(Request $request)
     {
-        $foods = Food::orderBy('sort_idx', 'asc')->get();
-
-        $mainFood = $foods->filter(function ($food) {
-            return $food->type == '拉麵系列';
-        })->take(6);
-
-        $sideDish = $foods->filter(function ($food) {
-            return $food->type == '美味小菜';
-        })->take(6);
-
-        $drink    = $foods->filter(function ($food) {
-            return $food->type == '清爽飲品';
-        })->take(6);
-
         return view('FrontPage.foods', [
             'pageContent'   => PageContent::where('page','food')->first(),
-            'mainFood'      => $mainFood,
-            'sideDish'      => $sideDish,
-            'drink'         => $drink,
+            'mainFoods'     => MainFood::orderBy('sort_idx', 'asc')->get(),
+            'sideFoods'     => SideFood::orderBy('sort_idx', 'asc')->get(),
+            'drinks'        => Drink::orderBy('sort_idx', 'asc')->get(),
         ]);
     }
 

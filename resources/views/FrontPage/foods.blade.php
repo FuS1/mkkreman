@@ -69,39 +69,15 @@
                 <div class="container">
                     <div class="swiper-container menu-swiper" id="noodle-swiper">
                         <div class="swiper-wrapper">
+                        @foreach ($mainFoods as $key => $food)
                             <div class="swiper-slide">
-                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-1.png') }}" alt=""></div>
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
                                 <div class="menu-swiper_text">
-                                    <h3>招牌豚骨拉麵</h3>
-                                    <p>
-                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                    搭配武火炙燒的叉燒肉，<br>
-                                    香氣撲鼻， 美味無雙， 初訪必點。
-                                    </p>
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-2.png') }}" alt=""></div>
-                                <div class="menu-swiper_text">
-                                    <h3>招牌豚骨拉麵</h3>
-                                    <p>
-                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                    搭配武火炙燒的叉燒肉，<br>
-                                    香氣撲鼻， 美味無雙， 初訪必點。
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-3.png') }}" alt=""></div>
-                                <div class="menu-swiper_text">
-                                    <h3>招牌豚骨拉麵</h3>
-                                    <p>
-                                    豬大骨湯底， 透著淡淡的牡蠣白， 營養不油膩；<br>
-                                    搭配武火炙燒的叉燒肉，<br>
-                                    香氣撲鼻， 美味無雙， 初訪必點。
-                                    </p>
-                                </div>
-                            </div>
+                        @endforeach
                         </div>      
                     </div>
                     <div class="menu-swiper_arrow next" id="noodle-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>
@@ -114,42 +90,15 @@
                 <div class="container">
                     <div class="swiper-container menu-swiper" id="side-swiper">
                         <div class="swiper-wrapper">
+                        @foreach ($sideFoods as $key => $food)
                             <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-4.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌唐揚炸鷄</h3>
-                                        <p>
-                                        酥脆多汁 鹹香好滋味<br>
-                                        讓人吃過一次就難以忘懷
-                                        </p>
-                                    </div>
-                                </a>
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-5.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌唐揚炸鷄</h3>
-                                        <p>
-                                        酥脆多汁 鹹香好滋味<br>
-                                        讓人吃過一次就難以忘懷
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/product-1.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>招牌唐揚炸鷄</h3>
-                                        <p>
-                                        酥脆多汁 鹹香好滋味<br>
-                                        讓人吃過一次就難以忘懷
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
+                        @endforeach
                         </div>      
                     </div>
                     <div class="menu-swiper_arrow next" id="side-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>
@@ -162,39 +111,15 @@
                 <div class="container">
                     <div class="swiper-container menu-swiper" id="drink-swiper">
                         <div class="swiper-wrapper">
+                        @foreach ($drinks as $key => $food)
                             <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/drink-1.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>陳阿滿桂花紅茶</h3>
-                                        <p>
-                                            帶著桂花香的甜蜜蜜滋味
-                                        </p>
-                                    </div>
-                                </a>
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/drink-2.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>陳阿滿桂花紅茶</h3>
-                                        <p>
-                                            帶著桂花香的甜蜜蜜滋味
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <div class="menu-swiper_pic"><img src="{{ asset('FrontPage/public/img/drink-3.png') }}" alt=""></div>
-                                    <div class="menu-swiper_text">
-                                        <h3>陳阿滿桂花紅茶</h3>
-                                        <p>
-                                            帶著桂花香的甜蜜蜜滋味
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
+                        @endforeach
                         </div>      
                     </div>
                     <div class="menu-swiper_arrow next" id="drink-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>

@@ -20,9 +20,6 @@ Route::get('',              function () { return view('FrontPage.index');  });
 Route::get('',              [WebPageController::class, 'index']         );
 Route::get('aboutUs',       [WebPageController::class, 'aboutUs']       );
 Route::get('food',          [WebPageController::class, 'foods']      );
-Route::get('food/{id}',      function ($id) {
-    return 'User '.$id;
-});
 Route::get('news',          [WebPageController::class, 'newses']      );
 Route::get('news/{id}',     [WebPageController::class, 'news']      );
 Route::get('store',         [WebPageController::class, 'stores']     );
@@ -52,7 +49,7 @@ Route::group([
     Route::get('side_food_list',            function () { return view('AdminPage.side_food_list');       });
     Route::get('side_food',                 function () { return view('AdminPage.side_food');            });
     Route::get('drink_list',                function () { return view('AdminPage.drink_list');       });
-    Route::get('drink_food',                function () { return view('AdminPage.drink');            });
+    Route::get('drink',                     function () { return view('AdminPage.drink');            });
     Route::get('admin_list',                function () { return view('AdminPage.admin_list');      });
     Route::get('contact_us_email',          function () { return view('AdminPage.contact_us_email');      });
     Route::get('seminar_list',              function () { return view('AdminPage.seminar_list');    });

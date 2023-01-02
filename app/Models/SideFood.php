@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class MainFood extends BaseModel
+class SideFood extends BaseModel
 {
     use HasFactory,SoftDeletes;
     protected $table = 'side_food';
