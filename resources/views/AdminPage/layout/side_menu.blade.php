@@ -38,7 +38,16 @@
                   <a href="/_admin_/food_main_content" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁面設定</a>
                </li>
                <li>
-                  <a href="/_admin_/food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">美味餐點列表</a>
+                  <a href="/_admin_/hot_food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">人氣推薦列表</a>
+               </li>
+               <li>
+                  <a href="/_admin_/main_food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">拉麵系列列表</a>
+               </li>
+               <li>
+                  <a href="/_admin_/side_food_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">美味小菜列表</a>
+               </li>
+               <li>
+                  <a href="/_admin_/drink_list" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">清爽飲品列表</a>
                </li>
             </ul>
          </li>

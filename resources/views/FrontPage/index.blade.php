@@ -53,8 +53,8 @@
                     <div class="recc_slider d-flex justify-content-center">
                         <ul id="wheel">
 
-                        @foreach ($foods as $key => $food)
-                            @if ($key+1 === count($foods) )
+                        @foreach ($hotfoods as $key => $food)
+                            @if ($key+1 === count($hotfoods) )
                             <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item opa-0">
                             @else
                             <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item">
@@ -68,7 +68,7 @@
                     </div>
                     <ul class="recc_intro">
 
-                    @foreach ($foods as $key => $food)
+                    @foreach ($hotfoods as $key => $food)
                         @if ($key === 2)
                         <li class="recc_intro_item active" id="intro{{ $key+1 }}">
                         @else
@@ -78,7 +78,7 @@
                                 <h3>{{$food->title}}</h3>
                             </div>
                             <p>
-                                {{$food->short_description}}
+                                {!! $food->short_description !!}
                             </p>
                         </li>
                     @endforeach

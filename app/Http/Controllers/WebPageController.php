@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Exceptions\ErrorException;
 use App\Models\PageContent;
 use App\Models\Banner;
-use App\Models\Food;
+use App\Models\HotFood;
 use App\Models\News;
 use App\Models\Store;
 use App\Models\AboutUsPerson;
@@ -24,7 +24,7 @@ class WebPageController extends Controller
 
         return view('FrontPage.index', [
             'banners'       => Banner::orderBy('sort_idx', 'asc')->get(),
-            'foods'         => Food::where('is_recommendation',1)->orderBy('sort_idx', 'asc')->get(),
+            'hotfoods'      => HotFood::orderBy('sort_idx', 'asc')->get(),
             'news'          => News::where('show_in_index',1)->orderBy('is_top', 'desc')->limit(6)->get(),
             'seminarStory'  => SeminarStory::where('show_in_index',1)->orderBy('sort_idx', 'asc')->get(),
             'seminarPost'   => SeminarPost::where('show_in_index',1)->orderBy('sort_idx', 'asc')->get(),

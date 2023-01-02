@@ -4,7 +4,7 @@
 	@relativeInclude('layout.html_head')
 	<script>
 		$(function() {
-			var table = initTabulator("#food-table",{
+			var table = initTabulator("#hotfood-table",{
 				rowHeight:200,
 				initialSort:[
 					{column:"sort_idx", dir:"asc"},
@@ -28,21 +28,6 @@
 						}
 					},
 					{
-						title: "商品分類",
-						field: "type",
-						width: '',
-						headerFilter: "input",
-					},
-					{
-						title: "顯示於人氣推薦",
-						field: "is_recommendation",
-						width: '',
-						responsive:false,
-						formatter: function(cell, formatterParams) {
-							return cell.getValue() ? '是':'否';
-						}
-					},
-					{
 						title: "排序",
 						field: "sort_idx",
 						headerSort: true,
@@ -61,7 +46,7 @@
 										'<button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="changeSeminarMediaSort('+cell.getRow().getData()['id']+',\'backward\')">'+
 											'排序往後'+
 										'</button>'+
-										'<a href="./food?food_id='+cell.getRow().getData()['id']+'" class="bg-[#062851] hover:bg-[#03152b] text-gray-100 font-bold py-2 px-4 rounded">'+
+										'<a href="./hot_food?hotfood_id='+cell.getRow().getData()['id']+'" class="bg-[#062851] hover:bg-[#03152b] text-gray-100 font-bold py-2 px-4 rounded">'+
 											'編輯'+
 										'</a>'+
 										'<button class="bg-red-700 hover:bg-red-800 text-gray-100 font-bold py-2 px-4 rounded-r" onclick="deleteSeminarMedia('+cell.getRow().getData()['id']+')">'+
@@ -71,7 +56,7 @@
 						}
 					},
 				],
-				ajaxURL: ENV['APP_API_URL'] + "admin/tabulator/food",
+				ajaxURL: ENV['APP_API_URL'] + "admin/tabulator/hotfood",
 				ajaxURLGenerator: function(url, config, params) {
 					params.filter = params.filter.map(function(e) {
 						return e;
@@ -87,17 +72,17 @@
 				}
 			});
 
-			$("#btn-save-food").on('click',function(){
+			$("#btn-save-hotfood").on('click',function(){
 
-				let form = $("#add-food-modal form");
+				let form = $("#add-hotfood-modal form");
 
 				if( form[0].reportValidity() ){
 					let data = getFormData(form,{
-						file:form.find('#food_file')[0].files[0],
+						file:form.find('#hotfood_file')[0].files[0],
 						description:form.find('[name=description]').val().replace(/\r?\n/g, '<br />')
 					});
 					console.log(data)
-					exec('food','POST',data,function(response){
+					exec('hotfood','POST',data,function(response){
 						console.log(response);
 						window.location.reload();
 					});
@@ -106,18 +91,18 @@
 			});
 		});
 
-		var deleteSeminarMedia = function(food_id){
-			exec('food','DELETE',{
-				food_id:food_id
+		var deleteSeminarMedia = function(hotfood_id){
+			exec('hotfood','DELETE',{
+				hotfood_id:hotfood_id
 			},function(response){
 				console.log(response);
 				window.location.reload();
 			});
 		}
 
-		var changeSeminarMediaSort = function(food_id,action){
-			exec('food/sort','PUT',{
-				food_id:food_id,
+		var changeSeminarMediaSort = function(hotfood_id,action){
+			exec('hotfood/sort','PUT',{
+				hotfood_id:hotfood_id,
 				action:action,
 			},function(response){
 				console.log(response);
@@ -137,12 +122,12 @@
 	<div class="md:w-2/3 lg:w-3/4 xl:w-5/6 2xl:w-6/7">
 		<div class="py-5 px-5 w-full">
 			<div class="mb-2">
-				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">商品設定</h1>
+				<h1 class="text-1xl md:text-2xl font-bold text-gray-600 inline-block align-middle">人氣推薦設定</h1>
 			</div>
 			<hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700">
-			<a href="./food" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200">增加餐點</a>
+			<a href="./hot_food" class="px-6 py-3 text-white font-medium rounded-lg text-sm no-underline bg-[#062851] hover:bg-[#03152b] hover:text-blue-200">增加人氣推薦商品</a>
 			<hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
-			<div class="table-responsive" id="food-table"></div>
+			<div class="table-responsive" id="hotfood-table"></div>
 		</div>
 	</div>
 </body>

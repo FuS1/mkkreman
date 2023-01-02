@@ -64,7 +64,7 @@ class CreatePageContentTable extends Migration
 
             // 最新消息資訊
             PageContent::create([
-                'page'   => 'food',
+                'page'   => 'news',
                 'content'=> null,
                 'bottom_content'=> null,
             ]);

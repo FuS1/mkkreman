@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class Food extends BaseModel
+class MainFood extends BaseModel
 {
     use HasFactory,SoftDeletes;
-    protected $table = 'food';
+    protected $table = 'main_food';
     protected $primaryKey = 'id';
     public $incrementing = true;
     protected $guarded = [];

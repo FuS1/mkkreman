@@ -8,7 +8,10 @@ use App\Http\Controllers\API\PageContentController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\StoreController;
-use App\Http\Controllers\API\FoodController;
+use App\Http\Controllers\API\MainFoodController;
+use App\Http\Controllers\API\SideFoodController;
+use App\Http\Controllers\API\HotFoodController;
+use App\Http\Controllers\API\DrinkController;
 use App\Http\Controllers\API\SystemVariableController;
 use App\Http\Controllers\API\SeminarController;
 use App\Http\Controllers\API\SeminarParticipantController;
@@ -72,13 +75,41 @@ Route::group([
         });
 
         Route::group([
-            'prefix' => 'food',
+            'prefix' => 'mainfood',
         ], function () {
-            Route::get  ('',      [FoodController::class, 'getFood'] );
-            Route::post ('',      [FoodController::class, 'saveFood'] );
-            Route::delete('',     [FoodController::class, 'deleteFood'] );
-            Route::put  ('sort',  [FoodController::class, 'changeFoodSort'] );
+            Route::get  ('',      [MainFoodController::class, 'getMainFood'] );
+            Route::post ('',      [MainFoodController::class, 'saveMainFood'] );
+            Route::delete('',     [MainFoodController::class, 'deleteMainFood'] );
+            Route::put  ('sort',  [MainFoodController::class, 'changeMainFoodSort'] );
         });
+
+        Route::group([
+            'prefix' => 'sidefood',
+        ], function () {
+            Route::get  ('',      [SideFoodController::class, 'getSideFood'] );
+            Route::post ('',      [SideFoodController::class, 'saveSideFood'] );
+            Route::delete('',     [SideFoodController::class, 'deleteSideFood'] );
+            Route::put  ('sort',  [SideFoodController::class, 'changeSideFoodSort'] );
+        });
+
+        Route::group([
+            'prefix' => 'hotfood',
+        ], function () {
+            Route::get  ('',      [HotFoodController::class, 'getHotFood'] );
+            Route::post ('',      [HotFoodController::class, 'saveHotFood'] );
+            Route::delete('',     [HotFoodController::class, 'deleteHotFood'] );
+            Route::put  ('sort',  [HotFoodController::class, 'changeHotFoodSort'] );
+        });
+
+        Route::group([
+            'prefix' => 'drink',
+        ], function () {
+            Route::get  ('',      [DrinkController::class, 'getDrink'] );
+            Route::post ('',      [DrinkController::class, 'saveDrink'] );
+            Route::delete('',     [DrinkController::class, 'deleteDrink'] );
+            Route::put  ('sort',  [DrinkController::class, 'changeDrinkSort'] );
+        });
+
 
         Route::group([
             'prefix' => 'about_us',
@@ -154,7 +185,10 @@ Route::group([
             Route::get ('banner',               [BannerController::class, 'tabulator'] );
             Route::get ('news',                 [NewsController::class,   'tabulator'] );
             Route::get ('store',                [StoreController::class,   'tabulator'] );
-            Route::get ('food',                 [FoodController::class,   'tabulator'] );
+            Route::get ('mainfood',             [MainFoodController::class,   'tabulator'] );
+            Route::get ('sidefood',             [SideFoodController::class,   'tabulator'] );
+            Route::get ('hotfood',              [HotFoodController::class,   'tabulator'] );
+            Route::get ('drink',                [DrinkController::class,   'tabulator'] );
             Route::get ('seminar',              [SeminarController::class,   'tabulator'] );
             Route::get ('seminar/participant',  [SeminarParticipantController::class,   'tabulator'] );
             Route::get ('seminar/story',        [SeminarStoryController::class,   'tabulator'] );
