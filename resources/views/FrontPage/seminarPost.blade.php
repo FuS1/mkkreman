@@ -11,7 +11,7 @@
         </div>
         
         <div class="container">
-            <div class="news-banner"><h1>{{ $seminarStory->title }}</h1></div>
+            <div class="news-banner"><h1>{{ $seminarPost->title }}</h1></div>
             {!! $seminarPost->content !!}
         </div>
 
