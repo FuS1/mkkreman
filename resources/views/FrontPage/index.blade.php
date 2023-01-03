@@ -3,6 +3,301 @@
 <head>
     @relativeInclude('include.meta')
     @relativeInclude('include.script')
+    <style>
+   
+    .food-swiper .swiper-slide  > img {
+        width:100%;
+    }
+
+    @media screen and (min-width: 768px) {
+    
+        .food-swiper .swiper-slide > img {
+            transform: scale(0.6);
+            margin-top: 3rem;
+        }
+        .food-swiper .swiper-slide-next > img{
+            transform: scale(1);
+            margin-top: 0rem;
+        }
+    }
+.smoke{
+    opacity:0;
+}
+.smoke-1 {
+    bottom: 0vw;
+    right: -12.86vw;
+    width: 40vw;
+    animation: smoke-1 8s linear infinite;
+    animation-delay: 0s;
+}
+
+.smoke-1-2 {
+    bottom: -17vw;
+    right: -11.14vw;
+    width: 66vw;
+    animation: smoke-1 8s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.smoke-1-2-2 {
+    bottom: -17vw;
+    right: -11.14vw;
+    width: 66vw;
+    animation: smoke-1 8s linear infinite;
+    animation-delay: 3.5s;
+}
+
+.smoke-1-3 {
+    z-index: 10;
+    bottom: -2.64vw;
+    right: 30.86vw;
+    width: 67vw;
+    animation: smoke-1 8s linear infinite;
+    animation-delay: 4s;
+}
+
+.smoke-2 {
+  animation: smoke-2 8s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.smoke-3 {
+  z-index: 10;
+  top: -8.6vw;
+  left: 20.6vw;
+  width: 45vw;
+  animation: smoke-3 5s linear infinite;
+  animation-delay: 0s;
+}
+.smoke-3-2 {
+  z-index: 10;
+  top: -6.6vw;
+  left: 22.6vw;
+  width: 45vw;
+  animation: smoke-3 5s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.smoke-3-3 {
+  z-index: 10;
+  top: -11.6vw;
+  left: 24.6vw;
+  width: 45vw;
+  animation: smoke-3 5s linear infinite;
+  animation-delay: 4s;
+}
+
+.smoke-4 {
+  animation: smoke-1 8s linear infinite;
+  animation-delay: 1.5s;
+}
+.smoke-5 {
+    top: -9vw;
+    left: -4vw;
+    width: 38vw;
+  animation: smoke-2 8s linear infinite;
+  animation-delay: 1.5s;
+}
+.smoke-5-2 {
+    top: -9vw;
+    left: -4vw;
+    width: 40vw;
+  animation: smoke-2 8s linear infinite;
+  animation-delay: 3.5s;
+}
+.smoke-5-3 {
+    top: -9vw;
+    left: -4vw;
+    width: 43vw;
+  animation: smoke-2 8s linear infinite;
+  animation-delay: 5.5s;
+}
+.smoke-6 {
+  animation: smoke-3 8s linear infinite;
+  animation-delay: 1.5s;
+}
+.smoke-7 {
+    top: -12vw;
+    left: 54vw;
+    width: 52vw;
+  animation: smoke-7 8s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.smoke-7-2 {
+    top: -12vw;
+    left: 54vw;
+    width: 52vw;
+  animation: smoke-7 8s linear infinite;
+  animation-delay: 2.5s;
+}
+.smoke-7-3 {
+    top: -12vw;
+    left: 54vw;
+    width: 52vw;
+  animation: smoke-7 8s linear infinite;
+  animation-delay: 6.5s;
+}
+
+@keyframes smoke-1 {
+  0% {
+    filter: blur(0px);
+    transform: translateY(0px) scale(-1, 1);
+    opacity: 0;
+  }
+
+  25% {
+    filter: blur(3px);
+    transform: translateY(-10px) scale(-1, 1.15);
+    opacity: 0.75;
+  }
+
+  50% {
+    filter: blur(5px);
+    transform: translateY(-40px) scale(-1, 1.3);
+    opacity: 1;
+  }
+
+  75% {
+    filter: blur(5px);
+    transform: translateY(-80px) scale(-1, 1.2);
+    opacity: 0.75;
+  }
+
+  100% {
+    filter: blur(7px);
+    transform: translateY(-100px) scale(-1, 1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes smoke-2 {
+  0% {
+    filter: blur(0px);
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+
+  25% {
+    filter: blur(3px);
+    transform: translateY(-10px) scale(1.05);
+    opacity: 0.6;
+  }
+
+  50% {
+    filter: blur(5px);
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+
+  75% {
+    filter: blur(5px);
+    transform: translateY(-30px) scale(1.15);
+    opacity: 0.6;
+  }
+
+  100% {
+    filter: blur(7px);
+    transform: translateY(-40px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes smoke-3 {
+  0% {
+    filter: blur(0px);
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+
+  25% {
+    filter: blur(3px);
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.6;
+  }
+
+  50% {
+    filter: blur(5px);
+    transform: translateY(-40px) scale(1.1);
+    opacity: 1;
+  }
+
+  75% {
+    filter: blur(5px);
+    transform: translateY(-60px) scale(1.15);
+    opacity: 0.6;
+  }
+
+  100% {
+    filter: blur(7px);
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes smoke-5 {
+  0% {
+    filter: blur(0px);
+    transform: translateY(0px) scale(-1, 1);
+    opacity: 0;
+  }
+
+  25% {
+    filter: blur(3px);
+    transform: translateY(-10px) scale(-1, 1.15);
+    opacity: 0.6;
+  }
+
+  50% {
+    filter: blur(5px);
+    transform: translateY(-40px) scale(-1, 1.3);
+    opacity: 1;
+  }
+
+  75% {
+    filter: blur(5px);
+    transform: translateY(-60px) scale(-1, 1.3);
+    opacity: 0.6;
+  }
+
+  100% {
+    filter: blur(7px);
+    transform: translateY(-70px) scale(-1, 1.2);
+    opacity: 0;
+  }
+}
+@keyframes smoke-7 {
+  0% {
+    filter: blur(0px);
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+
+  25% {
+    filter: blur(3px);
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.6;
+  }
+
+  50% {
+    filter: blur(5px);
+    transform: translateY(-40px) scale(1.1);
+    opacity: 1;
+  }
+
+  75% {
+    filter: blur(5px);
+    transform: translateY(-60px) scale(1.15);
+    opacity: 0.6;
+  }
+
+  100% {
+    filter: blur(7px);
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+</style>
 </head>
 <body>
     @relativeInclude('include.header')
@@ -39,16 +334,50 @@
             </div>
         </div>
 
-        <div class="recc">
-            <img src="{{ asset('FrontPage/public/img/smoke-1.png') }}" alt="" class="smoke smoke-1" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-6" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-2.png') }}" alt="" class="smoke smoke-2" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(104px) translateY(-52px); opacity: 0;">
-            <div class="title">
+        <div class="recc" style="background-color: #cecece;padding: 20px 0;">
+            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-1">
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-1-2">
+            <img src="{{ asset('FrontPage/public/img/smoke-2.png') }}" alt="" class="smoke smoke-1-2-2">
+            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-1-3">
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-1-3">
+            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5">
+            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5-2">
+            <img src="{{ asset('FrontPage/public/img/smoke-5.png') }}" alt="" class="smoke smoke-5-3">
+            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}" alt="" class="smoke smoke-6">
+            <img src="{{ asset('FrontPage/public/img/smoke-2.png') }}" alt="" class="smoke smoke-2">
+            <div class="title" style="z-index: 11;position: relative;">
                 <img src="{{ asset('FrontPage/public/img/title-reccomend.svg') }}" alt="人氣推薦">
                 <h2>Top Recommendations</h2>
             </div>
-            <div class="recc_inner">
+            <div class="swiper-container menu-swiper" id="food-swiper">
+                <div class="swiper-wrapper">
+                @foreach ($hotfoods as $key => $food)
+                    <div class="swiper-slide">
+                        <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                        <div class="menu-swiper_text">
+                            <div class="recc_intro_title">
+                                <h3 style="font-size: 22px;color: #122C52; margin: 0;border: 2px solid #0E2C50;background-color: #fff;padding: 8px 50px 10px;font-family: 'Noto Sans TC', sans-serif;font-weight: normal;">{{$food->title}}</h3>
+                            </div>
+                            <p>{!! $food->short_description !!}</p>
+                        </div>
+                    </div>
+                @endforeach
+                </div>      
+            </div>
+            <!-- <div class="swiper-container menu-swiper" id="side-swiper">
+                <div class="swiper-wrapper">
+                @foreach ($hotfoods as $key => $food)
+                    <div class="swiper-slide">
+                        <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                        <div class="menu-swiper_text">
+                            <h3 class="recc_intro_title">{{$food->title}}</h3>
+                            <p>{!! $food->short_description !!}</p>
+                        </div>
+                    </div>
+                @endforeach
+                </div>      
+            </div> -->
+            <!-- <div class="recc_inner">
                 <div class="recc_slider-box">
                     <div class="recc_slider d-flex justify-content-center">
                         <ul id="wheel">
@@ -85,12 +414,16 @@
                     </ul>
                     <img class="flavor" src="{{ asset('FrontPage/public/img/flavor.svg') }}" alt="">
                 </div>
-            </div>
-            <img src="{{ asset('FrontPage/public/img/smoke-4.png') }}" alt="" class="smoke smoke-4" data-1100="filter: blur(0px);transform: translateX(0px) translateY(0px); opacity: 1;" data-1400="filter: blur(5px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(0px) translateY(-52px); opacity: 0;">
-            <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7" data-1100="filter: blur(2px);transform: translateX(0px) translateY(0px); opacity: 0.7;" data-1400="filter: blur(7px);transform: translateX(-104px) translateY(-52px); opacity: 0;">
-            <div class="slider-arrow-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
-            <div class="slider-arrow-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
+            </div> -->
+            <img src="{{ asset('FrontPage/public/img/smoke-4.png') }}" alt="" class="smoke smoke-4" >
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3" >
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3-2" >
+            <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3-3" >
+            <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7">
+            <img src="{{ asset('FrontPage/public/img/smoke-6.png') }}"alt="" class="smoke smoke-7-2">
+            <img src="{{ asset('FrontPage/public/img/smoke-7.png') }}"alt="" class="smoke smoke-7-3">
+            <!-- <div class="slider-arrow-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
+            <div class="slider-arrow-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div> -->
 
 
         </div>
@@ -185,7 +518,7 @@
         </div>
     </main>
     @relativeInclude('include.footer')
-    <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script>
+    <!-- <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script> -->
     <script>
         var swiperBanner = new Swiper(".banner_slider", {
             slidesPerView: 1,
@@ -226,18 +559,32 @@
             }
         });
 
-        $(window).on("resize scroll",function(){
-            let headerHeight;
-            if($(window).width() <= 991){
-                headerHeight = 100;
-            }else {
-                headerHeight = 300;
+        var swiper = new Swiper("#food-swiper", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,    
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            breakpoints: {
+                700: {
+                    slidesPerView: 3,
+                }
             }
-            let reccTop = $(".recc").offset().top - headerHeight;
-            if($(window).scrollTop() >= reccTop){
-                $(".smoke").addClass("active");
-            }else {
-                $(".smoke").removeClass("active");
-            }
-        })
+        });
+        
+        // $(window).on("resize scroll",function(){
+        //     let headerHeight;
+        //     if($(window).width() <= 991){
+        //         headerHeight = 100;
+        //     }else {
+        //         headerHeight = 300;
+        //     }
+        //     let reccTop = $(".recc").offset().top - headerHeight;
+        //     if($(window).scrollTop() >= reccTop){
+        //         $(".smoke").addClass("active");
+        //     }else {
+        //         $(".smoke").removeClass("active");
+        //     }
+        // });
+
     </script>

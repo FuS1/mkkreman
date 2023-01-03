@@ -1,5 +1,6 @@
 /node_modules
 /public
+public/*
 /storage/*.key
 /storage/logs/*
 /bootstrap/cache/*
@@ -16,5 +17,3 @@ yarn-error.log
 /.vscode
 storage/framework/GOOGLE_CLOUD_KEY.json
 storage/query.log
-public/mix-manifest.json
-public/mix-manifest.json

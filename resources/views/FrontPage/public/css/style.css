@@ -104,7 +104,7 @@ textarea {
           box-shadow: 0 8px 8px rgba(0, 0, 0, 0.6);
   background-color: #fff;
   height: 120px;
-  z-index: 5;
+  z-index: 20;
 }
 
 .header .container {
@@ -2697,6 +2697,7 @@ body {
   border: 1px solid #0F2C51;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  min-height: 160px;
 }
 
 .news_page_text h3 {
@@ -2709,7 +2710,6 @@ body {
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  min-height: 160px;
 }
 
 .news_page_text .content {
