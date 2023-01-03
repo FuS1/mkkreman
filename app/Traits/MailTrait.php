@@ -29,7 +29,7 @@ trait MailTrait
             $config['bladeName'],
             $config['data'],
             function($message) use ($config) { 
-                $message->subject( (config('env.APP_ENV')!=='production'?'【測試郵件】':'').$config['title'] );
+                $message->subject( $config['title'] );
     
                 if(isset($config['to'])){
                     $message->to($config['to']);

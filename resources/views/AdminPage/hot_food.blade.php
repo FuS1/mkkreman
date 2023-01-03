@@ -42,6 +42,7 @@
 					let data = getFormData(form,{
 						hotfood_id : hotfood_id,
 						file	: form.find('#hotfood_file')[0].files[0],
+						short_description : $('[name="short_description"]').val().replace(/\r?\n/g, '<br />'),
 						// content : tinymce.get("content").getContent(),
 					});
 

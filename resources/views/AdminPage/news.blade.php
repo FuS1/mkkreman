@@ -71,6 +71,7 @@
 						banner_file: form.find('#banner_file')[0].files[0],
 						started_at : $('[name="started_at_date"]').val() + ' ' + started_at_time,
 						ended_at   : $('[name="ended_at_date"]'  ).val() + ' ' + ended_at_time,
+						short_description : $('[name="short_description"]').val().replace(/\r?\n/g, '<br />'),
 						content : tinymce.get("content").getContent(),
 					});
 
