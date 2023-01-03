@@ -15,7 +15,7 @@
                 <div class="row news_page">
                 @foreach ($seminarStory as $_seminarStory)
                     <div class="col-lg-4 col-6">
-                        <a href="/seminar/Story/{{ $_seminarStory->id }}" class="news_page_item">
+                        <a href="/seminar/story/{{ $_seminarStory->id }}" class="news_page_item">
                             <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt=""></div>
                             <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                 <h3>{{ $_seminarStory->title }}</h3>
