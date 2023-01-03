@@ -15,6 +15,13 @@
             display: block;
         }
     }
+
+    .map-warp{
+        width:100%;
+        max-width:640px;
+    }
+
+
     .lds-ring {
   display: inline-block;
   position: relative;
@@ -68,13 +75,13 @@
                 <img src="{{ asset('FrontPage/public/img/contact_us_title.png') }}" alt="人氣推薦">
                 <h2>Contact us</h2>
             </div>
-            <div class="text-center w-50 mx-auto mb-5" >
+            <div class="map-warp text-center mx-auto mb-5" >
                 <iframe src="https://www.google.com/maps/embed/v1/place?q=新北市三重區重新路五段609巷10號6樓之1&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border: 0; width: 100%; height: 340px;"></iframe>
             </div>
             <div class="text-center mb-5">
-                <p>總部服務專線 / 加盟專線：(02)2999-0133</p>
-                <p>總部服務時間：週一至週五 10:00AM~19:00PM</p>
-                <p>客服信箱：請填寫下方表格，我們將會盡快與您聯繫</p>
+                <p>總部服務專線 / 加盟專線：<span class="d-inline-block">(02)2999-0133</span></p>
+                <p>總部服務時間：<span class="d-inline-block">週一至週五 10:00AM~19:00PM</span></p>
+                <p>客服信箱：<span class="d-inline-block">請填寫下方表格，我們將會盡快與您聯繫</span></p>
             </div>
             <div class="form mb-5" style="background:#eaeff3;border-radius:20px;">
                 <div class="container">
