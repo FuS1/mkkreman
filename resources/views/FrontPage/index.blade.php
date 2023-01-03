@@ -193,6 +193,10 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction:false,
+            },
             loop: true,
             speed: 800,
         });
