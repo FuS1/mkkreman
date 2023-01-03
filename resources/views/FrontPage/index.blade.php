@@ -153,7 +153,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <a href="/seminarStory" class="more">看更多</a>
+                <a href="/seminar/story" class="more">看更多</a>
             </div>
         </div>
         
@@ -180,7 +180,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <a href="/seminarPost" class="more">看更多</a>
+                <a href="/seminar/post" class="more">看更多</a>
             </div>
         </div>
     </main>
