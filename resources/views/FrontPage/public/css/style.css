@@ -5,6 +5,41 @@
   src: url(../font/CenturyGothic.woff) format("woff"), url(../font/CenturyGothic.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "KaiminSoStd";
+  src: url(../font/A-OTF-KaiminSoStd-Heavy-2.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "KaiminTuStd";
+  src: url(../font/A-OTF-KaiminTuStd-Heavy-2.otf) format("opentype");
+}
+
+.news-banner{
+  width: 100%;
+  min-height: 74px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #122C52;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fcfcfc;
+  margin: 42px 0;
+  padding: 16px;
+  text-align: center;
+}
+
+.news-banner:before{
+  display: block;
+  content: '';
+  position: absolute;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 1px solid #ffffff;
+}
+
 body {
   color: #122C52;
   font-size: 17px;
@@ -581,6 +616,8 @@ main {
     height: 55px;
   }
   .fixed-btn a.btn-order img {
+    right: 0%;
+    top: -120%;
     width: 90px;
   }
   .fixed-btn-join {
@@ -2562,7 +2599,7 @@ body {
 }
 
 .news_slider {
-  padding-bottom: 65px;
+  /* padding-bottom: 65px; */
 }
 
 .news_slider .swiper-pagination {
@@ -2672,6 +2709,7 @@ body {
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  min-height: 160px;
 }
 
 .news_page_text .content {
@@ -2691,6 +2729,9 @@ body {
   text-align: right;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 @media screen and (max-width: 1199px) {

@@ -22,8 +22,8 @@
 	</script>
 </head>
 
-<body style="height:99vh;">
-	<div id="content" class="tinymce-body" name="content" style="border: 3px solid rgb(219 213 219); margin-top: 78px;">
+<body class="bg-gray-50" style="height:99vh;">
+	<div id="content" class="tinymce-body" name="content" style="border: 3px solid rgb(219 213 219); margin-top: 78px;min-height: 90vh;">
 		{!! $pageContent->editor_content ?? null !!}
 	</div>
 </body>
