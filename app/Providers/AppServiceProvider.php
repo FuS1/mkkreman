@@ -28,24 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
-        if(config('env.APP_ENV') ==='local'){
-            DB::listen(function ($query) {
-                Log::channel('sql')
-                    ->info(
-                        'Query Time : '. $query->time .'ms '.Str::replaceArray('?', $query->bindings, $query->sql)
-                    );
-            });
-        }
-        
         Schema::defaultStringLength(191);
-        
-        Desensitization::config([
-            'include' => function($uri) { return true; },
-            'roles' => collect(config('desensitization.roles'))->map(function($item, $key){
-                return function(&$string) use ($item) { $string = Str::desensite($string,$item); };
-            })
-        ]);
+
 
     }
 }
