@@ -3,7 +3,7 @@
 @if (Request::path() == 'seminar')
     <div class="fixed-btn-join">
         <a href="/seminar#seminarForm" class="btn-reserve"><img src="{{ asset('FrontPage/public/img/btn-reserve.png') }}"></a>
-        <a href="" class="btn-consult"><img src="{{ asset('FrontPage/public/img/btn-consult.png') }}" ></a>
+        <a href="/contactUs" class="btn-consult"><img src="{{ asset('FrontPage/public/img/btn-consult.png') }}" ></a>
     </div>
 @else
     <div class="fixed-btn">
