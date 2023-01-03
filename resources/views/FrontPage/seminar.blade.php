@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                             <div class="join_class_form_right">
-                                <div class="join_class_form_item le">
+                                <div class="join_class_form_item le" style="align-items: flex-start;">
                                     <label for="">LINE ID/Email</label>
                                     <input name="receive_detail" type="text" >
                                     <p class="remark">(建議填寫，方便確認報名資訊)</p>

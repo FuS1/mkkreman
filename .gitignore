@@ -16,3 +16,4 @@ yarn-error.log
 /.vscode
 storage/framework/GOOGLE_CLOUD_KEY.json
 storage/query.log
+public/mix-manifest.json
