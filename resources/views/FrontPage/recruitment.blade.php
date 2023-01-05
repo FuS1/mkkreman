@@ -22,11 +22,12 @@
                     <label for="">選擇區域</label>
                     <div class="recruit_select select-common">
                         <div class="recruit_select_active select-common_active">
-                            <span>北部</span>
+                            <span>全部門市</span>
                             <img src="{{ asset('FrontPage/public/img/select-triangle.svg') }}" alt="">
                         </div>
                         <ul class="recruit_select_list select-common_list">
-                            <li class="active">北部</li>
+                            <li class="active">全部門市</li>
+                            <li>北部</li>
                             <li>中部</li>
                             <li>南部</li>
                             <li>東部</li>
@@ -132,8 +133,9 @@
         });        
 
         function getStores(area){
-            if(area===undefined){
-                area='北部'
+            var data={};
+            if(area!==undefined && area!=='全部門市'){
+                data['area'] = area
             }
             $('.recruit_joinus_content').empty();
 
@@ -141,9 +143,7 @@
                 url :'api/store',
                 type:'get',
                 dataType:'json',
-                data:{
-                    area:area
-                },
+                data:data,
                 success: function(stores) {
                     console.log(stores);
                     if(!stores.length){

@@ -519,9 +519,9 @@
                 <a href="/seminar/post" style="width: 110px;text-align: center;"  class="more">看更多</a>
             </div>
 
-            <div class="join_video_link mt-5" style="display: flex;">
-                <a style="background-color: #132C53; margin-right:30px;max-width: 420px;" href="/seminar">前往加盟專區</a>
-                <a style="max-width: 420px;" href="/seminar#seminarForm">馬上報名課程</a>
+            <div class="join_video_link mt-5">
+                <a class="mt-5 mx-2" style="background-color: #132C53; max-width: 420px;" href="/seminar">前往加盟專區</a>
+                <a class="mt-5 mx-2" style="max-width: 420px;" href="/seminar#seminarForm">馬上報名課程</a>
             </div>
         </div>
 
