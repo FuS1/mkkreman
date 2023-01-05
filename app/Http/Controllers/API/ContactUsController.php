@@ -37,7 +37,7 @@ class ContactUsController extends Controller
         }
 
         $this->sendMail([
-            'bladeName' => 'mail.contact_us',
+            'bladeName' => 'Mail.contact_us',
             'title'     => '【詢問表單】 來自-'.$request->name,
             'to'        => $recipient,
             'data'      => [
