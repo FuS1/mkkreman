@@ -355,11 +355,18 @@ main {
     height: 35px;
   }
 }
+
 .page_banner > img{
-  height: 170px;
+  height: 370px;
   object-fit: cover;
   width: 100%;
 }
+@media screen and (max-width: 450px) {
+  .page_banner > img{
+    height: 200px;
+  }
+}
+
 .footer {
   background-color: #DCDDDD;
   padding: 46px 0 0 0;
