@@ -38,7 +38,7 @@ class SeminarController extends Controller
 
     public function getSeminars(Request $request)
     {
-        $seminars = Seminar::where('started_at','>=',Carbon::now()->toDateTimeString())->where('qop','>',0)->get();
+        $seminars = Seminar::where('ended_at','>=',Carbon::now()->toDateTimeString())->where('qop','>',0)->get();
 
         return response($seminars,200);
     }
