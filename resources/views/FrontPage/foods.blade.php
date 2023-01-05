@@ -167,6 +167,7 @@
             spaceBetween: 0,
             centeredSlides: true,
             loop: true,
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: "#noodle-next",
                 prevEl: "#noodle-prev",
@@ -187,6 +188,7 @@
             spaceBetween: 0,
             centeredSlides: true,
             loop: true,
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: "#side-next",
                 prevEl: "#side-prev",
@@ -207,6 +209,7 @@
             spaceBetween: 0,
             centeredSlides: true,
             loop: true,
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: "#drink-next",
                 prevEl: "#drink-prev",

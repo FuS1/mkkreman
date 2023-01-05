@@ -233,6 +233,7 @@
             centeredSlides: true,
             loop: true,
             speed: 800,
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: "#character_arrow_next",
                 prevEl: "#character_arrow_prev",
@@ -247,11 +248,6 @@
                     slidesPerView: 3,
                 },
             },
-            // on: {
-            //   click(event) {
-            //     swiperPic.slideTo(this.clickedIndex);	
-            //   },
-            // },
         });
 
         function characterIntro() {

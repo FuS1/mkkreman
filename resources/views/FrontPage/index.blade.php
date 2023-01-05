@@ -577,12 +577,7 @@
             spaceBetween: 30,
             centeredSlides: true,
             loop: true,
-            // on: {
-            //   click(event) {
-            //       console.log('event.target',this.clickedIndex);
-            //       swiperFood.slideTo(this.clickedIndex);	
-            //   },
-            // },
+            slideToClickedSlide: true,
             navigation: {
                 nextEl: "#food-next",
                 prevEl: "#food-prev",
