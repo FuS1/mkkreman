@@ -115,6 +115,7 @@ textarea {
     }
     &_nav {
         height: 100%;
+        display: block;
         ul {
             height: 100%;
             li {
@@ -215,7 +216,8 @@ textarea {
             top: 70px;
             width: 100vw;
             left: 0;
-            height: fit-content;
+            // height: fit-content;
+            height: auto;
             z-index: 1;
             background-color: $white;
             border-top: 1px solid $main-gray;
@@ -230,9 +232,25 @@ textarea {
                 }
             }
             a {
-                writing-mode: vertical-lr;
+                // writing-mode: vertical-lr;
                 display: block;
                 padding: 0 15px 25px;
+                width: 50px;
+                text-align: center;
+                &.active {
+                    font-weight: bold;
+                    color: #C30D23;
+                    &::after {
+                        width: 21px;
+                        height: 29px;
+                        top: -40px;
+                        background-image: url(../img/flavor-print.svg);
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: transparent;
+                    }
+                }
             }
             &_space {
                 display: none;
@@ -450,6 +468,7 @@ main {
             border: 1px solid $second-blue;
             letter-spacing: 0.1em;
             color: $main-blue;
+            transition: $transition-common;
         }
         &.btn-order {
             img {
@@ -458,6 +477,12 @@ main {
                 right: 70%;
                 bottom: 14%;
                 z-index: 0;
+            }
+        }
+        &:hover {
+            span {
+                background-color: $second-blue;
+                color: #fff;
             }
         }
     }

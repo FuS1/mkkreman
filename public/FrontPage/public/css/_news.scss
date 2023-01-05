@@ -18,6 +18,7 @@
                 object-fit: cover;
                 top: 0;
                 left: 0;
+                transition: $transition-common;
             }
         }
         &_title {
@@ -52,6 +53,13 @@
             font-size: 14px;
             color: $white;
             letter-spacing: 0.05em;
+        }
+        &:hover {
+            .news_item_pic {
+                img {
+                    transform: scale(1.2);
+                }
+            }
         }
     }
     &_slider {

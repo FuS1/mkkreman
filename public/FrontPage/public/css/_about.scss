@@ -12,6 +12,7 @@
         margin-bottom: 120px;
         >.container {
             max-width: 1000px;
+            position: relative;
         }
         &_pic {
             width: 100%;
@@ -37,11 +38,19 @@
             }
         }
         &_text {
-            max-width: 420px;
-            width: 100%;
+            // max-width: 420px;
+            // width: 100%;
+            width: 420px;
             margin: 0 auto;
             border: 5px solid $sixth-blue;
             padding: 7px;
+            position: absolute;
+            top: calc(100% + 55px);
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition-common;
             .inner {
                 border: 2px solid $sixth-blue;
                 padding: 20px;
@@ -62,12 +71,36 @@
             display: block;
             margin: 0 auto 13px;
         }
+        .swiper-button-next, .swiper-button-prev {
+            width: 25px;
+            height: 50px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: inherit;
+            bottom: calc(215px / 2);
+            transform: translateY(50%);
+            margin: 0;
+            z-index: 1;
+            &::after {
+                display: none;
+            }
+        }
+        .swiper-button-next {
+            background-image: url(../img/menu-slider-arrow-next.svg);
+            right: 5%;
+        }
+        .swiper-button-prev {
+            background-image: url(../img/menu-slider-arrow-prev.svg);
+            left: 5%;
+        }
         @media screen and (max-width: 767px) {
             margin-bottom: 60px;
         }
         @media screen and (max-width: 599px) {
             &_text {
-                width: calc(100% - 100px);
+                // width: calc(100% - 100px);
+                width: 100%;
             }
         }
         @media screen and (max-width: 500px) {
@@ -131,7 +164,8 @@
 
 .characterPic {
     padding-top: 75px;
-    padding-bottom: 55px;
+    // padding-bottom: calc(55px + 215px);
+    padding-bottom: calc(215px + 55px);
     .swiper-slide-active {
         .about_character_pic {
             .say {
