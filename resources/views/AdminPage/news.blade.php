@@ -64,6 +64,10 @@
 					let ended_at_time 	= $('[name="ended_at_time"]').val().split(':');
 					ended_at_time 		= ended_at_time[0] + ':' + ended_at_time[1] + ':00';
 
+					if( moment($('[name="started_at_date"]').val() + ' ' + started_at_time).isAfter(moment($('[name="ended_at_date"]'  ).val() + ' ' + ended_at_time)) ){
+						Swal.fire('日期時間設定錯誤','','error');
+						return ;
+					}
 
 					let data = getFormData(form,{
 						news_id : news_id,
