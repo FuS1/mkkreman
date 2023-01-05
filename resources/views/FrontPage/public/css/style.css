@@ -866,7 +866,7 @@ body {
   display:none;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   /* .banner{
     padding-top: 60px;
   } */
@@ -891,10 +891,23 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  /* .banner{
+    margin-top:60px;
+  } */
   .banner_link {
     padding-bottom: 60%;
   }
 }
+
+@media screen and (max-width: 575px) {
+  /* .banner{
+    margin-top:60px;
+  } */
+  .banner_link {
+    padding-bottom: 130%;
+  }
+}
+
 
 .home-about {
   padding: 55px 0 90px;

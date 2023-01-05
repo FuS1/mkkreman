@@ -531,6 +531,7 @@
     <script>
         var swiperBanner = new Swiper(".banner_slider", {
             slidesPerView: 1,
+            autoHeight: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
