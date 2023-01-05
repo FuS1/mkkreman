@@ -76,6 +76,15 @@
                                 </div>
                             </div>
                         @endforeach
+                        @foreach ($mainFoods as $key => $food)
+                            <div class="swiper-slide">
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
                         </div>      
                     </div>
                     <div class="menu-swiper_arrow next" id="noodle-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>
@@ -88,6 +97,15 @@
                 <div class="container">
                     <div class="swiper-container menu-swiper" id="side-swiper">
                         <div class="swiper-wrapper">
+                        @foreach ($sideFoods as $key => $food)
+                            <div class="swiper-slide">
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
                         @foreach ($sideFoods as $key => $food)
                             <div class="swiper-slide">
                                 <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
@@ -110,6 +128,15 @@
                     <div class="swiper-container menu-swiper" id="drink-swiper">
                         <div class="swiper-wrapper">
                         @foreach ($drinks as $key => $food)
+                            <div class="swiper-slide">
+                                <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
+                                <div class="menu-swiper_text">
+                                    <h3>{{$food->title}}</h3>
+                                    <p>{!! $food->short_description !!}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                        @foreach ($sideFoods as $key => $food)
                             <div class="swiper-slide">
                                 <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
                                 <div class="menu-swiper_text">
@@ -149,11 +176,11 @@
                     slidesPerView: 3,
                 }
             },
-            on: {
-              click(event) {
-                  swiper1.slideTo(this.clickedIndex);	
-              },
-            },
+            // on: {
+            //   click(event) {
+            //       swiper1.slideTo(this.clickedIndex);	
+            //   },
+            // },
         });
         var swiper2 = new Swiper("#side-swiper", {
             slidesPerView: 1,
@@ -169,11 +196,11 @@
                     slidesPerView: 3,
                 }
             }
-            on: {
-              click(event) {
-                  swiper2.slideTo(this.clickedIndex);	
-              },
-            },
+            // on: {
+            //   click(event) {
+            //       swiper2.slideTo(this.clickedIndex);	
+            //   },
+            // },
         });
         var swiper3 = new Swiper("#drink-swiper", {
             slidesPerView: 1,
@@ -189,10 +216,10 @@
                     slidesPerView: 3,
                 }
             }
-            on: {
-              click(event) {
-                  swiper3.slideTo(this.clickedIndex);	
-              },
-            },
+            // on: {
+            //   click(event) {
+            //       swiper3.slideTo(this.clickedIndex);	
+            //   },
+            // },
         });
     </script>

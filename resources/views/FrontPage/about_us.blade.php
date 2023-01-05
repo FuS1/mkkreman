@@ -78,6 +78,57 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="about_character_pic">
+                                    <img class="person" src="{{ asset('FrontPage/public/img/character-1.svg') }}" alt="">
+                                    <!-- <img class="say" src="./public/img/say.svg" alt=""> -->
+                                </div>
+                                <div class="about_character_text">
+                                    <div class="inner">
+                                        <div style="border: 0.15rem dashed #122C53;text-align: center;padding: 4px 3px;width: fit-content;font-size: 17px;font-weight: bold;margin: auto;margin-bottom: 15px;letter-spacing: 9px;">夢想是開一間拉麵店</div>
+                                        <ul>
+                                            <li>暱稱：爆子頭 阿良</li>
+                                            <li>出身：台灣鄉下</li>
+                                            <li>生日：9/6 處女座(目前26歲)</li>
+                                            <li>興趣：美食和交朋友</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="about_character_pic">
+                                    <img class="person" src="{{ asset('FrontPage/public/img/character-2.svg') }}" alt="">
+                                    <!-- <img class="say" src="./public/img/say.svg" alt=""> -->
+                                </div>
+                                <div class="about_character_text">
+                                    <div class="inner">
+                                        <div style="border: 0.15rem dashed #122C53;text-align: center;padding: 4px 3px;width: fit-content;font-size: 17px;font-weight: bold;margin: auto;margin-bottom: 15px;letter-spacing: 9px;">夢想是開一間拉麵店</div>
+                                        <ul>
+                                            <li>暱稱：爆子頭 阿良</li>
+                                            <li>出身：台灣城市</li>
+                                            <li>生日：10/6 天秤座(目前26歲)</li>
+                                            <li>興趣：美食和交朋友</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="about_character_pic">
+                                    <img class="person" src="{{ asset('FrontPage/public/img/character-3.svg') }}" alt="">
+                                    <!-- <img class="say" src="./public/img/say.svg" alt=""> -->
+                                </div>
+                                <div class="about_character_text">
+                                    <div class="inner">
+                                        <div style="border: 0.15rem dashed #122C53;text-align: center;padding: 4px 3px;width: fit-content;font-size: 17px;font-weight: bold;margin: auto;margin-bottom: 15px;letter-spacing: 9px;">夢想是開一間拉麵店</div>
+                                        <ul>
+                                            <li>暱稱：爆子頭 阿良</li>
+                                            <li>出身：台灣漁村</li>
+                                            <li>生日：11/6 天蠍座(目前26歲)</li>
+                                            <li>興趣：美食和交朋友</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>    
                     </div>
                     <div class="swiper-button-next character_arrow" id="character_arrow_next"></div>
@@ -181,7 +232,6 @@
             spaceBetween: 20,
             centeredSlides: true,
             loop: true,
-            // allowTouchMove: false,
             speed: 800,
             navigation: {
                 nextEl: "#character_arrow_next",
@@ -197,6 +247,11 @@
                     slidesPerView: 3,
                 },
             },
+            // on: {
+            //   click(event) {
+            //     swiperPic.slideTo(this.clickedIndex);	
+            //   },
+            // },
         });
 
         function characterIntro() {
