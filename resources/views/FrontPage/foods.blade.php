@@ -135,7 +135,7 @@
     @relativeInclude('include.script')
     
     <script>
-        var swiper = new Swiper("#noodle-swiper", {
+        var swiper1 = new Swiper("#noodle-swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
@@ -148,9 +148,14 @@
                 700: {
                     slidesPerView: 3,
                 }
-            }
+            },
+            on: {
+              click(event) {
+                  swiper1.slideTo(this.clickedIndex);	
+              },
+            },
         });
-        var swiper = new Swiper("#side-swiper", {
+        var swiper2 = new Swiper("#side-swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
@@ -164,8 +169,13 @@
                     slidesPerView: 3,
                 }
             }
+            on: {
+              click(event) {
+                  swiper2.slideTo(this.clickedIndex);	
+              },
+            },
         });
-        var swiper = new Swiper("#drink-swiper", {
+        var swiper3 = new Swiper("#drink-swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
@@ -179,5 +189,10 @@
                     slidesPerView: 3,
                 }
             }
+            on: {
+              click(event) {
+                  swiper3.slideTo(this.clickedIndex);	
+              },
+            },
         });
     </script>
