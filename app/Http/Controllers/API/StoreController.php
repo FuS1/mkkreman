@@ -41,8 +41,7 @@ class StoreController extends Controller
                 $store->whereIn('city',['宜蘭縣','臺東縣','花蓮縣']);
                 break;
             case '北部':
-            default:
-            $store->whereIn('city',['臺北市','基隆市','新北市','新竹市','新竹縣','桃園市']);
+                $store->whereIn('city',['臺北市','基隆市','新北市','新竹市','新竹縣','桃園市']);
                 break;
         }
 
