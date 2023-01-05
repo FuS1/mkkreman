@@ -39,7 +39,7 @@ class SeminarStoryController extends Controller
     {
         $seminarStory = SeminarStory::updateOrCreate(
         [
-            'id'          => $request->seminar_story_id ?? null,             
+            'id'        => !$request->seminar_story_id || $request->seminar_story_id==='null' ? null : $request->seminar_story_id ,       
         ],[
             'title'             => $request->title              ?? null,     
             'short_description' => $request->short_description  ?? null,     
