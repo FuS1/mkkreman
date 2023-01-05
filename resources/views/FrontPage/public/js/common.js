@@ -15,8 +15,8 @@ $(function(){
         $(this).parents(".select-common").find(".select-common_list").slideToggle(300);
     })
     $(".select-common_list li").click(function(){
-        let select = $(this).text();
-        $(this).parents(".select-common").find(".select-common_active span").text(select);
+        let select = $(this).html();
+        $(this).parents(".select-common").find(".select-common_active span").html(select);
         $(this).parents(".select-common").find(".select-common_list").slideUp(300);
         
     })

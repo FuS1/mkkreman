@@ -2,6 +2,29 @@
 <html lang="zh">
 <head>
     @relativeInclude('include.meta')
+    <style>
+        .select-common_active span{
+            overflow: initial;
+        }
+        .join_class_form_item input, .join_class_form_select_active {
+            height: 45px;
+        }
+        .join_class_form_select_active span {
+            font-size: 14px;
+        }
+        .join_class_form_check_input {
+            margin: 5px;
+        }
+        .select-common_list li{
+            font-size: 14px;
+        }
+        .seminar_option{
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
     @relativeInclude('include.header')
@@ -198,14 +221,20 @@
                     if(seminars.length<=0){
                         selected_seminar_id = 'noHaveSeminar';
                     }
+                    
+  
+  
+
                     seminars.forEach(function(seminar) {
-                        var optionStr = seminar['title']+' '+moment(seminar['started_at']).format('YYYY-MM-DD HH:mm')+'-'+moment(seminar['ended_at']).format('HH:mm')+'　'+seminar['address']+'　剩餘名額：'+seminar['qop']
+                        var optionStr = '<span class="seminar_option" style="display: block;overflow: hidden;">'+seminar['title']+'</span><span class="seminar_option" style="display: block;overflow: hidden;">'+moment(seminar['started_at']).format('YYYY-MM-DD HH:mm')+'-'+moment(seminar['ended_at']).format('HH:mm')+'</span><span class="seminar_option" style="display: block;overflow: hidden;">'+seminar['address']+'</span><span class="seminar_option" style="display: block;overflow: hidden;">剩餘名額：'+seminar['qop']+'</span>';
                         _dom = $('<li></li>');
                         
-                        _dom.text(optionStr);
+                        _dom.html(optionStr);
                         _dom.on('click',function(){
                             selected_seminar_id = seminar['id'];
-                            _dom.parents(".select-common").find(".select-common_active span").text(optionStr);
+                            _dom.parents(".select-common").find(".select-common_active").css('height','80px');
+                            // _dom.parents(".select-common").find(".select-common_active span").css('marginTop','-55px');
+                            _dom.parents(".select-common").find(".select-common_active span").html(optionStr);
                             _dom.parents(".select-common").find(".select-common_list").slideUp(300);
                         });
                         $('.seminar .join_class_form_select_list').append(_dom);
