@@ -843,7 +843,7 @@ body {
 .banner_link {
   display: block;
   width: 100%;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   position: relative;
 }
 
@@ -891,12 +891,18 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  /* .banner{
+    margin-top:60px;
+  } */
   .banner_link {
     padding-bottom: 60%;
   }
 }
 
 @media screen and (max-width: 575px) {
+  /* .banner{
+    margin-top:60px;
+  } */
   .banner_link {
     padding-bottom: 130%;
   }
