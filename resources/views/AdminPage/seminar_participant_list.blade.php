@@ -131,9 +131,13 @@
 					params.filter = params.filter.map(function(e) {
 						return e;
 					});
-					
-					params.customFilter = [];
-					
+
+					params.filter.push({
+						field : 'seminar_id',
+						type: "=",
+						value : getUrlParam('seminar_id'),
+					});
+
 					url += "?";
 					for(let i in params){
 						url +=( "&"+ i + "=" + encodeURIComponent(JSON.stringify(params[i]))) ;
