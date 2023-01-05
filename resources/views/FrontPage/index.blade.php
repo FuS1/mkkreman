@@ -308,7 +308,10 @@
                 <div class="swiper-wrapper">
                 @foreach ($banners as $banner)
                     <div class="swiper-slide">
-                        <a href="{{ $banner->url }}" target="_blank" class="banner_link"><img src="{{ asset( 'storage/'.$banner->file_path ) }}" alt=""></a>
+                        <a href="{{ $banner->url }}" target="_blank" class="banner_link">
+                          <img class="desktop" src="{{ asset( 'storage/'.$banner->file_path ) }}" alt="">
+                          <img class="mobile"  src="{{ asset( 'storage/'.$banner->mobile_file_path ) }}" alt="">
+                        </a>
                     </div>
                 @endforeach
                 </div>     

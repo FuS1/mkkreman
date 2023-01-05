@@ -38,9 +38,17 @@ class BannerController extends Controller
         
         $uploadResult = Storage::disk('public')->put($fileInfo['filePath'].'/'.$fileInfo['fileName'], file_get_contents($request->file));
 
+        $mobileFileInfo = [
+            'filePath' => 'banner',
+            'fileName' => Str::orderedUuid().".".($request->mobile_file->getClientOriginalExtension()==='' ? $request->mobile_file->clientExtension():$request->mobile_file->getClientOriginalExtension()),
+        ];
+        
+        $uploadResult = Storage::disk('public')->put($mobileFileInfo['filePath'].'/'.$mobileFileInfo['fileName'], file_get_contents($request->mobile_file));
+
         $banner = Banner::create([
             'title'     => $request->title ?? null,
             'file_path' => $fileInfo['filePath'] .'/'.$fileInfo['fileName'],
+            'mobile_file_path' => $mobileFileInfo['filePath'] .'/'.$mobileFileInfo['fileName'],
             'url'       => $request->url ?? null
         ]);
 

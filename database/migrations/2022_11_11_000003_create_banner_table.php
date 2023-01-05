@@ -27,6 +27,7 @@ class CreateBannerTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('title')->nullable()->comment('大圖標題');
                 $table->string('file_path',2048)->comment('檔案儲存位置');
+                $table->string('mobile_file_path',2048)->comment('手機板檔案儲存位置');
                 $table->string('url',2048)->comment('跳轉網址');
                 $table->integer('sort_idx')->default(99)->comment('排序(越小越前)');
                 $table->nullableTimestamps();

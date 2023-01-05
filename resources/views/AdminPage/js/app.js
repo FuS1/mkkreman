@@ -218,7 +218,7 @@ window.exec = function(url,type,data,successFunction,failFunction){
 
     let haveFile=false;
     for(var i in data){
-        if( (i=="file" || i=="banner_file") && data[i]!==undefined){
+        if( (i=="file" || i=="banner_file" || i=="mobile_file") && data[i]!==undefined){
             haveFile=true;
         }
     }
@@ -226,7 +226,7 @@ window.exec = function(url,type,data,successFunction,failFunction){
     if(haveFile){
         formData = new FormData();
         for(var i in data){
-            if(i=="file" || i=="banner_file"){
+            if(i=="file" || i=="banner_file"|| i=="mobile_file"){
                 if( data[i]!==undefined){
                     formData.append(i, data[i], data[i].name);
                 }

@@ -856,6 +856,27 @@ body {
   top: 0;
   left: 0;
 }
+/* .banner{
+  padding-top: 50px;
+} */
+.banner_link .desktop {
+  display:block;
+}
+.banner_link .mobile {
+  display:none;
+}
+
+@media screen and (max-width: 575px) {
+  /* .banner{
+    padding-top: 60px;
+  } */
+  .banner_link .desktop {
+    display:none;
+  }
+  .banner_link .mobile {
+    display:block;
+  }
+}
 
 .banner_slider .swiper-button-next::after, .banner_slider .swiper-button-prev::after {
   display: none;
