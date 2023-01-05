@@ -365,7 +365,9 @@
                         </div>
                     </div>
                 @endforeach
-                </div>      
+                </div>    
+                <div class="menu-swiper_arrow next" id="food-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>
+                <div class="menu-swiper_arrow prev" id="food-prev"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-prev.svg') }}" alt=""></div>   
             </div>
             <!-- <div class="swiper-container menu-swiper" id="side-swiper">
                 <div class="swiper-wrapper">
@@ -575,9 +577,14 @@
             spaceBetween: 30,
             centeredSlides: true,
             loop: true,
+            navigation: {
+                nextEl: "#food-next",
+                prevEl: "#food-prev",
+            },
             breakpoints: {
                 700: {
                     slidesPerView: 3,
+                    slidesPerGroup: 1,    
                 }
             }
         });
