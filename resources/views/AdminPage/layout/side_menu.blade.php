@@ -134,6 +134,9 @@
             </ul>
          </li>
          <li>
+            <a href="/_admin_/footer" class="flex items-center p-2 pl-11 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold">頁尾設定</a>
+         </li>
+         <li>
             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-[#062851] hover:font-bold" aria-controls="dropdown-join-contact-us" data-collapse-toggle="dropdown-join-contact-us">
                <div class="w-4">
                   <i class="flex-shrink-0 w-8 h-8 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-blue-900 dark:group-hover:text-white scale-125 pt-1.5 fa-solid fa-envelope"></i>
