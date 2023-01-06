@@ -39,7 +39,9 @@
 <body>
     @relativeInclude('include.header')
     <main>
-        <div class="banner-page"><img src="{{ asset( 'storage/'.$pageContent->banner_file_path ) }}" alt=""></div>
+        <div class="page_banner">
+            <img src="{{ asset( 'storage/'.$pageContent->banner_file_path ) }}" alt="">
+        </div>
         
         <div class="container">
             {!! $pageContent->content !!}
