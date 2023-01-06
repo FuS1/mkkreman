@@ -306,14 +306,16 @@
         <div class="banner">
             <div class="swiper-container banner_slider">
                 <div class="swiper-wrapper">
-                @foreach ($banners as $banner)
-                    <div class="swiper-slide">
-                        <a href="{{ $banner->url }}" target="_blank" class="banner_link">
-                          <img class="desktop" src="{{ asset( 'storage/'.$banner->file_path ) }}" alt="">
-                          <img class="mobile"  src="{{ asset( 'storage/'.$banner->mobile_file_path ) }}" alt="">
-                        </a>
-                    </div>
-                @endforeach
+                @for ($i = 0; $i < 10; $i++)
+                  @foreach ($banners as $banner)
+                      <div class="swiper-slide">
+                          <a href="{{ $banner->url }}" target="_blank" class="banner_link">
+                            <img class="desktop" src="{{ asset( 'storage/'.$banner->file_path ) }}" alt="">
+                            <img class="mobile"  src="{{ asset( 'storage/'.$banner->mobile_file_path ) }}" alt="">
+                          </a>
+                      </div>
+                  @endforeach
+                @endfor
                 </div>     
                 <div class="swiper-button-next slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-next.svg') }}" alt=""></div>
                 <div class="swiper-button-prev slider-arrow"><img src="{{ asset('FrontPage/public/img/slider-arrow-prev.svg') }}" alt=""></div>
@@ -369,57 +371,6 @@
                 <div class="menu-swiper_arrow next" id="food-next"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-next.svg') }}" alt=""></div>
                 <div class="menu-swiper_arrow prev" id="food-prev"><img src="{{ asset('FrontPage/public/img/menu-slider-arrow-prev.svg') }}" alt=""></div>   
             </div>
-            <!-- <div class="swiper-container menu-swiper" id="side-swiper">
-                <div class="swiper-wrapper">
-                @foreach ($hotfoods as $key => $food)
-                    <div class="swiper-slide">
-                        <div class="menu-swiper_pic"><img src="{{ asset( 'storage/'.$food->file_path ) }}" alt=""></div>
-                        <div class="menu-swiper_text">
-                            <h3 class="recc_intro_title">{{$food->title}}</h3>
-                            <p>{!! $food->short_description !!}</p>
-                        </div>
-                    </div>
-                @endforeach
-                </div>      
-            </div> -->
-            <!-- <div class="recc_inner">
-                <div class="recc_slider-box">
-                    <div class="recc_slider d-flex justify-content-center">
-                        <ul id="wheel">
-
-                        @foreach ($hotfoods as $key => $food)
-                            @if ($key+1 === count($hotfoods) )
-                            <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item opa-0">
-                            @else
-                            <li data-index="{{ $key+1 }}" data-intro="#intro{{ $key+1 }}" class="recc_slider_item">
-                            @endif
-                                <a href="#">
-                                    <img class="recc_slider_img" src="{{ asset( 'storage/'.$food->file_path ) }}" alt="">
-                                </a>
-                            </li>
-                        @endforeach
-                        </ul>
-                    </div>
-                    <ul class="recc_intro">
-
-                    @foreach ($hotfoods as $key => $food)
-                        @if ($key === 2)
-                        <li class="recc_intro_item active" id="intro{{ $key+1 }}">
-                        @else
-                        <li class="recc_intro_item" id="intro{{ $key+1 }}">
-                        @endif
-                            <div class="recc_intro_title">
-                                <h3>{{$food->title}}</h3>
-                            </div>
-                            <p>
-                                {!! $food->short_description !!}
-                            </p>
-                        </li>
-                    @endforeach
-                    </ul>
-                    <img class="flavor" src="{{ asset('FrontPage/public/img/flavor.svg') }}" alt="">
-                </div>
-            </div> -->
             <img src="{{ asset('FrontPage/public/img/smoke-4.png') }}" alt="" class="smoke smoke-4" >
             <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3" >
             <img src="{{ asset('FrontPage/public/img/smoke-3.png') }}" alt="" class="smoke smoke-3-2" >
@@ -441,7 +392,7 @@
                 </div>
                 <div class="swiper-container news_slider">
                     <div class="swiper-wrapper">
-                        
+
                     @foreach ($news as $_news)
                         <div class="swiper-slide">
                             <a href="/news/{{ $_news->id }}" class="news_page_item">
@@ -532,6 +483,7 @@
     <!-- <script src="{{ asset('FrontPage/public/js/round-slider.js') }}"></script> -->
     <script>
         var swiperBanner = new Swiper(".banner_slider", {
+            slidesPerGroup: 1,   
             slidesPerView: 1,
             autoHeight: true,
             navigation: {
@@ -543,14 +495,14 @@
                 disableOnInteraction:false,
             },
             loop: true,
-            speed: 800,
+            speed: 1000,
         });
         var swiperNews = new Swiper(".news_slider", {
             slidesPerView: 1.3,
             slidesPerGroup: 1,    
             spaceBetween: 30,
             loop: true,
-            speed: 800,
+            speed: 1000,
             centeredSlides:true,
             pagination: {
                 el: ".swiper-pagination",
@@ -577,6 +529,7 @@
             spaceBetween: 30,
             centeredSlides: true,
             loop: true,
+            speed: 1000,
             slideToClickedSlide: true,
             navigation: {
                 nextEl: "#food-next",
