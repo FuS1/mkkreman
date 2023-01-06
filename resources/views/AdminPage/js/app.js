@@ -403,6 +403,9 @@ window.initTinymce = function(dom_id, customConfig){
 		toolbar_location: 'top',
         toolbar_mode: 'sliding',
         // icons: 'material',
+        convert_urls: false,
+        remove_script_host:false,
+        document_base_url:ENV['APP_URL'],
         image_advtab: true,
         skin: 'oxide',// useDarkMode ? 'oxide-dark' : 'oxide',
         content_css: [
