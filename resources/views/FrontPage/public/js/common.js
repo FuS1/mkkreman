@@ -3,8 +3,12 @@ $(function(){
     $(".header_menu").click(function(){
         $(this).toggleClass("active");
         $(".header_mask, .header_nav").fadeToggle(300);
-    })
+    });
     
+    $(".header_mask").click(function(){
+        $(".header_menu").click();
+    });
+
     // top
     $(".btn-top").click(function(){
         $("html, body").animate({scrollTop: 0}, 300);
