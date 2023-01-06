@@ -535,6 +535,7 @@
             slidesPerView: 1,
             autoHeight: true,
             shortSwipes:false,
+            simulateTouch:false,//電腦上禁用拖曳
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -577,10 +578,11 @@
             slidesPerView: 1,
             slidesPerGroup: 1,    
             spaceBetween: 30,
+            shortSwipes:false,
+            longSwipesMs:100,
             loop: true,
-            speed: 800,
             centeredSlides: true,
-            shortSwipes:false,//禁用短距離觸發滑動效果
+            speed: 800,
             slideToClickedSlide: true,
             navigation: {
                 nextEl: "#food-next",

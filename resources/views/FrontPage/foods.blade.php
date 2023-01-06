@@ -168,6 +168,8 @@
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
+            shortSwipes:false,
+            longSwipesMs:100,
             loop: true,
             slideToClickedSlide: true,
             navigation: {
@@ -189,6 +191,8 @@
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
+            shortSwipes:false,
+            longSwipesMs:100,
             loop: true,
             slideToClickedSlide: true,
             navigation: {
@@ -210,6 +214,8 @@
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
+            shortSwipes:false,
+            longSwipesMs:100,
             loop: true,
             slideToClickedSlide: true,
             navigation: {

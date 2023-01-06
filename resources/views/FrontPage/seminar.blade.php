@@ -256,6 +256,8 @@
             var swiper = new Swiper(".join_advantage_slider", {
                 slidesPerView: 2,
                 spaceBetween: 25,
+                shortSwipes:false,
+                longSwipesMs:100,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",

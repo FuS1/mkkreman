@@ -230,6 +230,8 @@
         var swiperPic = new Swiper(".characterPic", {
             slidesPerView: 1,
             spaceBetween: 20,
+            shortSwipes:false,
+            longSwipesMs:100,
             centeredSlides: true,
             loop: true,
             speed: 800,
