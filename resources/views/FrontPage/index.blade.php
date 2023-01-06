@@ -306,7 +306,7 @@
         <div class="banner">
             <div class="swiper-container banner_slider">
                 <div class="swiper-wrapper">
-                @for ($i = 0; $i < 10; $i++)
+                @for ($i = 0; $i < 50; $i++)
                   @foreach ($banners as $banner)
                       <div class="swiper-slide">
                           <a href="{{ $banner->url }}" target="_blank" class="banner_link">
@@ -494,7 +494,7 @@
                 delay: 3500,
                 disableOnInteraction:false,
             },
-            loop: true,
+            // loop: true,
             speed: 1000,
         });
         var swiperNews = new Swiper(".news_slider", {
