@@ -24,6 +24,9 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        .join_class_form_check{
+            display:contents;
+        }
     </style>
 </head>
 <body>
