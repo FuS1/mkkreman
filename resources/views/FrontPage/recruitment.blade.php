@@ -26,11 +26,12 @@
                             <img src="{{ asset('FrontPage/public/img/select-triangle.svg') }}" alt="">
                         </div>
                         <ul class="recruit_select_list select-common_list">
-                            <li class="active">全部門市</li>
-                            <li>北部</li>
-                            <li>中部</li>
-                            <li>南部</li>
-                            <li>東部</li>
+                            <li area='全部門市'class="active">全部門市</li>
+                            <li area='北部'>北部（臺北市、新北市、基隆市、新竹市、桃園市、新竹縣、宜蘭縣）</li>
+                            <li area='中部'>中部（臺中市、苗栗縣、彰化縣、南投縣、雲林縣）</li>
+                            <li area='南部'>南部（高雄市、臺南市、嘉義市、嘉義縣、屏東縣）</li>
+                            <li area='東部'>東部（花蓮縣、臺東縣）</li>
+                            <li area='外島'>外島（金門縣）</li>
                         </ul>
                     </div>
                 </div>
@@ -127,15 +128,15 @@
             })
             
             $(".recruit_select li").click(function(){
-                getStores($(this).text());
+                getStores($(this).attr('area'));
             })
-            getStores()
+            getStores('全部門市')
         });        
 
         function getStores(area){
             var data={};
-            if(area!==undefined && area!=='全部門市'){
-                data['area'] = area
+            if(area!=='全部門市'){
+                data['area'] = area;
             }
             $('.recruit_joinus_content').empty();
 
