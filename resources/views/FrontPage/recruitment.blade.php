@@ -27,11 +27,11 @@
                         </div>
                         <ul class="recruit_select_list select-common_list">
                             <li area='全部門市'class="active">全部門市</li>
-                            <li area='北部'>北部（臺北市、新北市、基隆市、新竹市、桃園市、新竹縣、宜蘭縣）</li>
-                            <li area='中部'>中部（臺中市、苗栗縣、彰化縣、南投縣、雲林縣）</li>
-                            <li area='南部'>南部（高雄市、臺南市、嘉義市、嘉義縣、屏東縣）</li>
-                            <li area='東部'>東部（花蓮縣、臺東縣）</li>
-                            <li area='外島'>外島（金門縣）</li>
+                            <li area='北部'>北部（雙北、基隆、新竹、桃園、宜蘭）</li>
+                            <li area='中部'>中部（臺中、苗栗、彰化、南投、雲林）</li>
+                            <li area='南部'>南部（高雄、臺南、嘉義、屏東）</li>
+                            <li area='東部'>東部（花蓮、臺東）</li>
+                            <li area='外島'>外島（金門）</li>
                         </ul>
                     </div>
                 </div>
