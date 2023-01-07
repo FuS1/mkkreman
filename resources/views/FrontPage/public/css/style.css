@@ -3929,12 +3929,12 @@ body {
 
 .about_character .swiper-button-next {
   background-image: url(../img/menu-slider-arrow-next.svg);
-  right: -5%;
+  right: 5%;
 }
 
 .about_character .swiper-button-prev {
   background-image: url(../img/menu-slider-arrow-prev.svg);
-  left: -5%;
+  left: 5%;
 }
 
 @media screen and (max-width: 767px) {

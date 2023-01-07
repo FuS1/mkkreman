@@ -3842,7 +3842,7 @@ body {
 }
 
 .about_character_pic {
-  width: 100%;
+  width: 95%;
   padding-bottom: 100%;
   position: relative;
 }
@@ -3852,7 +3852,7 @@ body {
 }
 
 .about_character_pic img.person {
-  width: 100%;
+  width: 95%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -3870,7 +3870,7 @@ body {
 }
 
 .about_character_text {
-  width: 420px;
+  width: 380px;
   margin: 0 auto;
   border: 5px solid #122C53;
   padding: 7px;

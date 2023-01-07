@@ -17,7 +17,7 @@
 - 將此Repository Clone至本地www資料夾
 - 獲取.env檔案至本地
 - 於資料夾執行 composer install , npm install , php artisan storage:link , php artisan migrate , npm run dev
-- 設定 Virtual Host，從 Git checkout 下來的目錄可能是 C:\wamp\mkkreman，以設定成 localhost.mkkreman.com 為例
+- 設定 Virtual Host，從 Git checkout 下來的目錄可能是 C:\wamp\mkkramen，以設定成 localhost.mkkramen.com 為例
 
 1．本機 hosts 設定 
 開啟 C:\Windows\System32\drivers\etc\hosts
@@ -25,7 +25,7 @@
 
     127.0.0.1 localhost
     ::1 localhost
-    127.0.0.1 localhost.mkkreman.com
+    127.0.0.1 localhost.mkkramen.com
 
 2．Apache 設定
 開啟 C:\wamp64\bin\apache\apache2.4.51\conf\extra\httpd-vhosts.conf
@@ -38,18 +38,18 @@
     </VirtualHost>
 
     <VirtualHost *:80>
-        <Directory C:/wamp64/www/mkkreman>
+        <Directory C:/wamp64/www/mkkramen>
           Order allow,deny
           Allow from all
         </Directory>
-        DocumentRoot "C:/wamp64/www/mkkreman/public"
-        ServerName localhost.mkkreman.com
-        ServerAlias localhost.mkkreman.com
+        DocumentRoot "C:/wamp64/www/mkkramen/public"
+        ServerName localhost.mkkramen.com
+        ServerAlias localhost.mkkramen.com
         ErrorLog "logs/dummy-host.example.com-error.log"
         CustomLog "logs/dummy-host.example.com-access.log" common
     </VirtualHost>
 
-3．重啟Apache，之後瀏覽器開啟 localhost.mkkreman.com 就會指向 C:\wamp\www\mkkreman
+3．重啟Apache，之後瀏覽器開啟 localhost.mkkramen.com 就會指向 C:\wamp\www\mkkramen
 
 參考資料：
 https://kingweblife.blogspot.com/2016/07/xamppvirtualhostwordpress-opencart.html

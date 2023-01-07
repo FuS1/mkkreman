@@ -33,7 +33,7 @@
     "tinymce-langs": "^1.0.0",
     "tw-elements": "^1.0.0-alpha12"
   },
-  "name": "mkkreman",
+  "name": "mkkramen",
   "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
   "version": "1.0.0",
   "main": "postcss.config.js",
@@ -42,13 +42,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FuS1/mkkreman.git"
+    "url": "git+https://github.com/FuS1/mkkramen.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FuS1/mkkreman/issues"
+    "url": "https://github.com/FuS1/mkkramen/issues"
   },
-  "homepage": "https://github.com/FuS1/mkkreman#readme"
+  "homepage": "https://github.com/FuS1/mkkramen#readme"
 }

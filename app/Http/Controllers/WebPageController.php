@@ -38,6 +38,7 @@ class WebPageController extends Controller
     {
         return view('FrontPage.about_us', [
             'pageContent'   => PageContent::where('page','about_us')->first(),
+            'aboutUsPerson' => AboutUsPerson::orderBy('sort_idx', 'asc')->get(),
         ]);
     }
 
