@@ -338,7 +338,12 @@
                     data:data,
                     success: function(seminars) {
                         console.log(seminars);
-                        Swal.fire('已成功報名，將會有專人與您聯繫');
+                        Swal.fire({
+                            title: '已成功報名，將會有專人與您聯繫',
+                            icon: 'success',
+                        }).then(function(result) {
+                            location.reload();
+                        })
                     }
                 });
                 
