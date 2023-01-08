@@ -76,7 +76,7 @@
 						<label class="block border-l-8 border-l-[#062851] pl-2 py-1 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Banner圖</label>
 						<div class="mb-2">
 							<input id="banner_file" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" type="file">
-							<p class="mt-1 text-sm text-gray-500 dark:text-gray-300">限 PNG, JPG, GIF，解析度___ * ___ px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
+							<p class="mt-1 text-sm text-gray-500 dark:text-gray-300">限 PNG, JPG, GIF，解析度 1900 * 370 px，建議先<a class="text-orange-600" href="https://tinypng.com" target="_blank">壓縮</a></p>
 							<img class="max-w-full min-h-10 max-h-48 max-h-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 mb-3 hidden mx-auto" src="">
 						</div>
 					</div>
