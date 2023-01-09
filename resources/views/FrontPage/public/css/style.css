@@ -93,6 +93,7 @@ ul {
 
 .container img{
   max-width: 100%;
+  height:auto;
 }
 
 input::-webkit-outer-spin-button,
