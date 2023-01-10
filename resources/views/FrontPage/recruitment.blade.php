@@ -201,7 +201,7 @@
                                 '</div>'+
                                 '<div class="row">'+
                                     '<div class="col-4"><a class="recruit_joinus_job job_ma">主管</a></div>'+
-                                    '<div class="col-4"><a class="recruit_joinus_job job_full_time invalid">正職</a></div>'+
+                                    '<div class="col-4"><a class="recruit_joinus_job job_full_time">正職</a></div>'+
                                     '<div class="col-4"><a class="recruit_joinus_job job_part_time">計時</a></div>'+
                                 '</div>'+
                             '</div>'+
