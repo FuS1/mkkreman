@@ -156,6 +156,7 @@
                         _dom.find('.map_link').attr('href','https://www.google.com/maps/place/'+store['address']);
                         _dom.find('.title').text(store['title']);
                         _dom.find('.address').text(store['address']);
+                        _dom.find('.phone').text(store['phone']);
                         _dom.find('.store_img').attr('src',store['file_url'])
                         if(!store['job_ma']){
                             _dom.find('.job_ma').addClass('invalid');
