@@ -28,7 +28,7 @@ class WebPageController extends Controller
         return view('FrontPage.index', [
             'banners'       => Banner::orderBy('sort_idx', 'asc')->get(),
             'hotfoods'      => HotFood::orderBy('sort_idx', 'asc')->get(),
-            'news'          => News::where('show_in_index',1)->orderBy('is_top', 'desc')->limit(6)->get(),
+            'news'          => News::where('show_in_index',1)->orderBy('is_top', 'desc')->orderBy('started_at', 'desc')->limit(6)->get(),
             'seminarStory'  => SeminarStory::where('show_in_index',1)->orderBy('sort_idx', 'asc')->get(),
             'seminarPost'   => SeminarPost::where('show_in_index',1)->orderBy('sort_idx', 'asc')->get(),
         ]);
@@ -61,7 +61,7 @@ class WebPageController extends Controller
 
     public function newses(Request $request)
     {
-        $news = News::orderBy('is_top', 'desc')->get();
+        $news = News::orderBy('is_top', 'desc')->orderBy('started_at', 'desc')->get();
 
         return view('FrontPage.newses', [
             'pageContent'   => PageContent::where('page','news')->first(),
