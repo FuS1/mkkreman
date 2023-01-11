@@ -14,12 +14,14 @@
 					console.log(sidefood_data);
 					for(var i in sidefood_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(sidefood_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(sidefood_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(sidefood_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(sidefood_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

@@ -14,12 +14,14 @@
 					console.log(seminar_story_data);
 					for(var i in seminar_story_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(seminar_story_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(seminar_story_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(seminar_story_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(seminar_story_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

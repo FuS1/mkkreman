@@ -22,6 +22,8 @@
 								$(this).text(seminar_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(seminar_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(seminar_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

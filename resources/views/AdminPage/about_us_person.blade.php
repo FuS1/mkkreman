@@ -14,12 +14,14 @@
 					console.log(about_us_person_data);
 					for(var i in about_us_person_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(about_us_person_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(about_us_person_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(about_us_person_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(about_us_person_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

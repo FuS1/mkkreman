@@ -13,12 +13,14 @@
 				console.log(page_content_data);
 				for(var i in page_content_data){
 					$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-						if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+						if($(this).is('input') || $(this).is('select') ){
 							$(this).val(page_content_data[i]);
 						}else if($(this).is('span')){
 							$(this).text(page_content_data[i]);
 						}else if($(this).is('div')){
 							$(this).html(page_content_data[i]);
+						}else if($(this).is('textarea')){
+							$(this).val(page_content_data[i].replaceAll('<br />',"\n"));
 						}
 					});
 				}

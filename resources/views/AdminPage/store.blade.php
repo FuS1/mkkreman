@@ -14,12 +14,14 @@
 					console.log(store_data);
 					for(var i in store_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(store_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(store_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(store_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(store_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

@@ -14,12 +14,14 @@
 					console.log(drink_data);
 					for(var i in drink_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(drink_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(drink_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(drink_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(drink_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

@@ -14,12 +14,14 @@
 					console.log(mainfood_data);
 					for(var i in mainfood_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select')){
 								$(this).val(mainfood_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(mainfood_data[i]);
 							}else if($(this).is('div')){
 								$(this).html(mainfood_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(mainfood_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}

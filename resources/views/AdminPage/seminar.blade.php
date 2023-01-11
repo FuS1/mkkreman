@@ -14,10 +14,14 @@
 					console.log(seminar_data);
 					for(var i in seminar_data){
 						$("[name="+replaceAll(i,".","\\.")+"]").each(function( index ) {
-							if($(this).is('input') || $(this).is('select') || $(this).is('textarea') ){
+							if($(this).is('input') || $(this).is('select') ){
 								$(this).val(seminar_data[i]);
 							}else if($(this).is('span')){
 								$(this).text(seminar_data[i]);
+							}else if($(this).is('div')){
+								$(this).html(seminar_data[i]);
+							}else if($(this).is('textarea')){
+								$(this).val(seminar_data[i].replaceAll('<br />',"\n"));
 							}
 						});
 					}
