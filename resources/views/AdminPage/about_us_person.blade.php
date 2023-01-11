@@ -43,6 +43,7 @@
 				if( form[0].reportValidity() ){
 					let data = getFormData(form,{
 						about_us_person_id : about_us_person_id,
+						short_description : $('[name="short_description"]').val().replace(/\r?\n/g, '<br />'),
 						file	: form.find('#about_us_person_file')[0].files[0],
 					});
 

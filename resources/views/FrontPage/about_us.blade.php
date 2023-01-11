@@ -37,12 +37,7 @@
                                         <div style="border: 0.15rem dashed #122C53;text-align: center;padding: 4px 3px;width: fit-content;font-size: 17px;font-weight: bold;margin: auto;margin-bottom: 15px;letter-spacing: 9px;">
                                             {{$_aboutUsPerson->slogan}}
                                         </div>
-                                        <ul>
-                                            <li>暱稱：爆子頭 阿良</li>
-                                            <li>出身：台灣鄉下</li>
-                                            <li>生日：9/6 處女座(目前26歲)</li>
-                                            <li>興趣：美食和交朋友</li>
-                                        </ul>
+                                        <div>{!! $_aboutUsPerson->short_description !!}</div>
                                     </div>
                                 </div>
                             </div>
