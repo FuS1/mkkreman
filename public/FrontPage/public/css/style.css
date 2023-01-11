@@ -3753,11 +3753,11 @@ body {
 }
 
 .menu-swiper_arrow.next {
-  left: calc(100% + 10px);
+  left: calc(100% - 30px);
 }
 
 .menu-swiper_arrow.prev {
-  right: calc(100% + 10px);
+  right: calc(100% - 30px);
 }
 
 .menu-swiper_arrow:hover {
@@ -3806,10 +3806,10 @@ body {
     top: 30%;
   }
   .menu-swiper_arrow.prev {
-    left: 20px;
+    left: 10px;
   }
   .menu-swiper_arrow.next {
-    right: 20px;
+    right: 10px;
   }
 }
 
