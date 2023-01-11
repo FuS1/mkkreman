@@ -448,7 +448,7 @@
                                 <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt=""></div>
                                 <div class="news_page_text">
                                     <h3>{{ $_news->title }}</h3>
-                                    <p class="content">{{ $_news->short_description }}</p>
+                                    <p class="content">{!! $_news->short_description !!}</p>
                                 @if (empty($_news->ended_ymd)) 
                                     <p class="date">{{ $_news->started_ymd }}</p>
                                 @else
@@ -483,7 +483,7 @@
                                 <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt=""></div>
                                 <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarStory->title }}</h4>
-                                    <p>{{ $_seminarStory->short_description }}</p>
+                                    <p>{!! $_seminarStory->short_description !!}</p>
                                 </div>
                             </a>
                         </div>
@@ -510,7 +510,7 @@
                                 <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarPost->file_path ) }}" alt=""></div>
                                 <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                     <h4>{{ $_seminarPost->title }}</h4>
-                                    <p>{{ $_seminarPost->short_description }}</p>
+                                    <p>{!! $_seminarPost->short_description !!}</p>
                                 </div>
                             </a>
                         </div>

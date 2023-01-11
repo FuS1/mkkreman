@@ -31,7 +31,7 @@
                             <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_news->file_path ) }}" alt=""></div>
                             <div class="news_page_text">
                                 <h3>{{ $_news->title }}</h3>
-                                <p class="content">{{ $_news->short_description }}</p>
+                                <p class="content">{!! $_news->short_description !!}</p>
                             @if (empty($_news->ended_ymd)) 
                                 <p class="date">{{ $_news->started_ymd }}</p>
                             @else

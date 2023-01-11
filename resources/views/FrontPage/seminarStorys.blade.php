@@ -19,7 +19,7 @@
                             <div class="news_page_pic"><img src="{{ asset( 'storage/'.$_seminarStory->file_path ) }}" alt=""></div>
                             <div class="news_page_text" style="background-color:#efefef; border:none; color:#132C53; text-align:center;">
                                 <h3>{{ $_seminarStory->title }}</h3>
-                                <p class="content">{{ $_seminarStory->short_description }}</p>
+                                <p class="content">{!! $_seminarStory->short_description !!}</p>
                             </div>
                         </a>
                     </div>
