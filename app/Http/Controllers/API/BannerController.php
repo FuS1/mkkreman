@@ -31,6 +31,12 @@ class BannerController extends Controller
     public function saveBanner(Request $request)
     {
 
+        if(!isset($request->file)){
+            throw new ErrorException('缺少電腦版圖檔'); 
+        }else if(!isset($request->mobile_file)){
+            throw new ErrorException('缺少手機版圖檔'); 
+        }
+
         $fileInfo = [
             'filePath' => 'banner',
             'fileName' => Str::orderedUuid().".".($request->file->getClientOriginalExtension()==='' ? $request->file->clientExtension():$request->file->getClientOriginalExtension()),

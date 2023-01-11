@@ -156,6 +156,7 @@
                         _dom.find('.map_link').attr('href','https://www.google.com/maps/place/'+store['address']);
                         _dom.find('.title').text(store['title']);
                         _dom.find('.address').text(store['address']);
+                        _dom.find('.phone').text(store['phone']);
                         _dom.find('.store_img').attr('src',store['file_url'])
                         if(!store['job_ma']){
                             _dom.find('.job_ma').addClass('invalid');
@@ -200,7 +201,7 @@
                                 '</div>'+
                                 '<div class="row">'+
                                     '<div class="col-4"><a class="recruit_joinus_job job_ma">主管</a></div>'+
-                                    '<div class="col-4"><a class="recruit_joinus_job job_full_time invalid">正職</a></div>'+
+                                    '<div class="col-4"><a class="recruit_joinus_job job_full_time">正職</a></div>'+
                                     '<div class="col-4"><a class="recruit_joinus_job job_part_time">計時</a></div>'+
                                 '</div>'+
                             '</div>'+
